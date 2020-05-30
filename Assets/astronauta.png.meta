@@ -1,0 +1,1424 @@
+fileFormatVersion: 2
+guid: 33f4823a3a8780e47b17c0481c68c56e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7101749257982015468
+    second: astronauta_0
+  - first:
+      213: 2262507545743481493
+    second: astronauta_1
+  - first:
+      213: -2844230218654901885
+    second: astronauta_2
+  - first:
+      213: -89740983671986133
+    second: astronauta_3
+  - first:
+      213: -6470740049473427847
+    second: astronauta_4
+  - first:
+      213: 9113881827809715691
+    second: astronauta_5
+  - first:
+      213: 5048718859737264378
+    second: astronauta_6
+  - first:
+      213: -6360707316541456479
+    second: astronauta_7
+  - first:
+      213: 4095701172324533101
+    second: astronauta_8
+  - first:
+      213: 3629901412216639634
+    second: astronauta_9
+  - first:
+      213: 5874853202545091880
+    second: astronauta_10
+  - first:
+      213: 6269737748754460565
+    second: astronauta_11
+  - first:
+      213: -3987177997088129695
+    second: astronauta_12
+  - first:
+      213: 8366332255387057351
+    second: astronauta_13
+  - first:
+      213: -2949712545011826387
+    second: astronauta_14
+  - first:
+      213: 2048668836534608828
+    second: astronauta_15
+  - first:
+      213: 8529515786682066121
+    second: astronauta_16
+  - first:
+      213: -131157843286405080
+    second: astronauta_17
+  - first:
+      213: -7962276022983632194
+    second: astronauta_18
+  - first:
+      213: 325082368686035804
+    second: astronauta_19
+  - first:
+      213: -460474523945244749
+    second: astronauta_20
+  - first:
+      213: 4116516771735514820
+    second: astronauta_21
+  - first:
+      213: 3973683266762438823
+    second: astronauta_22
+  - first:
+      213: 5025766154377285917
+    second: astronauta_23
+  - first:
+      213: -8580967865383315938
+    second: astronauta_24
+  - first:
+      213: 1097847163331362966
+    second: astronauta_25
+  - first:
+      213: -3214113611910219393
+    second: astronauta_26
+  - first:
+      213: 3102855118726488543
+    second: astronauta_27
+  - first:
+      213: 5952934147990835152
+    second: astronauta_28
+  - first:
+      213: 6312096083166616804
+    second: astronauta_29
+  - first:
+      213: 7561589866851901268
+    second: astronauta_30
+  - first:
+      213: 2985262970410860591
+    second: astronauta_31
+  - first:
+      213: -7316163028224672545
+    second: astronauta_32
+  - first:
+      213: 362523012469637596
+    second: astronauta_33
+  - first:
+      213: -8199508173469991662
+    second: astronauta_34
+  - first:
+      213: -7670237222835608379
+    second: astronauta_35
+  - first:
+      213: 7543443779172380648
+    second: astronauta_36
+  - first:
+      213: -4313035933525722917
+    second: astronauta_37
+  - first:
+      213: 1061415190415784249
+    second: astronauta_38
+  - first:
+      213: 2439485807944926406
+    second: astronauta_39
+  - first:
+      213: 2009696045017645357
+    second: astronauta_40
+  - first:
+      213: -1267315546488524966
+    second: astronauta_41
+  - first:
+      213: 727711746657275215
+    second: astronauta_42
+  - first:
+      213: 2930971471080431989
+    second: astronauta_43
+  - first:
+      213: 1732769241522378940
+    second: astronauta_44
+  - first:
+      213: -7012923118656338127
+    second: astronauta_45
+  - first:
+      213: -3398840123320457290
+    second: astronauta_46
+  - first:
+      213: -5249758358618387016
+    second: astronauta_47
+  - first:
+      213: 4432881697733967820
+    second: astronauta_48
+  - first:
+      213: -7667303688202819551
+    second: astronauta_49
+  - first:
+      213: -4984598438722606463
+    second: astronauta_50
+  - first:
+      213: 2287973306591667174
+    second: astronauta_51
+  - first:
+      213: 2330949002386008661
+    second: astronauta_52
+  - first:
+      213: 6274511792551134530
+    second: astronauta_53
+  - first:
+      213: 1461975056366329957
+    second: astronauta_54
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: astronauta_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 246
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce779edc25b7e8260800000000000000
+      internalID: 7101749257982015468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 253
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a5ea520aa066f10800000000000000
+      internalID: 2262507545743481493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 248
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38994ad7fa34788d0800000000000000
+      internalID: -2844230218654901885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 248
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28ef620d0d21cef0800000000000000
+      internalID: -89740983671986133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 248
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9762e3d55305336a0800000000000000
+      internalID: -6470740049473427847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 250
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be56c772c330b7e70800000000000000
+      internalID: 9113881827809715691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_6
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 253
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0747dbd07a01640800000000000000
+      internalID: 5048718859737264378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_7
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 248
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af7155656a3ab7a0800000000000000
+      internalID: -6360707316541456479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_8
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 248
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d630e8a248ad6d830800000000000000
+      internalID: 4095701172324533101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_9
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 248
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2909cd43a10006230800000000000000
+      internalID: 3629901412216639634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_10
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 250
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82524458cdba78150800000000000000
+      internalID: 5874853202545091880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_11
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 187
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fed559345920750800000000000000
+      internalID: 6269737748754460565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_12
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 194
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16dfe439cb2baa8c0800000000000000
+      internalID: -3987177997088129695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_13
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 189
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ccfc3b0cde2b1470800000000000000
+      internalID: 8366332255387057351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_14
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d218e0d81148017d0800000000000000
+      internalID: -2949712545011826387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_15
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 189
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3ee08d3755e6c10800000000000000
+      internalID: 2048668836534608828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_16
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 191
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4654baa6dee5670800000000000000
+      internalID: 8529515786682066121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_17
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 194
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820586de2a80e2ef0800000000000000
+      internalID: -131157843286405080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_18
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 189
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba537e9420508190800000000000000
+      internalID: -7962276022983632194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_19
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 189
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53164421bce28400800000000000000
+      internalID: 325082368686035804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_20
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 189
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b760243cd01c99f0800000000000000
+      internalID: -460474523945244749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_21
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 191
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ceab33913ec02930800000000000000
+      internalID: 4116516771735514820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_22
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 128
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8f94da0eb552730800000000000000
+      internalID: 3973683266762438823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_23
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 135
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11d6d390bb1fb540800000000000000
+      internalID: 5025766154377285917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_24
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 130
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1619cab0374ae880800000000000000
+      internalID: -8580967865383315938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_25
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 130
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690490cad265c3f00800000000000000
+      internalID: 1097847163331362966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_26
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 130
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79f756f2bc2563d0800000000000000
+      internalID: -3214113611910219393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_27
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 132
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1e1357a4e8f0b20800000000000000
+      internalID: 3102855118726488543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_28
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 135
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df494e41121d9250800000000000000
+      internalID: 5952934147990835152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_29
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 130
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecd749d1f1199750800000000000000
+      internalID: 6312096083166616804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_30
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 130
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f96eebbe920f860800000000000000
+      internalID: 7561589866851901268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_31
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 130
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f208770ead8cd6920800000000000000
+      internalID: 2985262970410860591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_32
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 132
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc72df0d74c77a90800000000000000
+      internalID: -7316163028224672545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_33
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 69
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1482552c0f70500800000000000000
+      internalID: 362523012469637596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_34
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 76
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21db86352ce753e80800000000000000
+      internalID: -8199508173469991662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_35
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 71
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4a7ed62e7dd8590800000000000000
+      internalID: -7670237222835608379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_36
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef23b87622bfa860800000000000000
+      internalID: 7543443779172380648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_37
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 71
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd834be7ba40524c0800000000000000
+      internalID: -4313035933525722917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_38
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 73
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939bfe7fd77eabe00800000000000000
+      internalID: 1061415190415784249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_39
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 76
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c40a29da6bcad120800000000000000
+      internalID: 2439485807944926406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_40
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 71
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21c8c5b7efd3eb10800000000000000
+      internalID: 2009696045017645357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_41
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 71
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fa8399937996ee0800000000000000
+      internalID: -1267315546488524966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_42
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 71
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dc26e5af9591a00800000000000000
+      internalID: 727711746657275215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_43
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 73
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571ad842607eca820800000000000000
+      internalID: 2930971471080431989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_44
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 10
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb81aaec1780c0810800000000000000
+      internalID: 1732769241522378940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_45
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 17
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1374d5364971dae90800000000000000
+      internalID: -7012923118656338127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_46
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 12
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7a3296ae4e4d0d0800000000000000
+      internalID: -3398840123320457290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_47
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 12
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdc9e5569c1527b0800000000000000
+      internalID: -5249758358618387016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_48
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 12
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf73ccea62c48d30800000000000000
+      internalID: 4432881697733967820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_49
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 14
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128e0af2be3489590800000000000000
+      internalID: -7667303688202819551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_50
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 17
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ae8f7212623dab0800000000000000
+      internalID: -4984598438722606463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_51
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 12
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3e8f2a99380cf10800000000000000
+      internalID: 2287973306591667174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_52
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 12
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ae4cc84c1395020800000000000000
+      internalID: 2330949002386008661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_53
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 12
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24582064b3b831750800000000000000
+      internalID: 6274511792551134530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronauta_54
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 14
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5606231619af94410800000000000000
+      internalID: 1461975056366329957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
