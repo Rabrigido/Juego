@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 56a4da578da44d34a853dcb0f3c98bf1
+guid: b27c1bb7cd5b4d5448c6a6d9d43c61f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7902071565659449473
-    second: space-marine-idle_0
+      213: -4976300395368239279
+    second: cyberpunk-corridor-foreground_0
   - first:
-      213: -884061757183203111
-    second: space-marine-idle_1
+      213: 3750017243048431243
+    second: cyberpunk-corridor-foreground_1
   - first:
-      213: 8214164746644178477
-    second: space-marine-idle_2
+      213: -2440002004452664163
+    second: cyberpunk-corridor-foreground_2
   - first:
-      213: -7361812837265364456
-    second: space-marine-idle_3
+      213: -3531238918044215435
+    second: cyberpunk-corridor-foreground_3
+  - first:
+      213: -3544720872397951233
+    second: cyberpunk-corridor-foreground_4
+  - first:
+      213: 127954010597146995
+    second: cyberpunk-corridor-foreground_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: space-marine-idle_0
+      name: cyberpunk-corridor-foreground_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 32
-        height: 35
+        x: 6
+        y: 136
+        width: 82
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 188a8d4d83cc9ad60800000000000000
-      internalID: 7902071565659449473
+      spriteID: 15fa07ee721a0fab0800000000000000
+      internalID: -4976300395368239279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space-marine-idle_1
+      name: cyberpunk-corridor-foreground_1
       rect:
         serializedVersion: 2
-        x: 49
-        y: 1
-        width: 32
-        height: 36
+        x: 92
+        y: 123
+        width: 16
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d8669b048e2bb3f0800000000000000
-      internalID: -884061757183203111
+      spriteID: b8ecd7960dcba0430800000000000000
+      internalID: 3750017243048431243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space-marine-idle_2
+      name: cyberpunk-corridor-foreground_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 1
-        width: 32
-        height: 36
+        x: 119
+        y: 138
+        width: 72
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d26434a01539ef170800000000000000
-      internalID: 8214164746644178477
+      spriteID: d9c9b59ca1f532ed0800000000000000
+      internalID: -2440002004452664163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space-marine-idle_3
+      name: cyberpunk-corridor-foreground_3
       rect:
         serializedVersion: 2
-        x: 145
-        y: 1
-        width: 32
-        height: 36
+        x: 233
+        y: 0
+        width: 22
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,8 +182,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81a23e3aa3695d990800000000000000
-      internalID: -7361812837265364456
+      spriteID: 57790f0d9e48efec0800000000000000
+      internalID: -3531238918044215435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk-corridor-foreground_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 83
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffeaec4b52f9ecec0800000000000000
+      internalID: -3544720872397951233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk-corridor-foreground_5
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 9
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371ca35ae7596c100800000000000000
+      internalID: 127954010597146995
       vertices: []
       indices: 
       edges: []
