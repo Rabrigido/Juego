@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class Player1controller : MonoBehaviour
 {
-    Boolean canjump;
+    public float jumpForce;
+    public bool onGround;
+    public Transform footRef;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,13 +44,14 @@ public class Player1controller : MonoBehaviour
         {
             gameObject.transform.Translate(-10f * Time.deltaTime, 0, 0);
         }
-    }
 
-    private void OnCollosionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Ground")
+        onGround = Physics2D.OverlapCircle(footRef.position, 0.5f, 1 << 8);
+
+        if (Input.GetKeyDown("w") && onGround)
         {
-            canjump = true;
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+
         }
+
     }
 }
