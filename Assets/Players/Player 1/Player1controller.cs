@@ -50,7 +50,12 @@ public class Player1controller : MonoBehaviour
         if (Input.GetKeyDown("w") && onGround)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+            gameObject.GetComponent<Animator>().SetBool("Jump", true);
 
+        }
+        if (onGround)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Jump", false);
         }
 
     }
