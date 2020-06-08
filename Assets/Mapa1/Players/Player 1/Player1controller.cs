@@ -14,7 +14,6 @@ public class Player1controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            print(footRef.position.y.CompareTo(gameObject.transform.position.y));
     }
     // Update is called once per frame
     void Update()
