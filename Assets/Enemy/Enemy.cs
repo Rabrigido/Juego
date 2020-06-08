@@ -13,12 +13,14 @@ public class Enemy : MonoBehaviour
     // Variables para gestionar el radio de vision y velocidad
     public float visionRadius;
     public float speed;
+    public int option;
     public GameObject player;
 
     //Variable para guardar la posicion
     //GameObject player;
     //Variable para guardar la posicion inicial
     Vector3 initialPosition;
+    Vector3 target;
 
 
     // Start is called before the first frame update
@@ -29,20 +31,38 @@ public class Enemy : MonoBehaviour
 
         //Guardamos nuestra posicion inicial
         initialPosition = transform.position;
+        target = gameObject.transform.position;
     }
-
+        
     // Update is called once per frame
     void Update()
     {
-        //Por defecto nuestro objetivo siempre sera nuestra posicion inicial 
-        Vector3 target = initialPosition;
-        //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
-        float dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist < visionRadius) target = player.transform.position;
+        
 
-        //Finalmente movemos el enemigo en direccion a su target
-        float fixedSpeed = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+        if (option == 1)
+        {
+            //Por defecto nuestro objetivo siempre sera nuestra posicion inicial 
+            target = initialPosition;
+            //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
+            float dist = Vector3.Distance(player.transform.position, transform.position);
+            if (dist < visionRadius) target = player.transform.position;
+
+            //Finalmente movemos el enemigo en direccion a su target
+            float fixedSpeed = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+        }
+        else if(option == 2)
+        {
+            target = transform.position;
+            //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
+            float dist = Vector3.Distance(player.transform.position, transform.position);
+            if (dist < visionRadius) target = player.transform.position;
+
+            //Finalmente movemos el enemigo en direccion a su target
+            float fixedSpeed = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+        }
+        
     }
 
     void OnDrawGizmos()
