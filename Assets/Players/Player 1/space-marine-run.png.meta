@@ -126,9 +126,9 @@ TextureImporter:
         x: 2
         y: 1
         width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,11 +145,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 50
-        y: 8
+        y: 1
         width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,11 +166,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 98
-        y: 3
-        width: 33
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 1
+        width: 34
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,11 +187,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 146
-        y: 3
+        y: 1
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,12 +207,12 @@ TextureImporter:
       name: space-marine-run_4
       rect:
         serializedVersion: 2
-        x: 195
-        y: 3
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 194
+        y: 1
+        width: 32
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,12 +228,12 @@ TextureImporter:
       name: space-marine-run_5
       rect:
         serializedVersion: 2
-        x: 243
-        y: 5
-        width: 30
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 242
+        y: 1
+        width: 32
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: space-marine-run_6
       rect:
         serializedVersion: 2
-        x: 290
-        y: 8
-        width: 30
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 289
+        y: 1
+        width: 32
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -271,11 +271,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 338
-        y: 3
+        y: 1
         width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -292,11 +292,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 386
-        y: 3
+        y: 1
         width: 33
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,11 +313,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 434
-        y: 3
+        y: 1
         width: 33
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -333,12 +333,12 @@ TextureImporter:
       name: space-marine-run_10
       rect:
         serializedVersion: 2
-        x: 482
-        y: 5
+        x: 483
+        y: 1
         width: 34
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
