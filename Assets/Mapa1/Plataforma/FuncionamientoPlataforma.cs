@@ -9,14 +9,15 @@ public class FuncionamientoPlataforma : MonoBehaviour
 {
     public Transform PosY;
     public Boolean SobrePlataforma;
-    Vector2 tamaño;
+
+
     
 
     // Start is called before the first frame update
     void Start()
     {
-        tamaño = gameObject.GetComponent<BoxCollider2D>().size;
-        gameObject.GetComponent<BoxCollider2D>().size = gameObject.GetComponent<BoxCollider2D>().size - gameObject.GetComponent<BoxCollider2D>().size;
+        
+        gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
 
     }
 
@@ -27,27 +28,21 @@ public class FuncionamientoPlataforma : MonoBehaviour
 
         if (PosY.position.y.CompareTo(gameObject.transform.position.y) >= 0)
         {
-            SobrePlataforma = true;
+            gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+
         }
 
         if (PosY.position.y.CompareTo(gameObject.transform.position.y) < 0)
         {
-            SobrePlataforma = false;
+            gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
+            gameObject.GetComponent<PlatformEffector2D>().rotationalOffset = 0;
         }
 
-        if (SobrePlataforma)
-        {
-            gameObject.GetComponent<BoxCollider2D>().size = tamaño;
-        }
-
-        if (!SobrePlataforma)
-        {
-            gameObject.GetComponent<BoxCollider2D>().size = gameObject.GetComponent<BoxCollider2D>().size - gameObject.GetComponent<BoxCollider2D>().size;
-        }
-
+       
         if (Input.GetKey("s")) 
         {
-            gameObject.GetComponent<BoxCollider2D>().size = gameObject.GetComponent<BoxCollider2D>().size - gameObject.GetComponent<BoxCollider2D>().size;
+            gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
+            gameObject.GetComponent<PlatformEffector2D>().rotationalOffset = 180;
         }
 
 

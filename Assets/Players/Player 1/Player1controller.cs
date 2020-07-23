@@ -13,16 +13,38 @@ public class Player1controller : MonoBehaviour
     public Transform footRef;
     public Transform footRefRight;
     public GameObject gun;
+    public float disparo;
+    public Transform bullet;
+    public GameObject bulletPrefab;
+
+    private bool fire;
+    private Animator shot;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        shot = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
     {
+        shot.SetBool("Shot", fire);
         onGround = Physics2D.OverlapCircle(footRef.position, 0.5f, 1 << 8);
+
+        // Disparo
+        if (Input.GetKeyDown("space"))
+        {
+            PlayerShooting();
+            fire = true;
+
+        }
+        else
+        {
+            fire = false;
+        }
+        //Fin Disparo
+
 
         if (Input.GetKey("a") && (!Input.GetKey("s") || !onGround))
         {
@@ -92,5 +114,42 @@ public class Player1controller : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Jump", false);
         }
 
+    }
+    public void PlayerShooting()
+    {
+        if (Input.GetKeyDown("space") && !Input.GetKey("s") && !gameObject.GetComponent<SpriteRenderer>().flipX && !Input.GetKey("a") && !Input.GetKey("d"))
+        {
+            Vector3 posisionArreglada = new Vector3(bullet.position.x + 2f, bullet.position.y + .8f, bullet.position.x);
+            Instantiate(bulletPrefab, posisionArreglada , bullet.rotation);
+        }
+        else if (Input.GetKeyDown("space") && !Input.GetKey("s") && gameObject.GetComponent<SpriteRenderer>().flipX && !Input.GetKey("a") && !Input.GetKey("d"))
+        {
+            Vector3 posisionArreglada = new Vector3(bullet.position.x -2f, bullet.position.y + .8f, bullet.position.x);
+            Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
+        }
+        else if (Input.GetKeyDown("space") && !Input.GetKey("s") && !gameObject.GetComponent<SpriteRenderer>().flipX && !Input.GetKey("a") && Input.GetKey("d"))
+        {
+            Vector3 posisionArreglada = new Vector3(bullet.position.x + 2f, bullet.position.y + .3f, bullet.position.x);
+            Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
+        }
+        else if (Input.GetKeyDown("space") && !Input.GetKey("s") && gameObject.GetComponent<SpriteRenderer>().flipX && Input.GetKey("a") && !Input.GetKey("d"))
+        {
+            Vector3 posisionArreglada = new Vector3(bullet.position.x - 2f, bullet.position.y + .3f, bullet.position.x);
+            Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
+        }
+        else if (Input.GetKeyDown("space") && Input.GetKey("s") && !gameObject.GetComponent<SpriteRenderer>().flipX )
+        {
+            Vector3 posisionArreglada = new Vector3(bullet.position.x + 2f, bullet.position.y - .5f, bullet.position.x);
+            Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
+        }
+        else if (Input.GetKeyDown("space") && Input.GetKey("s") && gameObject.GetComponent<SpriteRenderer>().flipX )
+        {
+            Vector3 posisionArreglada = new Vector3(bullet.position.x - 2f, bullet.position.y - .5f, bullet.position.x);
+            Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
+        }
+    }
+    public float getWalkSpeed()
+    {
+        return walk_Speed;
     }
 }
