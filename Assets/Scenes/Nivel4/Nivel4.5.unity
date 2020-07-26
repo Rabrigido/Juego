@@ -12076,7 +12076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132630793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.8, y: -1.32, z: -193.0494}
+  m_LocalPosition: {x: -47.8, y: -6.7, z: -193.0494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1146555538}
@@ -15535,7 +15535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433234671}
   - component: {fileID: 1433234672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mapa parte chica 4 (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
