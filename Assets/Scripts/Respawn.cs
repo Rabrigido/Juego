@@ -5,10 +5,15 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     public float threshold;
+    Vector3 posicionInicial;
+    void Start()
+    {
+        posicionInicial = GameObject.FindGameObjectWithTag("Player").transform.position;
 
+    }
     void FixedUpdate()
     {
         if (transform.position.y < threshold)
-            transform.position = new Vector3(0, 0, 0);
+            transform.position = posicionInicial;
     }
 }

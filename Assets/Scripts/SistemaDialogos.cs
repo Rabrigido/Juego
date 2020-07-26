@@ -31,9 +31,15 @@ public class SistemaDialogos : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PanelDialogo.SetActive(true);
-        dentro = true;
-        StartCoroutine(TextoDialogo());
+        if (collision.gameObject.tag == "Player")
+        {
+            dentro = true;
+            if (dentro)
+            {
+              PanelDialogo.SetActive(true);
+                StartCoroutine(TextoDialogo());
+            }
+        }
         
     }
 
@@ -41,10 +47,11 @@ public class SistemaDialogos : MonoBehaviour
     // Si el player sale del collider se restauran todos las variables.
     private void OnTriggerExit2D(Collider2D collision)
     {
-        index = 0;
-        textoD.text = null;
-        PanelDialogo.SetActive(false);
         dentro = false;
+        index = 0;
+        textoD.text = "";
+        PanelDialogo.SetActive(false);
+        
     }
 
     void Update()
@@ -53,7 +60,7 @@ public class SistemaDialogos : MonoBehaviour
 
         if(textoD.text == parrafos[index])
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey("m"))
             {
                 textoD.text = "";
                 continuar.onClick.Invoke();
@@ -74,9 +81,11 @@ public class SistemaDialogos : MonoBehaviour
                 textoD.text = "";
                 break;
             }
-            textoD.text += letra;
-            yield return new WaitForSeconds(velocidadParrafo); //tiempo que se demora en escribir letra por letra, mientras más grande el número más lenta será la escritura.
-
+            else
+            {
+                textoD.text += letra;
+                yield return new WaitForSeconds(velocidadParrafo); //tiempo que se demora en escribir letra por letra, mientras más grande el número más lenta será la escritura.
+            }
         }
     }
 
