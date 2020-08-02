@@ -43,10 +43,11 @@ public class BulletMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        Destroy(gameObject, bulletLife);
     }
-    private void OnTriggerEnter2D(Collider2D colission)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
+    
 }
