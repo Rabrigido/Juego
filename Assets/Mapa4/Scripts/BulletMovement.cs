@@ -44,6 +44,9 @@ public class BulletMovement : MonoBehaviour
     void Update()
     {
        
-        Destroy(gameObject, bulletLife);
+    }
+    private void OnTriggerEnter2D(Collider2D colission)
+    {
+        gameObject.SetActive(false);
     }
 }
