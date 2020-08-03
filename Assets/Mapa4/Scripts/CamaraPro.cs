@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class CamaraPro : MonoBehaviour
 {
-    public GameObject personaje;
+    public GameObject player;
     public Vector2 minCamPos, maxCampPos;
     public float smoothTime;
 
@@ -22,10 +22,20 @@ public class CamaraPro : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float posX = Mathf.SmoothDamp(transform.position.x,personaje.transform.position.x, ref velocity.x, smoothTime);
-        float posY = Mathf.SmoothDamp(transform.position.y, personaje.transform.position.y, ref velocity.y, smoothTime);
+        if (player.GetComponent<SpriteRenderer>().flipX)
+        {
+            float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x-10f, ref velocity.x, smoothTime);
+            float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y + 8f, ref velocity.y, smoothTime);
+
+            transform.position = new Vector3(Mathf.Clamp(posX, minCamPos.x, maxCampPos.x), Mathf.Clamp(posY, minCamPos.y, maxCampPos.y), transform.position.z);
+        }
+        else
+        {
+            float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x +10f, ref velocity.x, smoothTime);
+            float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y + 8f, ref velocity.y, smoothTime);
+
+            transform.position = new Vector3(Mathf.Clamp(posX, minCamPos.x, maxCampPos.x), Mathf.Clamp(posY, minCamPos.y, maxCampPos.y), transform.position.z);
+        }
         
-        transform.position = new Vector3(Mathf.Clamp(posX, minCamPos.x, maxCampPos.x), Mathf.Clamp(posY, minCamPos.y, maxCampPos.y),transform.position.z);
-       
     }
 }
