@@ -152,4 +152,5 @@ public class Player1controller : MonoBehaviour
     {
         return walk_Speed;
     }
+    
 }

@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: 94d675123702b6d449e7a383c22d1319
+guid: 85564c1055a667f4fbbcd2c508206c94
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2385555981903924313
-    second: alien3_0
+      213: -1646864220084688452
+    second: space-marine-die_0
   - first:
-      213: 5053471547746711012
-    second: alien3_1
+      213: 5685055855302739919
+    second: space-marine-die_1
   - first:
-      213: -1238304639491894908
-    second: alien3_2
+      213: -8746452801790940940
+    second: space-marine-die_2
   - first:
-      213: -3745932098649447258
-    second: alien3_3
-  - first:
-      213: -156690774542757420
-    second: alien3_4
-  - first:
-      213: -5106658602080543620
-    second: alien3_5
-  - first:
-      213: 7418396299085973571
-    second: alien3_6
+      213: 3301143990506229674
+    second: space-marine-die_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -132,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: alien3_0
+      name: space-marine-die_0
       rect:
         serializedVersion: 2
-        x: 121
-        y: 68
-        width: 97
-        height: 83
+        x: 46
+        y: 13
+        width: 32
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95c013db6823b1120800000000000000
-      internalID: 2385555981903924313
+      spriteID: cb92d80a7b92529e0800000000000000
+      internalID: -1646864220084688452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alien3_1
+      name: space-marine-die_1
       rect:
         serializedVersion: 2
-        x: 246
-        y: 69
-        width: 79
-        height: 84
+        x: 118
+        y: 14
+        width: 29
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e57cf52999812640800000000000000
-      internalID: 5053471547746711012
+      spriteID: fc7039ffd2065ee40800000000000000
+      internalID: 5685055855302739919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alien3_2
+      name: space-marine-die_2
       rect:
         serializedVersion: 2
-        x: 347
-        y: 75
-        width: 76
-        height: 86
+        x: 191
+        y: 12
+        width: 29
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4811e5fbd78a0dee0800000000000000
-      internalID: -1238304639491894908
+      spriteID: 4f8e788748b5e9680800000000000000
+      internalID: -8746452801790940940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alien3_3
+      name: space-marine-die_3
       rect:
         serializedVersion: 2
-        x: 456
-        y: 105
-        width: 139
-        height: 36
+        x: 252
+        y: 8
+        width: 32
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,71 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a424436a96c30cc0800000000000000
-      internalID: -3745932098649447258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien3_4
-      rect:
-        serializedVersion: 2
-        x: 766
-        y: 78
-        width: 94
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d15ccb129253ddf0800000000000000
-      internalID: -156690774542757420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien3_5
-      rect:
-        serializedVersion: 2
-        x: 897
-        y: 87
-        width: 79
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7cdbc1ce018129b0800000000000000
-      internalID: -5106658602080543620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien3_6
-      rect:
-        serializedVersion: 2
-        x: 614
-        y: 80
-        width: 123
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3488712312073f660800000000000000
-      internalID: 7418396299085973571
+      spriteID: aaf0a8a18f400dd20800000000000000
+      internalID: 3301143990506229674
       vertices: []
       indices: 
       edges: []

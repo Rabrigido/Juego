@@ -20,9 +20,12 @@ public class EnemyLife : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
+    private void OnTriggerEnter2D(Collider2D collision)
 
-        cantidadBalas--;
+    {
+        if (collision.gameObject.tag == "Bala")
+        {
+            cantidadBalas--;
+        }
     }
 }

@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
             target = initialPosition;
             //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
             float dist = Vector3.Distance(player.transform.position, transform.position);
-            if (dist < visionRadius) target = player.transform.position;
+            if (dist < visionRadius) target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
 
             //Finalmente movemos el enemigo en direccion a su target
             float fixedSpeed = speed * Time.deltaTime;
@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
             target = transform.position;
             //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
             float dist = Vector3.Distance(player.transform.position, transform.position);
-            if (dist < visionRadius) target = player.transform.position;
+            if (dist < visionRadius) target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
 
             //Finalmente movemos el enemigo en direccion a su target
             float fixedSpeed = speed * Time.deltaTime;
