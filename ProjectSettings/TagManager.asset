@@ -9,6 +9,7 @@ TagManager:
   - Gun
   - Bala
   - Enemy
+  - Recolectables
   layers:
   - Default
   - TransparentFX
