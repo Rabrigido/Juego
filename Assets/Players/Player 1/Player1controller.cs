@@ -17,6 +17,7 @@ public class Player1controller : MonoBehaviour
     public Transform bullet;
     public GameObject bulletPrefab;
 
+
     private bool fire;
     private Animator shot;
 
@@ -152,5 +153,8 @@ public class Player1controller : MonoBehaviour
     {
         return walk_Speed;
     }
+
+ 
+  
     
 }
