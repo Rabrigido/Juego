@@ -37,7 +37,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
-
         if (option == 1)
         {
             //Por defecto nuestro objetivo siempre sera nuestra posicion inicial 
@@ -61,7 +60,20 @@ public class Enemy : MonoBehaviour
             float fixedSpeed = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
         }
-        
+
+           
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Rigidbody2D m_Rigidbody = gameObject.GetComponent<Rigidbody2D>();
+
+            m_Rigidbody.constraints = RigidbodyConstraints2D.FreezePositionY;
+            
+            //RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionZ;
+        }      
     }
 
     void OnDrawGizmos()
@@ -69,8 +81,6 @@ public class Enemy : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, visionRadius);
         }
-
-
 
     
 }

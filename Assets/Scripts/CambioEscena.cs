@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CambioEscena : MonoBehaviour
 {
 
     public string nombreEscena;
+    public GameObject TextoContadorCarpetas;
+    public GameObject textoContadorAlien;
+    public int totalRecolectable;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +28,20 @@ public class CambioEscena : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
-        }
-        
+            if (TextoContadorCarpetas.GetComponent<Text>().text.Equals(totalRecolectable.ToString()))
+            {
+                if (textoContadorAlien.GetComponent<Text>().text.Equals("0"))
+                {
+                    SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+                }
+                else 
+                {
+                    //Advertir que faltan enemigos
+                }       
+            }
+            else { 
+                //Dar advertencia de que faltan items por recoger.
+            }     
+        } 
     }
 }

@@ -8532,7 +8532,8 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 2068836864}
+      objectReference: {fileID: 5351208609893665051, guid: 0f530cb477ce12a47b5d3238f79caaeb,
+        type: 3}
     - target: {fileID: 8916036611737719687, guid: 0d024b1f7ec62014984707521f9beec1,
         type: 3}
       propertyPath: m_LocalPosition.x
