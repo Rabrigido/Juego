@@ -66,7 +66,14 @@ public class Enemy : MonoBehaviour
             //nada, esta patrullando.
         }
 
-           
+        else if (option == 4)  //BOSS
+        {
+            //nada, es un boss.
+        }
+
+
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 
