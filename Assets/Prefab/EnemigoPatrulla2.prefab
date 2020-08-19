@@ -55,12 +55,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7352449766271121390}
   - component: {fileID: 7352449766271121389}
-  - component: {fileID: 7352449766271121388}
   - component: {fileID: 7352449766271121387}
   - component: {fileID: 7352449766271121386}
   - component: {fileID: 7352449766271121385}
   - component: {fileID: 7352449766271121384}
   - component: {fileID: 7352449766271121360}
+  - component: {fileID: 6902696070658909626}
   m_Layer: 0
   m_Name: EnemigoPatrulla2
   m_TagString: Enemy
@@ -122,7 +122,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 11692e4f8e57a824aa912c41572f7b88, type: 3}
+  m_Sprite: {fileID: -1965044619469391446, guid: 8049730afd2f1d740b941677633a3b13,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,25 +134,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7352449766271121388
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7352449766271121367}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 12e1df69cae7fc4438b1b5ed7ed0f13c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &7352449766271121387
 Rigidbody2D:
   serializedVersion: 4
@@ -190,7 +172,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 73.13333, y: 16.2}
+    oldSize: {x: 9, y: 5.4666667}
     newSize: {x: 109.7, y: 24.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -243,3 +225,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 3870037131843649802}
   speed: 7
+--- !u!95 &6902696070658909626
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7352449766271121367}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b497e8fddc8c217418b531a48f741f0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

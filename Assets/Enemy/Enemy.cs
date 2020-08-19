@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public int option;
     public GameObject player;
 
+    private Boolean devolviendose;
+
     //Variable para guardar la posicion
     //GameObject player;
     //Variable para guardar la posicion inicial
@@ -36,18 +38,61 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
+            {
+            if (option == 1)
+            {
+                //Por defecto nuestro objetivo siempre sera nuestra posicion inicial 
+                target = initialPosition;
+                //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
+                float dist = Vector3.Distance(player.transform.position, transform.position);
+                if (dist < visionRadius)
+                {
+                    target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                    if (gameObject.transform.position.x - target.x == 0)
+                    {
+                        gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+                    }
+                    else
+                    {
+                        gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+                    }
+                    devolviendose = false;
+                    if (gameObject.transform.position.x - player.transform.position.x > 0)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                    if (gameObject.transform.position.x - player.transform.position.x < 0)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                }
+                else
+                {
+                    gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+                    devolviendose = true;
+                    if (gameObject.transform.position.x - target.x > 0)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                        gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+                    }
+                    else if (gameObject.transform.position.x - target.x == 0)
+                    {
+                        gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+                    }
+                    else
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                        gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+                    }
 
-        if (option == 1)
-        {
-            //Por defecto nuestro objetivo siempre sera nuestra posicion inicial 
-            target = initialPosition;
-            //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
-            float dist = Vector3.Distance(player.transform.position, transform.position);
-            if (dist < visionRadius) target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                }
 
-            //Finalmente movemos el enemigo en direccion a su target
-            float fixedSpeed = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+
+                //Finalmente movemos el enemigo en direccion a su target
+                float fixedSpeed = speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+            }
         }
         else if (option == 2)
         {

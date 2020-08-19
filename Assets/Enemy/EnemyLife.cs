@@ -21,10 +21,15 @@ public class EnemyLife : MonoBehaviour
     {
         if (cantidadBalas == 0)
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+            gameObject.GetComponent<Animator>().SetBool("Atacando", false);
+            gameObject.GetComponent<Animator>().SetBool("Muerto", true);
+            Destroy(gameObject,1.5f);
             contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
             contador--;
             textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
+            
+
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
