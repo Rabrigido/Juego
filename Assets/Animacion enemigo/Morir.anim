@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack
+  m_Name: Morir
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -37,8 +37,8 @@ AnimationClip:
     - time: 0.9166667
       value: {fileID: -3745932098649447258, guid: 94d675123702b6d449e7a383c22d1319,
         type: 3}
-    - time: 1.0833334
-      value: {fileID: 7418396299085973571, guid: 94d675123702b6d449e7a383c22d1319,
+    - time: 1.6333333
+      value: {fileID: -3745932098649447258, guid: 94d675123702b6d449e7a383c22d1319,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -65,13 +65,13 @@ AnimationClip:
     - {fileID: -1238304639491894908, guid: 94d675123702b6d449e7a383c22d1319, type: 3}
     - {fileID: 5053471547746711012, guid: 94d675123702b6d449e7a383c22d1319, type: 3}
     - {fileID: -3745932098649447258, guid: 94d675123702b6d449e7a383c22d1319, type: 3}
-    - {fileID: 7418396299085973571, guid: 94d675123702b6d449e7a383c22d1319, type: 3}
+    - {fileID: -3745932098649447258, guid: 94d675123702b6d449e7a383c22d1319, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1
+    m_StopTime: 1.65
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
