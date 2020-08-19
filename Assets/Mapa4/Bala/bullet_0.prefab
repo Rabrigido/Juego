@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 30
-  bulletLife: 5
+  bulletLife: 1
   tag: Player
 --- !u!50 &-4346733235818784425
 Rigidbody2D:

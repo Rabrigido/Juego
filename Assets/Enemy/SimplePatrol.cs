@@ -33,7 +33,7 @@ public class SimplePatrol : MonoBehaviour {
     {
         if (!isGoingRight)
         {
-            transform.position = Vector3.MoveTowards(transform.position, endPoint.transform.position, enemySpeed = Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, endPoint.transform.position, enemySpeed);
             if (transform.position == endPoint.transform.position) 
             {
                 isGoingRight = true;
@@ -42,7 +42,7 @@ public class SimplePatrol : MonoBehaviour {
 
         if (isGoingRight)
         {
-            transform.position = Vector3.MoveTowards(transform.position, startPoint.transform.position, enemySpeed = Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, startPoint.transform.position, enemySpeed);
             if(transform.position == startPoint.transform.position) 
             {
                 isGoingRight = false;
