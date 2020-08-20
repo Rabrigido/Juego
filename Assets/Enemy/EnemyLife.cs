@@ -10,26 +10,33 @@ public class EnemyLife : MonoBehaviour
     public int cantidadBalas;
     public GameObject textoContadorEnemigos;
     private int contador;
+    private Boolean muriendose;
     // Start is called before the first frame update
     void Start()
     {
-        
+        muriendose = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cantidadBalas == 0)
+        
+        if (muriendose == true)
         {
+            
             gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
             gameObject.GetComponent<Animator>().SetBool("Atacando", false);
-            gameObject.GetComponent<Animator>().SetBool("Muerto", true);
+            gameObject.GetComponent<Animator>().SetBool("Muerto", true); 
             Destroy(gameObject,1.5f);
+
+
+        }
+        if (cantidadBalas == 0 && muriendose == false)
+        {
+            muriendose = true;
             contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
             contador--;
             textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
-            
-
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

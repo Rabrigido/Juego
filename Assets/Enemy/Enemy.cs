@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Diagnostics;
+using System.Drawing;
 using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
@@ -10,10 +11,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Variables para gestionar el radio de vision y velocidad
-    public float visionRadius;
+    public float visionRadius1;
+    public float visionRadius2;
     public float speed;
+    public float speed2;
     public int option;
     public GameObject player;
+    private Boolean atacar = false;
 
     private Boolean devolviendose;
 
@@ -33,60 +37,95 @@ public class Enemy : MonoBehaviour
         //Guardamos nuestra posicion inicial
         initialPosition = transform.position;
         target = gameObject.transform.position;
-    }
+
         
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
-            {
+        {
             if (option == 1)
             {
                 //Por defecto nuestro objetivo siempre sera nuestra posicion inicial 
-                target = initialPosition;
+                target = gameObject.transform.position;
                 //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
                 float dist = Vector3.Distance(player.transform.position, transform.position);
-                if (dist < visionRadius)
+                if (dist < visionRadius1)
                 {
-                    target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-                    if (gameObject.transform.position.x - target.x == 0)
+                    if (dist <= visionRadius2 && player.GetComponent<PlayerLife>().vida > 0)
                     {
+
+                        gameObject.GetComponent<Animator>().SetBool("Atacando", true);
+                        if (gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfoCount(0) == 20)
+                        {
+                            player.GetComponent<PlayerLife>().vida--;
+                        }
+                        UnityEngine.Debug.Log(gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(1).IsName("Ataque"));
                         gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+                        speed = 0;
+                        if (gameObject.transform.position.x - player.transform.position.x > 0)
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                        }
+                        if (gameObject.transform.position.x - player.transform.position.x < 0)
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                        }
+
                     }
                     else
                     {
-                        gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+                        gameObject.GetComponent<Animator>().SetBool("Atacando", false);
+                        speed = speed2;
                     }
-                    devolviendose = false;
-                    if (gameObject.transform.position.x - player.transform.position.x > 0)
+                    if (!gameObject.GetComponent<Animator>().GetBool("Atacando"))
                     {
-                        gameObject.GetComponent<SpriteRenderer>().flipX = true;
-                    }
-                    if (gameObject.transform.position.x - player.transform.position.x < 0)
-                    {
-                        gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                        target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                        if (gameObject.transform.position.x - target.x == 0)
+                        {
+                            gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+                        }
+                        devolviendose = false;
+                        if (gameObject.transform.position.x - player.transform.position.x > 0)
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                        }
+                        if (gameObject.transform.position.x - player.transform.position.x < 0)
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                        }
                     }
                 }
                 else
                 {
                     gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
-                    devolviendose = true;
-                    if (gameObject.transform.position.x - target.x > 0)
-                    {
-                        gameObject.GetComponent<SpriteRenderer>().flipX = true;
-                        gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
-                    }
-                    else if (gameObject.transform.position.x - target.x == 0)
-                    {
-                        gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
-                    }
-                    else
-                    {
-                        gameObject.GetComponent<SpriteRenderer>().flipX = false;
-                        gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
-                    }
-
                 }
+                //if (dist > visionRadius1)
+                //{
+                  //  gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+                    //devolviendose = true;
+                    //if (gameObject.transform.position.x - target.x > 0)
+                 //   {
+                 //       gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                  //      gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+                  //  }
+                  //  else if (gameObject.transform.position.x - target.x == 0)
+                  //  {
+                 //       gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+                 //   }
+                  //  else
+                 //   {
+                 //       gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                 //       gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+                 //   }
+
+               // }
 
 
                 //Finalmente movemos el enemigo en direccion a su target
@@ -99,7 +138,7 @@ public class Enemy : MonoBehaviour
             target = transform.position;
             //Pero si la distancia hasta el jugador es menor que el radio de vision el objetivo sera él
             float dist = Vector3.Distance(player.transform.position, transform.position);
-            if (dist < visionRadius) target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+            if (dist < visionRadius1) target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
 
             //Finalmente movemos el enemigo en direccion a su target
             float fixedSpeed = speed * Time.deltaTime;
@@ -135,9 +174,33 @@ public class Enemy : MonoBehaviour
 
     void OnDrawGizmos()
         {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, visionRadius);
-        }
+            Gizmos.color = UnityEngine.Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, visionRadius1);
+            Gizmos.color = UnityEngine.Color.red;
+            Gizmos.DrawWireSphere(transform.position, visionRadius2);
+    }
+    public void enemyAttack()
+    {
+        float distA = Vector3.Distance(player.transform.position, transform.position);
+        
+        if (distA < visionRadius2 && player.GetComponent<PlayerLife>().vida > 0)
+        {
 
-    
+            gameObject.GetComponent<Animator>().SetBool("Atacando", true);
+            gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+            speed = 0;
+            
+        }
+        else
+        {
+            gameObject.GetComponent<Animator>().SetBool("Atacando", false);
+            gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+            speed = speed2;
+        }
+    }
+    IEnumerator esperarAtaque()
+    {
+        yield return new WaitForSeconds(3);
+        player.GetComponent<PlayerLife>().vida--;
+    }
 }
