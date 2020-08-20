@@ -44,9 +44,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
+        if (option == 1)
         {
-            if (option == 1)
+            if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
             {
                 //Por defecto nuestro objetivo siempre sera nuestra posicion inicial 
                 target = gameObject.transform.position;
@@ -147,7 +147,44 @@ public class Enemy : MonoBehaviour
 
         else if (option == 3)
         {
-            //nada, esta patrullando.
+            if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
+            {
+                float dist = Vector3.Distance(player.transform.position, transform.position);
+                if (dist <= visionRadius2 && player.GetComponent<PlayerLife>().vida > 0)
+                {
+                    if (gameObject.transform.position.x - player.transform.position.x > 0)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                    if (gameObject.transform.position.x - player.transform.position.x < 0)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    gameObject.GetComponent<patrullar>().speed = 0;
+                    gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
+                    gameObject.GetComponent<Animator>().SetBool("Atacando", true);
+                }
+                else
+                {
+                    gameObject.GetComponent<Animator>().SetBool("Atacando", false);
+                    gameObject.GetComponent<patrullar>().speed = gameObject.GetComponent<patrullar>().speed2;
+                    if (gameObject.GetComponent<patrullar>().derecha)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                        gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+
+                    }
+                    if (!gameObject.GetComponent<patrullar>().derecha)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                        gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
+                    }
+                }
+            }
+            else
+            {
+                gameObject.GetComponent<patrullar>().speed = 0;
+            }
         }
 
         else if (option == 4)  //BOSS
