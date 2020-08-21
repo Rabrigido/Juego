@@ -302,7 +302,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 466744340}
+      objectReference: {fileID: 0}
     - target: {fileID: 8894783138322217111, guid: 2e585a6ef193ece4bacca7dfeb78eb44,
         type: 3}
       propertyPath: m_Name
@@ -392,6 +392,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8205731179144245893, guid: 0d024b1f7ec62014984707521f9beec1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205731179144245893, guid: 0d024b1f7ec62014984707521f9beec1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8916036611737719684, guid: 0d024b1f7ec62014984707521f9beec1,
         type: 3}
       propertyPath: jump_Force
@@ -690,12 +700,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &466744340 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8916036611737719690, guid: 0d024b1f7ec62014984707521f9beec1,
-    type: 3}
-  m_PrefabInstance: {fileID: 295886764}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &522135933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,10 +1319,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce74d782000caa142aa0d3db6c72cbb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRadius: 0
+  visionRadius1: 0
+  visionRadius2: 0
   speed: 15
+  speed2: 0
   option: 4
-  player: {fileID: 466744340}
+  player: {fileID: 0}
 --- !u!61 &1662230176
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1441,7 +1447,7 @@ Transform:
   - {fileID: 1912899443}
   - {fileID: 310853470}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1912899442
 GameObject:
@@ -2093,6 +2099,10 @@ MonoBehaviour:
   corazon3: {fileID: 6248604571025428852}
   vida: 4
   player: {fileID: 0}
+  imagenMuerte: {fileID: 0}
+  textoMuerte: {fileID: 0}
+  botonMuerteMenu: {fileID: 0}
+  botonMuerteContinuar: {fileID: 0}
 --- !u!114 &6248604571250080839
 MonoBehaviour:
   m_ObjectHideFlags: 0

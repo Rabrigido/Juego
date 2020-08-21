@@ -18,11 +18,15 @@ public class MenuJugadores : MonoBehaviour
     }
     public void unJugador()
     {
+        PlayerPrefs.SetInt("NumeroJugadores", 1);
+        PlayerPrefs.SetInt("PlayerActual", 1);
         SceneManager.LoadScene("Nivel2.1");
     }
     public void dosJugadores()
     {
-
+        PlayerPrefs.SetInt("NumeroJugadores", 2);
+        PlayerPrefs.SetInt("PlayerActual", 1);
+        SceneManager.LoadScene("Nivel2.1");
     }
     public void volver()
     {

@@ -16,7 +16,7 @@ public class Player1controller : MonoBehaviour
     public float disparo;
     public Transform bullet;
     public GameObject bulletPrefab;
-
+    private Boolean muerto;
 
     private bool fire;
     private Animator shot;
@@ -30,91 +30,105 @@ public class Player1controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shot.SetBool("Shot", fire);
-        onGround = Physics2D.OverlapCircle(footRef.position, 0.5f, 1 << 8);
-
-        // Disparo
-        if (Input.GetKeyDown("space"))
+        if (PlayerPrefs.GetInt("PlayerActual") == 1)
         {
-            PlayerShooting();
-            fire = true;
-
-        }
-        else
-        {
-            fire = false;
-        }
-        //Fin Disparo
-
-
-        if (Input.GetKey("a") && (!Input.GetKey("s") || !onGround))
-        {
-            gameObject.transform.Translate(-walk_Speed * Time.deltaTime, 0, 0);
-            gameObject.GetComponent<Animator>().SetBool("Move", true);
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
-            
+            gameObject.GetComponent<Animator>().SetBool("Player1",true);
         }
 
-        if (Input.GetKey("d") && (!Input.GetKey("s") || !onGround))
+        if (PlayerPrefs.GetInt("PlayerActual") == 2)
         {
-            gameObject.transform.Translate(walk_Speed * Time.deltaTime, 0, 0);
-            gameObject.GetComponent<Animator>().SetBool("Move", true);
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
-
+            gameObject.GetComponent<Animator>().SetBool("Player1", false);
         }
+
+        muerto = gameObject.GetComponent<Animator>().GetBool("Muerte");
+        if (!muerto)
+        {
+            shot.SetBool("Shot", fire);
+            onGround = Physics2D.OverlapCircle(footRef.position, 0.5f, 1 << 8);
+
+            // Disparo
+            if (Input.GetKeyDown("space"))
+            {
+                PlayerShooting();
+                fire = true;
+
+            }
+            else
+            {
+                fire = false;
+            }
+            //Fin Disparo
+
+
+            if (Input.GetKey("a") && (!Input.GetKey("s") || !onGround))
+            {
+                gameObject.transform.Translate(-walk_Speed * Time.deltaTime, 0, 0);
+                gameObject.GetComponent<Animator>().SetBool("Move", true);
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+
+            }
+
+            if (Input.GetKey("d") && (!Input.GetKey("s") || !onGround))
+            {
+                gameObject.transform.Translate(walk_Speed * Time.deltaTime, 0, 0);
+                gameObject.GetComponent<Animator>().SetBool("Move", true);
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+
+            }
 
             if (Input.GetKey("s"))
-        {
-            gameObject.GetComponent<Animator>().SetBool("Crouch", true);
-            gameObject.GetComponent<Animator>().SetBool("Move", false);
-            gameObject.GetComponent<Animator>().SetBool("Jump", false);
-        }
-        if (!Input.GetKey("s"))
-        {
-            gameObject.GetComponent<Animator>().SetBool("Crouch", false);
-        }
+            {
+                gameObject.GetComponent<Animator>().SetBool("Crouch", true);
+                gameObject.GetComponent<Animator>().SetBool("Move", false);
+                gameObject.GetComponent<Animator>().SetBool("Jump", false);
+            }
+            if (!Input.GetKey("s"))
+            {
+                gameObject.GetComponent<Animator>().SetBool("Crouch", false);
+            }
 
-        if (Input.GetKey("s") && Input.GetKey("a"))
-        {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            if (Input.GetKey("s") && Input.GetKey("a"))
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
+
+            if (Input.GetKey("s") && Input.GetKey("d"))
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            }
+
+            if ((!Input.GetKey("d") && !Input.GetKey("a")) || (Input.GetKey("d") && Input.GetKey("a")))
+            {
+                gameObject.GetComponent<Animator>().SetBool("Move", false);
+            }
+
+            if (Input.GetKey("d") && Input.GetKey("c"))
+            {
+                gameObject.transform.Translate(run_Speed * Time.deltaTime, 0, 0);
+            }
+
+            if (Input.GetKey("a") && Input.GetKey("c"))
+            {
+                gameObject.transform.Translate(-run_Speed * Time.deltaTime, 0, 0);
+            }
+
+            if (Input.GetKeyDown("w") && onGround && !Input.GetKey("s"))
+            {
+                gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jump_Force));
+
+            }
+
+            if (!onGround && !Input.GetKey("s"))
+            {
+                gameObject.GetComponent<Animator>().SetBool("Jump", true);
+            }
+
+            if (onGround)
+            {
+                gameObject.GetComponent<Animator>().SetBool("Jump", false);
+            }
+
         }
-
-        if (Input.GetKey("s") && Input.GetKey("d"))
-        {
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
-        }
-
-        if ((!Input.GetKey("d") && !Input.GetKey("a")) || (Input.GetKey("d") && Input.GetKey("a")))
-        {
-            gameObject.GetComponent<Animator>().SetBool("Move", false);
-        }
-
-        if (Input.GetKey("d") && Input.GetKey("c"))
-        {
-            gameObject.transform.Translate(run_Speed * Time.deltaTime, 0, 0);
-        }
-
-        if (Input.GetKey("a") && Input.GetKey("c"))
-        {
-            gameObject.transform.Translate(-run_Speed * Time.deltaTime, 0, 0);
-        }
-
-        if (Input.GetKeyDown("w") && onGround && !Input.GetKey("s"))
-        {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jump_Force));
-
-        }
-
-        if (!onGround && !Input.GetKey("s"))
-        {
-            gameObject.GetComponent<Animator>().SetBool("Jump", true);
-        }
-
-        if (onGround)
-        {
-            gameObject.GetComponent<Animator>().SetBool("Jump", false);
-        }
-
     }
     public void PlayerShooting()
     {
