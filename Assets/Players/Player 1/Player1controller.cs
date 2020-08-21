@@ -26,6 +26,7 @@ public class Player1controller : MonoBehaviour
     void Start()
     {
         shot = GetComponent<Animator>();
+        if (PlayerPrefs.GetInt("PlayerActual") == 2) gameObject.GetComponent<Animator>().SetBool("Player2", true);
     }
     // Update is called once per frame
     void Update()
