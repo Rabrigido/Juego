@@ -56,7 +56,12 @@ public class PlayerLife : MonoBehaviour
             }
 
         }
+        if (vida < 4 && collision.gameObject.tag == "vida")
+        {
+            vida++;
+            PlayerPrefs.SetInt("Vida", vida);
 
+        }
     }
     public int getVida()
     {

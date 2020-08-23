@@ -15,6 +15,11 @@ public class Corazones : MonoBehaviour
     public GameObject textoMuerte;
     public GameObject botonMuerteMenu;
     public GameObject botonMuerteContinuar;
+    public GameObject cero;
+    public GameObject uno;
+    public GameObject dos;
+    public GameObject tres;
+    public GameObject cuatro;
 
 
     // Start is called before the first frame update
@@ -29,20 +34,53 @@ public class Corazones : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerPrefs.GetInt("Vida") == 4)
+        {
+            corazon.SetActive(true);
+            corazon1.SetActive(true);
+            corazon2.SetActive(true);
+            corazon3.SetActive(true);
+            cero.SetActive(false);
+            uno.SetActive(false);
+            dos.SetActive(false);
+            tres.SetActive(false);
+            cuatro.SetActive(true);
+        }
         if (PlayerPrefs.GetInt("Vida") == 3)
         {
             corazon.SetActive(false);
+            corazon1.SetActive(true);
+            corazon2.SetActive(true);
+            corazon3.SetActive(true);
+            cero.SetActive(false);
+            uno.SetActive(false);
+            dos.SetActive(false);
+            tres.SetActive(true);
+            cuatro.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Vida") == 2)
         {
             corazon.SetActive(false);
             corazon1.SetActive(false);
+            corazon2.SetActive(true);
+            corazon3.SetActive(true);
+            cero.SetActive(false);
+            uno.SetActive(false);
+            dos.SetActive(true);
+            tres.SetActive(false);
+            cuatro.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Vida") == 1)
         {
             corazon.SetActive(false);
             corazon1.SetActive(false);
             corazon2.SetActive(false);
+            corazon3.SetActive(true);
+            cero.SetActive(false);
+            uno.SetActive(true);
+            dos.SetActive(false);
+            tres.SetActive(false);
+            cuatro.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Vida") == 0)
         {
@@ -50,8 +88,13 @@ public class Corazones : MonoBehaviour
             corazon1.SetActive(false);
             corazon2.SetActive(false);
             corazon3.SetActive(false);
-            imagenMuerte.SetActive(true);
-            textoMuerte.SetActive(true);
+           
+            cero.SetActive(true);
+            uno.SetActive(false);
+            dos.SetActive(false);
+            tres.SetActive(false);
+            cuatro.SetActive(false);
+
 
             if (PlayerPrefs.GetInt("NumeroJugadores") == 2) 
             {
@@ -71,6 +114,8 @@ public class Corazones : MonoBehaviour
             {
                 botonMuerteMenu.SetActive(true);
             }
+            imagenMuerte.SetActive(true);
+            textoMuerte.SetActive(true);
         }
     }
 }

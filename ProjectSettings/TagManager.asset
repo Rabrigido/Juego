@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Recolectables
   - garra
+  - vida
   layers:
   - Default
   - TransparentFX

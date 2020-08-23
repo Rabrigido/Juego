@@ -8,8 +8,7 @@ public class CoinCollaider : MonoBehaviour
 {
     public GameObject texto;
     public int contador = 0;
-
-
+    
 
     void Start()
     {

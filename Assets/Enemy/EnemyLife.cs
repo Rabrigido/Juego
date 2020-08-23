@@ -12,22 +12,30 @@ public class EnemyLife : MonoBehaviour
     private int contador;
     private Boolean muriendose;
     // Start is called before the first frame update
+
+    public GameObject recolectable;
+
     void Start()
     {
+        if (recolectable != null)
+        {
+            recolectable.SetActive(false);
+
+        }
         muriendose = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if (muriendose == true)
         {
-            
+
             gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
             gameObject.GetComponent<Animator>().SetBool("Atacando", false);
-            gameObject.GetComponent<Animator>().SetBool("Muerto", true); 
-            Destroy(gameObject,1.5f);
+            gameObject.GetComponent<Animator>().SetBool("Muerto", true);
+            Destroy(gameObject, 1.5f);
 
 
         }
@@ -37,6 +45,13 @@ public class EnemyLife : MonoBehaviour
             contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
             contador--;
             textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
+
+
+        }
+        if (gameObject.GetComponent<Animator>().GetBool("Muerto") && recolectable != null)
+        {
+            recolectable.transform.position = gameObject.transform.position;
+            recolectable.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

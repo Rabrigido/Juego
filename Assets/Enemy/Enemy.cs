@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
                         {
                             player.GetComponent<PlayerLife>().vida--;
                         }
-                        UnityEngine.Debug.Log(gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(1).IsName("Ataque"));
+                        
                         gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
                         speed = 0;
                         if (gameObject.transform.position.x - player.transform.position.x > 0)
