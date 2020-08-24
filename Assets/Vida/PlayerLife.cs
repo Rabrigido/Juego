@@ -10,7 +10,6 @@ public class PlayerLife : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
 
         if (SceneManager.GetActiveScene().name.Equals("Nivel2.1"))
         {

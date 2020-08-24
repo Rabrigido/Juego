@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 2/Nivel2.5.unity
     guid: f0bb772d65a477945ac650d3c903206d
+  - enabled: 1
+    path: Assets/Scenes/Cargas/CargaMenu-Tutorial1.unity
+    guid: f1eaf0845090a2443be72d0082cda5c9
   m_configObjects: {}
