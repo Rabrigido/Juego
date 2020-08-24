@@ -17,6 +17,9 @@ public class Player1controller : MonoBehaviour
     public Transform bullet;
     public GameObject bulletPrefab;
     private Boolean muerto;
+    public AudioClip audioCaminar;
+    private AudioSource fuenteAudio;
+    private Boolean caminandoA;
 
     private bool fire;
     private Animator shot;
@@ -25,6 +28,8 @@ public class Player1controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fuenteAudio = gameObject.GetComponent<AudioSource>();
+        fuenteAudio.clip = audioCaminar;
         shot = GetComponent<Animator>();
         if (PlayerPrefs.GetInt("PlayerActual") == 2) gameObject.GetComponent<Animator>().SetBool("Player2", true);
     }
@@ -49,7 +54,20 @@ public class Player1controller : MonoBehaviour
             }
             //Fin Disparo
 
+            if (gameObject.GetComponent<Animator>().GetBool("Move") && onGround)
+            {
+                if (!fuenteAudio.loop)
+                {
+                    fuenteAudio.loop = true;
+                    fuenteAudio.Play();
+                }
 
+            }
+            else
+            {
+                fuenteAudio.loop = false;
+                fuenteAudio.Stop();
+            }
             if (Input.GetKey("a") && (!Input.GetKey("s") || !onGround))
             {
                 gameObject.transform.Translate(-walk_Speed * Time.deltaTime, 0, 0);
@@ -144,12 +162,12 @@ public class Player1controller : MonoBehaviour
                 Vector3 posisionArreglada = new Vector3(bullet.position.x - 2.5f, bullet.position.y + .3f, bullet.position.x);
                 Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
             }
-            else if (Input.GetKeyDown("space") && Input.GetKey("s") && !gameObject.GetComponent<SpriteRenderer>().flipX)
+            else if (Input.GetKeyDown("space") && !Input.GetKey("s") && !gameObject.GetComponent<SpriteRenderer>().flipX)
             {
                 Vector3 posisionArreglada = new Vector3(bullet.position.x + 2f, bullet.position.y - .5f, bullet.position.x);
                 Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
             }
-            else if (Input.GetKeyDown("space") && Input.GetKey("s") && gameObject.GetComponent<SpriteRenderer>().flipX)
+            else if (Input.GetKeyDown("space") && !Input.GetKey("s") && gameObject.GetComponent<SpriteRenderer>().flipX)
             {
                 Vector3 posisionArreglada = new Vector3(bullet.position.x - 2.5f, bullet.position.y - .5f, bullet.position.x);
                 Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);

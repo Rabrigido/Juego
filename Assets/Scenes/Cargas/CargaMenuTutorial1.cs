@@ -17,6 +17,7 @@ public class CargaMenuTutorial1 : MonoBehaviour
     void Update()
     {
         contador = contador + Time.deltaTime;
+        if (Input.anyKeyDown) SceneManager.LoadScene("Nivel2.1");
         if (contador>30) SceneManager.LoadScene("Nivel2.1");
     }
 }

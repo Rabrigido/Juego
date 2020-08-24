@@ -30,7 +30,7 @@ public class balas : MonoBehaviour
         if (contador >= 0 && !muerto)
         {
             if (Input.GetKeyDown("r") && contador !=6) contador = 0;
-            if (Input.GetKeyDown("space"))
+            if (Input.GetKeyDown("space") && !Input.GetKey("s"))
             {
                 contador--;
             }

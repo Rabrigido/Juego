@@ -10,7 +10,8 @@ public class BulletMovement : MonoBehaviour
     public string tag;
     private GameObject gun;
     private GameObject player;
-
+    public AudioClip audioDisparo;
+    private AudioSource fuenteAudio;
     private Rigidbody2D bulletRB;
     private float originalScaleX;
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class BulletMovement : MonoBehaviour
 
     void Start()
     {
+        
         if (player.GetComponent<SpriteRenderer>().flipX)
         {
             transform.localScale = new Vector3(-originalScaleX, transform.localScale.y, transform.localScale.z);
