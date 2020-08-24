@@ -12,6 +12,7 @@ TagManager:
   - Recolectables
   - garra
   - vida
+  - Caida
   layers:
   - Default
   - TransparentFX

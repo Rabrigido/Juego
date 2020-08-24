@@ -28,6 +28,7 @@ public class Player1controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("contadorRec", 0);
         fuenteAudio = gameObject.GetComponent<AudioSource>();
         fuenteAudio.clip = audioCaminar;
         shot = GetComponent<Animator>();

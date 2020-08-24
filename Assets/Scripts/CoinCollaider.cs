@@ -12,17 +12,20 @@ public class CoinCollaider : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.GetInt("contadorRec");
         texto.GetComponent<Text>().text = contador.ToString();
     }
     private void Update()
     {
-        contador = Int32.Parse(texto.GetComponent<Text>().text);
+        //contador = Int32.Parse(texto.GetComponent<Text>().text);
+        contador = PlayerPrefs.GetInt("contadorRec");
     }
 
     private void OnTriggerEnter2D(Collider2D colission)
     {
         if(colission.gameObject.tag == "Player")
         {
+
             contador++;
             texto.GetComponent<Text>().text = contador.ToString();
             gameObject.SetActive(false);

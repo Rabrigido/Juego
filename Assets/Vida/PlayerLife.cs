@@ -11,13 +11,14 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
 
-        if (SceneManager.GetActiveScene().name.Equals("Nivel2.1"))
+        if (SceneManager.GetActiveScene().name.Equals("Nivel2.5"))
         {
             PlayerPrefs.SetInt("Vida", 4);
         }
         else
         {
-            vida = PlayerPrefs.GetInt("Vida");
+            PlayerPrefs.SetInt("Vida", 4); //POR MIENTRAS CAMBIAR LUEGO AAAAAAAAAAAAAAAAAAAAAAAA
+            // vida = PlayerPrefs.GetInt("Vida");
         }
     }
 
@@ -60,6 +61,11 @@ public class PlayerLife : MonoBehaviour
             vida++;
             PlayerPrefs.SetInt("Vida", vida);
 
+        }
+        if(collision.gameObject.tag == "Caida")
+        {
+            vida = 0;
+            PlayerPrefs.SetInt("Vida", vida);
         }
     }
     public int getVida()

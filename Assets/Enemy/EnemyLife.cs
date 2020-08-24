@@ -12,7 +12,7 @@ public class EnemyLife : MonoBehaviour
     private int contador;
     private Boolean muriendose;
     // Start is called before the first frame update
-
+    float contadorRecolectable = 0;
     public GameObject recolectable;
 
     void Start()
@@ -28,6 +28,7 @@ public class EnemyLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (muriendose == true)
         {
@@ -50,8 +51,14 @@ public class EnemyLife : MonoBehaviour
         }
         if (gameObject.GetComponent<Animator>().GetBool("Muerto") && recolectable != null)
         {
-            recolectable.transform.position = gameObject.transform.position;
-            recolectable.SetActive(true);
+            
+            contadorRecolectable = contadorRecolectable + Time.deltaTime;
+            if (contadorRecolectable > 1.4)
+            {
+                recolectable.transform.position = gameObject.transform.position;
+                recolectable.SetActive(true);
+            }
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

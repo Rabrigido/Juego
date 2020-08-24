@@ -10,8 +10,7 @@ public class Vida : MonoBehaviour
         if (colission.gameObject.tag == "Player" && PlayerPrefs.GetInt("Vida") < 4)
         {
 
-
-            gameObject.SetActive(false);
+            Destroy(gameObject);
 
         }
 
