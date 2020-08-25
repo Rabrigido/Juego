@@ -8,6 +8,7 @@ public class CoinCollaider : MonoBehaviour
 {
     public GameObject texto;
     public int contador;
+    public GameObject audioRecolectable;
 
     private void OnTriggerEnter2D(Collider2D colission)
     {
@@ -18,6 +19,7 @@ public class CoinCollaider : MonoBehaviour
             PlayerPrefs.SetInt("contadorRec", contador);
             Debug.Log(contador);
             texto.GetComponent<Text>().text = contador.ToString();
+            Instantiate(audioRecolectable, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         
