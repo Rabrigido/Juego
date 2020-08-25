@@ -246,6 +246,8 @@ MonoBehaviour:
   cantidadBalas: 5
   textoContadorEnemigos: {fileID: 0}
   recolectable: {fileID: 0}
+  audioMuerteEnemigo: {fileID: 2085905043313613167, guid: 6b7b7df995bf489419eac20a27e7cd43,
+    type: 3}
 --- !u!82 &1048206956706681056
 AudioSource:
   m_ObjectHideFlags: 0

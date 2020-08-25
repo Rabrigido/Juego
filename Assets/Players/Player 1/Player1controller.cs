@@ -20,6 +20,7 @@ public class Player1controller : MonoBehaviour
     public AudioClip audioCaminar;
     private AudioSource fuenteAudio;
     private Boolean caminandoA;
+    public GameObject audioBala;
 
     private bool fire;
     private Animator shot;
@@ -145,6 +146,7 @@ public class Player1controller : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("disparo") >= 0)
         {
+
             if (Input.GetKeyDown("space") && !Input.GetKey("s") && !gameObject.GetComponent<SpriteRenderer>().flipX && !Input.GetKey("a") && !Input.GetKey("d"))
             {
                 Vector3 posisionArreglada = new Vector3(bullet.position.x + 2f, bullet.position.y + .8f, bullet.position.x);
@@ -175,6 +177,9 @@ public class Player1controller : MonoBehaviour
                 Vector3 posisionArreglada = new Vector3(bullet.position.x - 2.5f, bullet.position.y - .5f, bullet.position.x);
                 Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
             }
+            
+            Destroy(Instantiate(audioBala, gameObject.transform.position, Quaternion.identity), 0.285f);
+            
         }
     }
     public float getWalkSpeed()

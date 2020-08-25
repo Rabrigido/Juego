@@ -97,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texto: {fileID: 0}
   contador: 0
+  audioRecolectable: {fileID: 8694212012309771386, guid: ebbe7d80ed8fc314c813f55b14e8049a,
+    type: 3}
 --- !u!61 &6765070841209726428
 BoxCollider2D:
   m_ObjectHideFlags: 0

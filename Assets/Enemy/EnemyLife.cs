@@ -14,6 +14,7 @@ public class EnemyLife : MonoBehaviour
     // Start is called before the first frame update
     float contadorRecolectable = 0;
     public GameObject recolectable;
+    public GameObject audioMuerteEnemigo;
 
     void Start()
     {
@@ -28,7 +29,7 @@ public class EnemyLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         if (muriendose == true)
         {
@@ -36,7 +37,19 @@ public class EnemyLife : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
             gameObject.GetComponent<Animator>().SetBool("Atacando", false);
             gameObject.GetComponent<Animator>().SetBool("Muerto", true);
+
+            if (gameObject.GetComponent<Animator>().GetBool("Muerto"))
+            {
+
+                contadorRecolectable = contadorRecolectable + Time.deltaTime;
+
+                if (contadorRecolectable < 0.01 )
+                {
+                    Instantiate(audioMuerteEnemigo, gameObject.transform.position, Quaternion.identity);
+                }
+            }
             Destroy(gameObject, 1.5f);
+            
 
 
         }
@@ -51,8 +64,6 @@ public class EnemyLife : MonoBehaviour
         }
         if (gameObject.GetComponent<Animator>().GetBool("Muerto") && recolectable != null)
         {
-            
-            contadorRecolectable = contadorRecolectable + Time.deltaTime;
 
             if (contadorRecolectable > 1.4)
             {
