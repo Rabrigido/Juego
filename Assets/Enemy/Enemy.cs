@@ -28,6 +28,10 @@ public class Enemy : MonoBehaviour
     Vector3 target;
 
 
+    public AudioClip audioAtaque;
+    private AudioSource fuenteAudio;
+
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -38,7 +42,8 @@ public class Enemy : MonoBehaviour
         initialPosition = transform.position;
         target = gameObject.transform.position;
 
-        
+        fuenteAudio = gameObject.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -58,6 +63,7 @@ public class Enemy : MonoBehaviour
                     {
 
                         gameObject.GetComponent<Animator>().SetBool("Atacando", true);
+
                         if (gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfoCount(0) == 20)
                         {
                             player.GetComponent<PlayerLife>().vida--;
@@ -163,6 +169,13 @@ public class Enemy : MonoBehaviour
                     gameObject.GetComponent<patrullar>().speed = 0;
                     gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
                     gameObject.GetComponent<Animator>().SetBool("Atacando", true);
+
+                    if (!fuenteAudio.isPlaying)
+                    {
+                        fuenteAudio.clip = audioAtaque;
+                        fuenteAudio.Play();
+                    }
+                    
                 }
                 else
                 {
@@ -218,6 +231,7 @@ public class Enemy : MonoBehaviour
     }
     public void enemyAttack()
     {
+
         float distA = Vector3.Distance(player.transform.position, transform.position);
         
         if (distA < visionRadius2 && player.GetComponent<PlayerLife>().vida > 0)
@@ -226,6 +240,8 @@ public class Enemy : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Atacando", true);
             gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
             speed = 0;
+            
+
             
         }
         else

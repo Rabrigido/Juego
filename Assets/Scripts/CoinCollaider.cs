@@ -7,26 +7,18 @@ using UnityEngine.UI;
 public class CoinCollaider : MonoBehaviour
 {
     public GameObject texto;
-    public int contador = 0;
-    
-
-    void Start()
-    {
-        texto.GetComponent<Text>().text = contador.ToString();
-    }
-    private void Update()
-    {
-        contador = Int32.Parse(texto.GetComponent<Text>().text);
-    }
+    public int contador;
 
     private void OnTriggerEnter2D(Collider2D colission)
     {
         if(colission.gameObject.tag == "Player")
         {
-
+            contador = PlayerPrefs.GetInt("contadorRec");
             contador++;
+            PlayerPrefs.SetInt("contadorRec", contador);
+            Debug.Log(contador);
             texto.GetComponent<Text>().text = contador.ToString();
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
         
     }

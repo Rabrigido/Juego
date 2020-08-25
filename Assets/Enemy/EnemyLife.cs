@@ -53,10 +53,15 @@ public class EnemyLife : MonoBehaviour
         {
             
             contadorRecolectable = contadorRecolectable + Time.deltaTime;
+
             if (contadorRecolectable > 1.4)
             {
-                recolectable.transform.position = gameObject.transform.position;
-                recolectable.SetActive(true);
+                if (!recolectable.activeSelf)
+                {
+                    recolectable.transform.position = gameObject.transform.position;
+                    recolectable.SetActive(true);
+                }
+                
             }
             
         }

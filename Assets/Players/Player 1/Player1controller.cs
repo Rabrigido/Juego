@@ -25,9 +25,11 @@ public class Player1controller : MonoBehaviour
     private Animator shot;
 
 
+    private Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
     {
+        rb2d = gameObject.GetComponentInParent<Rigidbody2D>();
         PlayerPrefs.SetInt("contadorRec", 0);
         fuenteAudio = gameObject.GetComponent<AudioSource>();
         fuenteAudio.clip = audioCaminar;
@@ -180,7 +182,30 @@ public class Player1controller : MonoBehaviour
         return walk_Speed;
     }
 
- 
-  
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Plataforma")
+        {
+            rb2d.velocity = new Vector3(0f, 0f, 0f);
+            gameObject.transform.parent = collision.gameObject.transform;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Plataforma")
+        {
+            gameObject.transform.parent = collision.gameObject.transform;
+        }
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        gameObject.transform.parent = null;
+
+    }
+
+
+
 }
