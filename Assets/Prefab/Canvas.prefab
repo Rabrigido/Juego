@@ -1368,6 +1368,11 @@ MonoBehaviour:
   bala5: {fileID: 8531546344226545440}
   bala6: {fileID: 6895180994143434440}
   recargando: {fileID: 18846629974275563}
+  player: {fileID: 0}
+  audioRecargando1: {fileID: 2248885487290690734, guid: ac23842085e1de449a0f46cf0138279d,
+    type: 3}
+  audioRecargando2: {fileID: 8646287668842490239, guid: f56fe6b6093233a47a5b3ee811b15121,
+    type: 3}
 --- !u!1 &631062473895411475
 GameObject:
   m_ObjectHideFlags: 0

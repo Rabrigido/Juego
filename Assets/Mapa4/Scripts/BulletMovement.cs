@@ -14,6 +14,8 @@ public class BulletMovement : MonoBehaviour
     private AudioSource fuenteAudio;
     private Rigidbody2D bulletRB;
     private float originalScaleX;
+
+    public GameObject choqueBala;
     // Start is called before the first frame update
 
     void Awake()
@@ -55,6 +57,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Destroy(Instantiate(),.5);
             Destroy(gameObject);
 
         }

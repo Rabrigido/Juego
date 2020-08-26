@@ -16,6 +16,8 @@ public class balas : MonoBehaviour
     public GameObject recargando;
     public GameObject player;
     private Boolean muerto;
+    public GameObject audioRecargando1;
+    public GameObject audioRecargando2;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,10 @@ public class balas : MonoBehaviour
         muerto = player.GetComponent<Animator>().GetBool("Muerte");
         if (contador >= 0 && !muerto)
         {
-            if (Input.GetKeyDown("r") && contador !=6) contador = 0;
+            if (Input.GetKeyDown("r") && contador != 6)
+            {
+                contador = 0;
+            }
             if (Input.GetKeyDown("space") && !Input.GetKey("s"))
             {
                 contador--;
@@ -104,10 +109,20 @@ public class balas : MonoBehaviour
         }
         if (contador <= 0)
         {
+           
             recargando.SetActive(true);
             PlayerPrefs.SetInt("disparo", contador);
             contadorAlt = contadorAlt + Time.deltaTime;
-            if (contadorAlt > 3) contador = 6;//contador alt son los segundos de recarga
+            if(contadorAlt > 0.02f && contadorAlt < 0.05f)
+            {
+                Instantiate(audioRecargando1, gameObject.transform.position, Quaternion.identity);
+
+            }
+            if (contadorAlt > 3)
+            {
+                contador = 6;//contador alt son los segundos de recarga
+                Instantiate(audioRecargando2, gameObject.transform.position, Quaternion.identity);
+            }
         }
     }
 }
