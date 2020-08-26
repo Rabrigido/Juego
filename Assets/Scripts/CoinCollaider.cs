@@ -17,7 +17,6 @@ public class CoinCollaider : MonoBehaviour
             contador = PlayerPrefs.GetInt("contadorRec");
             contador++;
             PlayerPrefs.SetInt("contadorRec", contador);
-            Debug.Log(contador);
             texto.GetComponent<Text>().text = contador.ToString();
             Instantiate(audioRecolectable, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);
