@@ -144,7 +144,7 @@ public class Player1controller : MonoBehaviour
     }
     public void PlayerShooting()
     {
-        if (PlayerPrefs.GetInt("disparo") >= 0)
+        if (PlayerPrefs.GetInt("disparo") > 0)
         {
 
             if (Input.GetKeyDown("space") && !Input.GetKey("s") && !gameObject.GetComponent<SpriteRenderer>().flipX && !Input.GetKey("a") && !Input.GetKey("d"))
@@ -177,8 +177,11 @@ public class Player1controller : MonoBehaviour
                 Vector3 posisionArreglada = new Vector3(bullet.position.x - 2.5f, bullet.position.y - .5f, bullet.position.x);
                 Instantiate(bulletPrefab, posisionArreglada, bullet.rotation);
             }
+            if (!Input.GetKey("s"))
+            {
+                Destroy(Instantiate(audioBala, gameObject.transform.position, Quaternion.identity), 0.285f);
+            }
             
-            Destroy(Instantiate(audioBala, gameObject.transform.position, Quaternion.identity), 0.285f);
             
         }
     }

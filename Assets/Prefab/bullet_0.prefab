@@ -127,8 +127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 30
   bulletLife: 1
-  tag: Player
+  tagg: Player
   audioDisparo: {fileID: 8300000, guid: 92818d668eff917489f4ae5cc6721767, type: 3}
+  choqueBala: {fileID: 0}
 --- !u!50 &-4346733235818784425
 Rigidbody2D:
   serializedVersion: 4

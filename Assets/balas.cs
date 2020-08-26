@@ -113,15 +113,15 @@ public class balas : MonoBehaviour
             recargando.SetActive(true);
             PlayerPrefs.SetInt("disparo", contador);
             contadorAlt = contadorAlt + Time.deltaTime;
-            if(contadorAlt > 0.02f && contadorAlt < 0.05f)
+            if(contadorAlt > 0.02f && contadorAlt < 0.03f)
             {
-                Instantiate(audioRecargando1, gameObject.transform.position, Quaternion.identity);
+                Destroy(Instantiate(audioRecargando1, gameObject.transform.position, Quaternion.identity),3);
 
             }
             if (contadorAlt > 3)
             {
                 contador = 6;//contador alt son los segundos de recarga
-                Instantiate(audioRecargando2, gameObject.transform.position, Quaternion.identity);
+                Destroy(Instantiate(audioRecargando2, gameObject.transform.position, Quaternion.identity),3);
             }
         }
     }

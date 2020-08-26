@@ -7,7 +7,7 @@ public class BulletMovement : MonoBehaviour
     
     public float bulletSpeed;
     public float bulletLife;
-    public string tag;
+    public string tagg;
     private GameObject gun;
     private GameObject player;
     public AudioClip audioDisparo;
@@ -21,8 +21,8 @@ public class BulletMovement : MonoBehaviour
     void Awake()
     {
         bulletRB = GetComponent<Rigidbody2D>();
-        gun = GameObject.FindGameObjectWithTag(tag);
-        player = GameObject.FindGameObjectWithTag(tag);
+        gun = GameObject.FindGameObjectWithTag(tagg);
+        player = GameObject.FindGameObjectWithTag(tagg);
         originalScaleX = transform.localScale.x;
 
     }
@@ -57,7 +57,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(Instantiate(),.5);
+            //Destroy(Instantiate(),.5);
             Destroy(gameObject);
 
         }

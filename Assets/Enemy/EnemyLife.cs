@@ -45,7 +45,7 @@ public class EnemyLife : MonoBehaviour
 
                 if (contadorRecolectable < 0.01 )
                 {
-                    Instantiate(audioMuerteEnemigo, gameObject.transform.position, Quaternion.identity);
+                    Destroy(Instantiate(audioMuerteEnemigo, gameObject.transform.position, Quaternion.identity),3);
                 }
             }
             Destroy(gameObject, 1.5f);
