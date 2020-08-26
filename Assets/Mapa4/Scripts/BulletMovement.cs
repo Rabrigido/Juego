@@ -57,7 +57,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(Instantiate(),.5);
+            //Destroy(Instantiate(),.5);
             Destroy(gameObject);
 
         }
