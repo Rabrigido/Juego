@@ -10,7 +10,6 @@ public class Gusano : MonoBehaviour
     public float visionRadius2;
     public float speed;
     public float speed2;
-    public GameObject audioBaba;
     public GameObject player;
     private Boolean exploto = false;
     private Boolean caminando = false;
@@ -36,18 +35,20 @@ public class Gusano : MonoBehaviour
         if (gameObject.GetComponent<Animator>().GetBool("Ver") && !caminando)
         {
             sonido.clip = baba;
+            sonido.loop = true;
             sonido.Play();
             caminando = true;
         }
         if(!gameObject.GetComponent<Animator>().GetBool("Ver"))
         {
+            sonido.Stop();
             caminando = false;
         }
 
         if (!gameObject.GetComponent<Animator>().GetBool("Explosion") && !exploto)
         {
-            target = player.gameObject.transform.position;
-            float dist = Vector3.Distance(player.transform.position, transform.position);
+            target = new Vector3(player.gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+            float dist = Vector3.Distance(target, transform.position);
 
             if (dist < visionRadius1 && PlayerPrefs.GetInt("Vida") > 0)
             {
@@ -75,12 +76,13 @@ public class Gusano : MonoBehaviour
                 gameObject.GetComponent<Animator>().SetBool("Ver", true);
 
                 float fixedSpeed = speed * Time.deltaTime;
+
                 transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
 
             }
+            Debug.Log(dist);
             if(dist > visionRadius2)
             {
-                audioBaba.GetComponent<AudioSource>().Stop();
                 player.GetComponent<Animator>().SetBool("Ver", false);
 
             }
