@@ -132,7 +132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &2927662333835541373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +149,9 @@ MonoBehaviour:
   visionRadius2: 10
   speed: 10
   speed2: 10
+  audioBaba: {fileID: 0}
   player: {fileID: 0}
+  baba: {fileID: 0}
   audioExplosionGusano: {fileID: 5446678852731752258, guid: e59b670f4875c6a4da6ebf94d5f8dacf,
     type: 3}
 --- !u!95 &2927662333835541370
