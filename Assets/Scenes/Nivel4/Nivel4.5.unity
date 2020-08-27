@@ -533,6 +533,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreEscena: Nivel5.1
+  TextoContadorCarpetas: {fileID: 0}
+  textoContadorAlien: {fileID: 0}
+  totalRecolectable: 0
 --- !u!61 &60360581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13661,6 +13664,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreEscena: Nivel4.4
+  TextoContadorCarpetas: {fileID: 0}
+  textoContadorAlien: {fileID: 0}
+  totalRecolectable: 0
 --- !u!61 &1257091423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19807,7 +19813,6 @@ GameObject:
   - component: {fileID: 1831090234}
   - component: {fileID: 1831090233}
   - component: {fileID: 1831090232}
-  - component: {fileID: 1831090231}
   - component: {fileID: 1831090230}
   m_Layer: 0
   m_Name: Main Camera
@@ -19832,18 +19837,6 @@ MonoBehaviour:
   minCamPos: {x: 8.7, y: -67.5}
   maxCampPos: {x: 165, y: 39.2}
   smoothTime: 0.3
---- !u!114 &1831090231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831090229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af79b3476cb6a4b49a82334dbf40c212, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &1831090232
 AudioListener:
   m_ObjectHideFlags: 0
