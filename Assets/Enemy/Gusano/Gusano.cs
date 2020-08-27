@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,40 +10,40 @@ public class Gusano : MonoBehaviour
     public float visionRadius2;
     public float speed;
     public float speed2;
-    public int option;
+    public GameObject audioBaba;
     public GameObject player;
-    private bool exploto = false;
+    private Boolean exploto = false;
+    private Boolean caminando = false;
 
-    private bool devolviendose;
-
-    //Variable para guardar la posicion
-    //GameObject player;
-    //Variable para guardar la posicion inicial
-    Vector3 initialPosition;
+    private AudioSource sonido;
+    public AudioClip baba;
     Vector3 target;
 
-
-    public AudioClip audioAtaque;
-    private AudioSource fuenteAudio;
+    public GameObject audioExplosionGusano;
 
 
-    // Start is called before the first frame update
     void Start()
     {
-        //Recuperamos al jugador gracias al tag
-        //player = GameObject.FindGameObjectWithTag("Player");
-
-        //Guardamos nuestra posicion inicial
-        initialPosition = transform.position;
+        sonido = gameObject.GetComponent<AudioSource>();
         target = gameObject.transform.position;
 
-        fuenteAudio = gameObject.GetComponent<AudioSource>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.GetComponent<Animator>().GetBool("Ver") && !caminando)
+        {
+            sonido.clip = baba;
+            sonido.Play();
+            caminando = true;
+        }
+        if(!gameObject.GetComponent<Animator>().GetBool("Ver"))
+        {
+            caminando = false;
+        }
+
         if (!gameObject.GetComponent<Animator>().GetBool("Explosion") && !exploto)
         {
             target = player.gameObject.transform.position;
@@ -60,7 +61,6 @@ public class Gusano : MonoBehaviour
 
                 }
             }
-            Debug.Log(dist);
             if(dist < visionRadius2 && PlayerPrefs.GetInt("Vida") > 0)
             {
                 if (gameObject.transform.position.x - player.transform.position.x > 0)
@@ -80,6 +80,7 @@ public class Gusano : MonoBehaviour
             }
             if(dist > visionRadius2)
             {
+                audioBaba.GetComponent<AudioSource>().Stop();
                 player.GetComponent<Animator>().SetBool("Ver", false);
 
             }
@@ -87,7 +88,8 @@ public class Gusano : MonoBehaviour
         else if(gameObject.GetComponent<Animator>().GetBool("Explosion") && !exploto)
         {
             gameObject.GetComponent<Animator>().SetBool("Explosion", false);
-            Destroy(gameObject, 1);
+            Destroy(Instantiate(audioExplosionGusano, gameObject.transform.position, Quaternion.identity),0.4f);
+            Destroy(gameObject, .5f);
             exploto = true;
         }
 
