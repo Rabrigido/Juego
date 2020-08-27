@@ -148,8 +148,9 @@ MonoBehaviour:
   bullet: {fileID: 8794299897761733430}
   bulletPrefab: {fileID: 5351208609893665051, guid: 0f530cb477ce12a47b5d3238f79caaeb,
     type: 3}
-  audioDisparo: {fileID: 8300000, guid: 92818d668eff917489f4ae5cc6721767, type: 3}
-  audioCaminar: {fileID: 0}
+  audioCaminar: {fileID: 8300000, guid: 0f163b08423ad37479c32196aebb787c, type: 3}
+  audioBala: {fileID: 1258480483346773204, guid: c0e1ff460119e0d41b9480a3d27e7aed,
+    type: 3}
 --- !u!95 &8794299897761733436
 Animator:
   serializedVersion: 3
