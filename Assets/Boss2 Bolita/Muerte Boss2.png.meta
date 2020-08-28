@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 22d563ff87ef27c4fadfd59afa556dfb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4617782628509986535
+    second: Muerte Boss2_0
+  - first:
+      213: -7107864915881390505
+    second: Muerte Boss2_1
+  - first:
+      213: -2313599458127313996
+    second: Muerte Boss2_2
+  - first:
+      213: 5915206830060580778
+    second: Muerte Boss2_3
+  - first:
+      213: -3593112898846715053
+    second: Muerte Boss2_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,7 +112,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Muerte Boss2_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 10
+        width: 223
+        height: 104
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eeae46a5d8a51040800000000000000
+      internalID: 4617782628509986535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte Boss2_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 178
+        height: 144
+      alignment: 9
+      pivot: {x: 0.49642807, y: 0.45143175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e8d61a48acb5d90800000000000000
+      internalID: -7107864915881390505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte Boss2_2
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 178
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b309c10d8174efd0800000000000000
+      internalID: -2313599458127313996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte Boss2_3
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 18
+        width: 158
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafa9b69549071250800000000000000
+      internalID: 5915206830060580778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte Boss2_4
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 13
+        width: 217
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3531e5a0bd2b22ec0800000000000000
+      internalID: -3593112898846715053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
