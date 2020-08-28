@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2927662333835541373}
   - component: {fileID: 2927662333835541370}
   - component: {fileID: 7167780328893107119}
+  - component: {fileID: 8755921311058104903}
   m_Layer: 0
   m_Name: Gusano_sprite_21
   m_TagString: Untagged
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -151,7 +152,7 @@ MonoBehaviour:
   speed: 10
   speed2: 10
   player: {fileID: 0}
-  baba: {fileID: 0}
+  baba: {fileID: 8300000, guid: e478de77366806c478f19dab25ac3772, type: 3}
   audioExplosionGusano: {fileID: 5446678852731752258, guid: e59b670f4875c6a4da6ebf94d5f8dacf,
     type: 3}
 --- !u!95 &2927662333835541370
@@ -269,3 +270,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &8755921311058104903
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2927662333835541360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.55
