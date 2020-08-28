@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: dd5abd6977723404c8a732e26e228eef
+guid: e6ad94bd864fa1344b9495503d2babd2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5831573737833894895
-    second: BolitaJefe2_0
+      213: 3706742821219820785
+    second: Transicion_0
   - first:
-      213: 3875112634604514404
-    second: BolitaJefe2_1
+      213: 3554100922601641745
+    second: Transicion_1
   - first:
-      213: -5113858511791227066
-    second: BolitaJefe2_2
-  - first:
-      213: 1632444091643910228
-    second: BolitaJefe2_3
-  - first:
-      213: -8105506403363436230
-    second: BolitaJefe2_4
-  - first:
-      213: 9027502328665455343
-    second: BolitaJefe2_5
-  - first:
-      213: 4298251742908130538
-    second: BolitaJefe2_6
+      213: -7763477829029177761
+    second: Transicion_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,148 +108,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BolitaJefe2_0
+      name: Transicion_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 11
-        width: 187
-        height: 96
+        x: 118
+        y: 333
+        width: 124
+        height: 82
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11ce9ea1596121fa0800000000000000
-      internalID: -5831573737833894895
+      spriteID: 1f4698ce4fef07330800000000000000
+      internalID: 3706742821219820785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BolitaJefe2_1
+      name: Transicion_1
       rect:
         serializedVersion: 2
-        x: 204
-        y: 11
-        width: 170
-        height: 96
+        x: 114
+        y: 188
+        width: 94
+        height: 71
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46cea32f86a27c530800000000000000
-      internalID: 3875112634604514404
+      spriteID: 1171f8b65f3b25130800000000000000
+      internalID: 3554100922601641745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BolitaJefe2_2
+      name: Transicion_2
       rect:
         serializedVersion: 2
-        x: 387
-        y: 11
+        x: 127
+        y: 68
         width: 88
-        height: 96
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64f731527cce709b0800000000000000
-      internalID: -5113858511791227066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BolitaJefe2_3
-      rect:
-        serializedVersion: 2
-        x: 488
-        y: 11
-        width: 87
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 458de16904b97a610800000000000000
-      internalID: 1632444091643910228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BolitaJefe2_4
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 10
-        width: 88
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a394ed6fed4738f80800000000000000
-      internalID: -8105506403363436230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BolitaJefe2_5
-      rect:
-        serializedVersion: 2
-        x: 699
-        y: 11
-        width: 87
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: feabd15c981284d70800000000000000
-      internalID: 9027502328665455343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BolitaJefe2_6
-      rect:
-        serializedVersion: 2
-        x: 793
-        y: 11
-        width: 158
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae42e33ef2576ab30800000000000000
-      internalID: 4298251742908130538
+      spriteID: f5658131c06924490800000000000000
+      internalID: -7763477829029177761
       vertices: []
       indices: 
       edges: []
