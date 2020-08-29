@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 
 public class boss3 : MonoBehaviour
@@ -12,8 +13,16 @@ public class boss3 : MonoBehaviour
     public Transform target3;
     public Transform target4;
     public Transform target5;
-    public float speed;
+    public Transform target6;
+    public Transform target7;
+    public Transform target8;
+    public int vida;
+    private int contador;
+    private float speed;
+    public float speed1;
     public float speed2;
+    public float speed3;
+    public float speed4;
     public Boolean derecha;
     private Vector3 start;
     private Vector3 end;
@@ -22,15 +31,22 @@ public class boss3 : MonoBehaviour
     private float contadorMedio;
     private Boolean move;
     private static readonly Random getrandom = new Random();
+    public GameObject recolectable;
+    private float contadorRecolectable = 0;
+    public GameObject textoContadorEnemigos;
 
-    private int vida;
 
     // Start is called before the first frame update
     void Start()
     {
-        vida = 6;
+        if (recolectable != null)
+        {
+            recolectable.SetActive(false);
+
+        }
+        PlayerPrefs.SetInt("vidajefe", vida);
         System.Random ran = new System.Random();
-        target = target1;
+        target = target4;
         if (target != null)
         {
             derecha = false;
@@ -41,25 +57,76 @@ public class boss3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (vida == 0)
+        if (PlayerPrefs.GetInt("vidajefe") <= 0)
         {
+            contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
+            contador--;
+            textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
+            contadorRecolectable = contadorRecolectable + Time.deltaTime;
+            move = false;
             gameObject.GetComponent<Animator>().SetBool("move", false);
             gameObject.GetComponent<Animator>().SetBool("muerto", true);
+            if (recolectable != null)
+            {
+
+                if (contadorRecolectable > 1)
+                {
+                    if (!recolectable.activeSelf)
+                    {
+                        recolectable.transform.position = gameObject.transform.position;
+                        recolectable.SetActive(true);
+                    }
+
+                }
+
+            }
         }
         if (!gameObject.GetComponent<Animator>().GetBool("muerto"))
         {
             contadorInicio = contadorInicio + Time.deltaTime;
-            contadorMedio = contadorMedio + Time.deltaTime;
             if (contadorInicio >= 2 && contadorInicio < 3)
             {
                 move = true;
                 gameObject.GetComponent<Animator>().SetBool("move", true);
             }
 
-            if (contadorMedio >= 1 && contadorMedio < 2)
+            contadorMedio = contadorMedio + Time.deltaTime;
+
+            if (porcentaje() >= 75)
             {
-                move = true;
-                gameObject.GetComponent<Animator>().SetBool("move", true);
+                if (contadorMedio >= 4 && contadorMedio < 5)
+                {
+                    speed = speed1;
+                    move = true;
+                    gameObject.GetComponent<Animator>().SetBool("move", true);
+                }
+            }
+            if (porcentaje() >= 50 && porcentaje() < 75)
+            {
+                if (contadorMedio >= 3 && contadorMedio < 4)
+                {
+                    speed = speed2;
+                    move = true;
+                    gameObject.GetComponent<Animator>().SetBool("move", true);
+                }
+            }
+            if (porcentaje() >= 25 && porcentaje() < 50)
+            {
+                if (contadorMedio >= 2 && contadorMedio < 3)
+                {
+                    speed = speed3;
+                    move = true;
+                    gameObject.GetComponent<Animator>().SetBool("move", true);
+                }
+            }
+            if (porcentaje() >= 0 && porcentaje() < 25)
+            {
+                if (contadorMedio >= 1 && contadorMedio < 2)
+                {
+                    speed = speed4;
+                    move = true;
+                    gameObject.GetComponent<Animator>().SetBool("move", true);
+                }
             }
 
 
@@ -74,7 +141,7 @@ public class boss3 : MonoBehaviour
                 {
                     move = false;
                     gameObject.GetComponent<Animator>().SetBool("move", false);
-                    int numero = GetRandomNumber(1, 6);
+                    int numero = GetRandomNumber(1, 9);
                     if (numero == 1)
                     {
                         contadorMedio = 0;
@@ -110,6 +177,27 @@ public class boss3 : MonoBehaviour
                         numero = 0;
                         end = aux;
                     }
+                    if (numero == 6)
+                    {
+                        contadorMedio = 0;
+                        Vector3 aux = target6.position;
+                        numero = 0;
+                        end = aux;
+                    }
+                    if (numero == 7)
+                    {
+                        contadorMedio = 0;
+                        Vector3 aux = target7.position;
+                        numero = 0;
+                        end = aux;
+                    }
+                    if (numero == 8)
+                    {
+                        contadorMedio = 0;
+                        Vector3 aux = target8.position;
+                        numero = 0;
+                        end = aux;
+                    }
                 }
 
             }
@@ -138,7 +226,11 @@ public class boss3 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bala")
         {
-            vida--;
+            PlayerPrefs.SetInt("vidajefe", (PlayerPrefs.GetInt("vidajefe") - 1));
         }
+    }
+    private float porcentaje()
+    {
+        return ((PlayerPrefs.GetInt("vidajefe") * 100) / vida);
     }
 }
