@@ -54,13 +54,6 @@ public class Gusano : MonoBehaviour
             {
                 gameObject.GetComponent<Animator>().SetBool("Explosion", true);
 
-                if (dist < visionRadius1 && PlayerPrefs.GetInt("Vida") > 0)
-                {
-                    int vida = PlayerPrefs.GetInt("Vida");
-                    vida--;
-                    PlayerPrefs.SetInt("Vida", vida);
-
-                }
             }
             if(dist < visionRadius2 && PlayerPrefs.GetInt("Vida") > 0)
             {
@@ -83,7 +76,7 @@ public class Gusano : MonoBehaviour
             Debug.Log(dist);
             if(dist > visionRadius2)
             {
-                player.GetComponent<Animator>().SetBool("Ver", false);
+                gameObject.GetComponent<Animator>().SetBool("Ver", false);
 
             }
         }
@@ -104,5 +97,16 @@ public class Gusano : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, visionRadius1);
         Gizmos.color = UnityEngine.Color.red;
         Gizmos.DrawWireSphere(transform.position, visionRadius2);
+    }
+    private void OnTriggerEnter2D(Collider2D colission)
+    {
+        if (colission.gameObject.tag == "Player" && PlayerPrefs.GetInt("Vida") > 0)
+        {
+            int vida = PlayerPrefs.GetInt("Vida");
+            vida--;
+            PlayerPrefs.SetInt("Vida", vida);
+
+        }
+
     }
 }
