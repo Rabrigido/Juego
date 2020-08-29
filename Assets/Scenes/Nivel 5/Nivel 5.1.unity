@@ -213,8 +213,13 @@ GameObject:
   - component: {fileID: 26673396}
   - component: {fileID: 26673395}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: pilar_negro
   m_TagString: Untagged
+=======
+  m_Name: Mapa parte chica 5
+  m_TagString: Ground
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -688,7 +693,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!1 &103001797
+=======
+--- !u!4 &644929603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644929601}
+  m_LocalRotation: {x: -0, y: -0, z: 0.008836284, w: 0.99996096}
+  m_LocalPosition: {x: -140.621, y: -27.088, z: 166.84766}
+  m_LocalScale: {x: 8.99383, y: 14.864719, z: 1}
+  m_Children: []
+  m_Father: {fileID: 130751148}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.013}
+--- !u!1 &751017294
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15662,11 +15685,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb23d21e72df8e4bbfcc1aa5a58909f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   texto: {fileID: 1585408033}
   contador: 0
   audioRecolectable: {fileID: 8694212012309771386, guid: ebbe7d80ed8fc314c813f55b14e8049a,
     type: 3}
 --- !u!1 &1535872613611482646
+=======
+  player: {fileID: 0}
+  minCamPos: {x: 3.1, y: 1.8}
+  maxCampPos: {x: 452, y: 526}
+  smoothTime: 0
+--- !u!1 &2028185805
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15761,6 +15792,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 8082234162691025537}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -15770,6 +15802,17 @@ MonoBehaviour:
   target: {fileID: 1101089320}
   speed: 12
 --- !u!1001 &8695406083810125197
+=======
+  m_GameObject: {fileID: 2028185805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72, y: -28.7, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2046781156
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
