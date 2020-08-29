@@ -34,11 +34,16 @@ public class boss3 : MonoBehaviour
     public GameObject recolectable;
     private float contadorRecolectable = 0;
     public GameObject textoContadorEnemigos;
+    public GameObject audioMuerteEnemigo;
+    public AudioClip audioMover;
+    private AudioSource fuenteAudio;
+    private Boolean caminando = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        fuenteAudio = gameObject.GetComponent<AudioSource>();
         if (recolectable != null)
         {
             recolectable.SetActive(false);
@@ -66,6 +71,10 @@ public class boss3 : MonoBehaviour
             move = false;
             gameObject.GetComponent<Animator>().SetBool("move", false);
             gameObject.GetComponent<Animator>().SetBool("muerto", true);
+            if (contadorRecolectable < 0.01)
+            {
+                Destroy(Instantiate(audioMuerteEnemigo, gameObject.transform.position, Quaternion.identity), 3);
+            }
             if (recolectable != null)
             {
 
@@ -83,49 +92,63 @@ public class boss3 : MonoBehaviour
         }
         if (!gameObject.GetComponent<Animator>().GetBool("muerto"))
         {
+            if (gameObject.GetComponent<Animator>().GetBool("move") && !caminando)
+            {
+                fuenteAudio.clip = audioMover;
+                fuenteAudio.loop = true;
+                fuenteAudio.Play();
+                caminando = true;
+            }
+            if (!gameObject.GetComponent<Animator>().GetBool("move"))
+            {
+                fuenteAudio.Stop();
+                caminando = false;
+            }
             contadorInicio = contadorInicio + Time.deltaTime;
-            if (contadorInicio >= 2 && contadorInicio < 3)
+            if (contadorInicio >= 10 && contadorInicio < 11)
             {
                 move = true;
                 gameObject.GetComponent<Animator>().SetBool("move", true);
             }
+            if (contadorInicio >= 12)
+            {
+                contadorMedio = contadorMedio + Time.deltaTime;
 
-            contadorMedio = contadorMedio + Time.deltaTime;
-
-            if (porcentaje() >= 75)
-            {
-                if (contadorMedio >= 4 && contadorMedio < 5)
+                if (porcentaje() >= 75)
                 {
-                    speed = speed1;
-                    move = true;
-                    gameObject.GetComponent<Animator>().SetBool("move", true);
+                    if (contadorMedio >= 4 && contadorMedio < 5)
+                    {
+                        speed = speed1;
+                        move = true;
+                        gameObject.GetComponent<Animator>().SetBool("move", true);
+                    }
                 }
-            }
-            if (porcentaje() >= 50 && porcentaje() < 75)
-            {
-                if (contadorMedio >= 3 && contadorMedio < 4)
+                if (porcentaje() >= 50 && porcentaje() < 75)
                 {
-                    speed = speed2;
-                    move = true;
-                    gameObject.GetComponent<Animator>().SetBool("move", true);
+                    if (contadorMedio >= 3 && contadorMedio < 4)
+                    {
+                        speed = speed2;
+                        move = true;
+                        gameObject.GetComponent<Animator>().SetBool("move", true);
+                    }
                 }
-            }
-            if (porcentaje() >= 25 && porcentaje() < 50)
-            {
-                if (contadorMedio >= 2 && contadorMedio < 3)
+                if (porcentaje() >= 25 && porcentaje() < 50)
                 {
-                    speed = speed3;
-                    move = true;
-                    gameObject.GetComponent<Animator>().SetBool("move", true);
+                    if (contadorMedio >= 2 && contadorMedio < 3)
+                    {
+                        speed = speed3;
+                        move = true;
+                        gameObject.GetComponent<Animator>().SetBool("move", true);
+                    }
                 }
-            }
-            if (porcentaje() >= 0 && porcentaje() < 25)
-            {
-                if (contadorMedio >= 1 && contadorMedio < 2)
+                if (porcentaje() >= 0 && porcentaje() < 25)
                 {
-                    speed = speed4;
-                    move = true;
-                    gameObject.GetComponent<Animator>().SetBool("move", true);
+                    if (contadorMedio >= 1 && contadorMedio < 2)
+                    {
+                        speed = speed4;
+                        move = true;
+                        gameObject.GetComponent<Animator>().SetBool("move", true);
+                    }
                 }
             }
 
@@ -209,8 +232,10 @@ public class boss3 : MonoBehaviour
         {
             if (move)
             {
+                
                 float fixedSpeed = speed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, end, fixedSpeed);
+
             }
         }
     }
