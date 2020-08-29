@@ -59,14 +59,16 @@ public class Enemy : MonoBehaviour
                 float dist = Vector3.Distance(player.transform.position, transform.position);
                 if (dist < visionRadius1)
                 {
-                    if (dist <= visionRadius2 && player.GetComponent<PlayerLife>().vida > 0)
+                    if (dist <= visionRadius2 && PlayerPrefs.GetInt("Vida") > 0)
                     {
 
                         gameObject.GetComponent<Animator>().SetBool("Atacando", true);
 
                         if (gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfoCount(0) == 20)
                         {
-                            player.GetComponent<PlayerLife>().vida--;
+                            int vidaPlayer = PlayerPrefs.GetInt("Vida");
+                            vidaPlayer--;
+                            PlayerPrefs.SetInt("Vida", vidaPlayer);
                         }
                         
                         gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
@@ -156,7 +158,8 @@ public class Enemy : MonoBehaviour
             if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
             {
                 float dist = Vector3.Distance(player.transform.position, transform.position);
-                if (dist <= visionRadius2 && player.GetComponent<PlayerLife>().vida > 0)
+               
+                if (dist <= visionRadius2 && PlayerPrefs.GetInt("Vida") > 0)
                 {
                     if (gameObject.transform.position.x - player.transform.position.x > 0)
                     {
@@ -234,7 +237,7 @@ public class Enemy : MonoBehaviour
 
         float distA = Vector3.Distance(player.transform.position, transform.position);
         
-        if (distA < visionRadius2 && player.GetComponent<PlayerLife>().vida > 0)
+        if (distA < visionRadius2 && PlayerPrefs.GetInt("Vida") > 0)
         {
 
             gameObject.GetComponent<Animator>().SetBool("Atacando", true);
@@ -254,6 +257,9 @@ public class Enemy : MonoBehaviour
     IEnumerator esperarAtaque()
     {
         yield return new WaitForSeconds(3);
-        player.GetComponent<PlayerLife>().vida--;
+        int vidaPlayer = PlayerPrefs.GetInt("Vida");
+        vidaPlayer--;
+        PlayerPrefs.SetInt("Vida", vidaPlayer);
+
     }
 }

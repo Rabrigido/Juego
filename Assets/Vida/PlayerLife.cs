@@ -25,6 +25,7 @@ public class PlayerLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        vida = PlayerPrefs.GetInt("Vida");
         if (vida == 0)
         {
             gameObject.GetComponent<Animator>().SetBool("Muerte", true);
