@@ -21,7 +21,14 @@ public class Boss1 : MonoBehaviour
     private int contador;
     public GameObject recolectable;
     float contadorRecolectable = 0;
-    public GameObject audioMuerteEnemigo;
+    
+    private AudioSource sonido;
+    public AudioClip sonidoCaminar;
+    public AudioClip sonidoAtaque;
+    public AudioClip audioMuerteEnemigo;
+    private Boolean atacando = false;
+    private Boolean moviendose = false;
+    private Boolean muerto = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +40,15 @@ public class Boss1 : MonoBehaviour
             recolectable.SetActive(false);
 
         }
+        sonido = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
+
         if (PlayerPrefs.GetInt("vidajefe") <= 0) //Se muere
         {
             gameObject.GetComponent<Animator>().SetBool("Muerto", true);
@@ -66,11 +77,54 @@ public class Boss1 : MonoBehaviour
             }
         }
 
-        Debug.Log("VIDA BOSS: " + PlayerPrefs.GetInt("vidajefe"));
+    
 
 
         float dist = Vector3.Distance(player.transform.position, transform.position);
         
+
+        if (gameObject.GetComponent<Animator>().GetBool("Acercarse") && !moviendose) //Caminando
+        {
+            sonido.clip = sonidoCaminar;
+            sonido.loop = true;
+            sonido.Play();
+            moviendose = true;
+        }
+        if (!gameObject.GetComponent<Animator>().GetBool("Acercarse"))
+        {
+            sonido.Stop();
+            moviendose = false;
+        }
+
+        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && !atacando) //Atacando
+        {
+            sonido.clip = sonidoAtaque;
+            sonido.loop = true;
+            sonido.Play();
+            atacando = true;
+        }
+        if (!gameObject.GetComponent<Animator>().GetBool("Atacar"))
+        {
+            sonido.Stop();
+            atacando = false;
+        }
+
+        if (gameObject.GetComponent<Animator>().GetBool("Muerto") && !muerto) //F
+        {
+            sonido.clip = audioMuerteEnemigo;
+            sonido.loop = false;
+            sonido.Play();
+            muerto = true;
+        }
+        if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
+        {
+            sonido.Stop();
+            muerto = false;
+        }
+
+
+
+
 
         if (!gameObject.GetComponent<Animator>().GetBool("Muerto") && PlayerPrefs.GetInt("Vida") > 0) //Si no está muerto
         {
