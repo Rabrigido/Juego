@@ -2635,7 +2635,7 @@ MonoBehaviour:
   visionRadius1: 80
   visionRadius2: 7
   player: {fileID: 1023608692}
-  initialSpeed: 30
+  initialSpeed: 11
   minX: 45
   maxX: 210
   maxY: -0.59

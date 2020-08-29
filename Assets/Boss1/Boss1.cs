@@ -72,7 +72,7 @@ public class Boss1 : MonoBehaviour
         float dist = Vector3.Distance(player.transform.position, transform.position);
         
 
-        if (!gameObject.GetComponent<Animator>().GetBool("Muerto")) //Si no está muerto
+        if (!gameObject.GetComponent<Animator>().GetBool("Muerto") && PlayerPrefs.GetInt("Vida") > 0) //Si no está muerto
         {
             if ((player.transform.position.x >= minX && player.transform.position.x <= maxX) && (player.transform.position.y < maxY)) //Lo ve
             {
@@ -169,6 +169,12 @@ public class Boss1 : MonoBehaviour
             */
             
         }
+
+        if ((PlayerPrefs.GetInt("Vida") <= 0) && (!gameObject.GetComponent<Animator>().GetBool("Muerto")))
+        {
+            gameObject.GetComponent<Animator>().SetBool("Acercarse", false);
+        }
+        
     }
 
     void OnDrawGizmos()
