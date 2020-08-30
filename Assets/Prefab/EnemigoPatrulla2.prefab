@@ -258,7 +258,7 @@ MonoBehaviour:
   speed2: 0
   option: 3
   player: {fileID: 0}
-  audioAtaque: {fileID: 8300000, guid: ae6fce8a29728d64b8ea4edbe38f0dca, type: 3}
+  audioAtaque: {fileID: 8300000, guid: 44eaffc12e8d0cd43b00815658382cca, type: 3}
   audioCaminar: {fileID: 8300000, guid: 6cfa7bd11c5e7664fbb049205b6b80e2, type: 3}
 --- !u!114 &6006050247200528830
 MonoBehaviour:
