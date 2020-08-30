@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Tiempo : MonoBehaviour
@@ -13,7 +14,6 @@ public class Tiempo : MonoBehaviour
     public float escalaDeTiempo = 1;
 
     private Text textoTiempo;
-    private float tiempoDelFrameConTimeScale = 0f;
     private float tiempoAMostrarEnSegundos = 0f;
 
     private float escalaDeTiempoAlPausar;
@@ -24,18 +24,26 @@ public class Tiempo : MonoBehaviour
 
     void Start()
     {
-        textoTiempo = GetComponent<Text>();
-        tiempoAMostrarEnSegundos = tiempoInicial;
+        if (SceneManager.GetActiveScene().name.Equals("Nivel1.1"))
+        {
+            PlayerPrefs.SetFloat("Tiempo", 0f);
+        }
+        /*else
+        {
+            PlayerPrefs.SetFloat("Tiempo", 0f);
+        }
+        */
 
-        ActualizarReloj(tiempoInicial);
+        textoTiempo = GetComponent<Text>();
+
+        ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
     }
 
     // Update is called once per frame
     void Update()
     {
- 
-        tiempoAMostrarEnSegundos += Time.deltaTime;
-        ActualizarReloj(tiempoAMostrarEnSegundos);
+        PlayerPrefs.SetFloat("Tiempo", PlayerPrefs.GetFloat("Tiempo") + Time.deltaTime);
+        ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
     }
 
     public void ActualizarReloj(float tiempoEnSegundos)

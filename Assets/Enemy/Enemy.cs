@@ -27,8 +27,8 @@ public class Enemy : MonoBehaviour
     Vector3 initialPosition;
     Vector3 target;
 
-
     public AudioClip audioAtaque;
+    public AudioClip audioCaminar;
     private AudioSource fuenteAudio;
 
 
@@ -49,6 +49,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.GetComponent<Animator>().GetBool("vePlayer") && !fuenteAudio.isPlaying){
+
+
+            fuenteAudio.clip = audioCaminar;
+            fuenteAudio.Play();
+
+        }
+
         if (option == 1)
         {
             if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
@@ -64,11 +72,15 @@ public class Enemy : MonoBehaviour
 
                         gameObject.GetComponent<Animator>().SetBool("Atacando", true);
 
+
+
                         if (gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfoCount(0) == 20)
                         {
                             int vidaPlayer = PlayerPrefs.GetInt("Vida");
                             vidaPlayer--;
                             PlayerPrefs.SetInt("Vida", vidaPlayer);
+                           
+                            
                         }
                         
                         gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
@@ -155,6 +167,9 @@ public class Enemy : MonoBehaviour
 
         else if (option == 3)
         {
+
+
+
             if (!gameObject.GetComponent<Animator>().GetBool("Muerto"))
             {
                 float dist = Vector3.Distance(player.transform.position, transform.position);
@@ -173,11 +188,8 @@ public class Enemy : MonoBehaviour
                     gameObject.GetComponent<Animator>().SetBool("vePlayer", false);
                     gameObject.GetComponent<Animator>().SetBool("Atacando", true);
 
-                    if (!fuenteAudio.isPlaying)
-                    {
-                        fuenteAudio.clip = audioAtaque;
-                        fuenteAudio.Play();
-                    }
+
+
                     
                 }
                 else
