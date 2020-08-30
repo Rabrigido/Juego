@@ -38,6 +38,7 @@ public class boss3 : MonoBehaviour
     public AudioClip audioMover;
     private AudioSource fuenteAudio;
     private Boolean caminando = false;
+    private Boolean cmurio = true;
 
 
     // Start is called before the first frame update
@@ -57,6 +58,7 @@ public class boss3 : MonoBehaviour
             derecha = false;
             end = target.position;
         }
+        speed = speed1;
     }
 
     // Update is called once per frame
@@ -71,9 +73,10 @@ public class boss3 : MonoBehaviour
             move = false;
             gameObject.GetComponent<Animator>().SetBool("move", false);
             gameObject.GetComponent<Animator>().SetBool("muerto", true);
-            if (contadorRecolectable < 0.01)
+            if (cmurio)
             {
                 Destroy(Instantiate(audioMuerteEnemigo, gameObject.transform.position, Quaternion.identity), 3);
+                cmurio = false;
             }
             if (recolectable != null)
             {
@@ -110,7 +113,7 @@ public class boss3 : MonoBehaviour
                 move = true;
                 gameObject.GetComponent<Animator>().SetBool("move", true);
             }
-            if (contadorInicio >= 12)
+            if (contadorInicio >= 10)
             {
                 contadorMedio = contadorMedio + Time.deltaTime;
 

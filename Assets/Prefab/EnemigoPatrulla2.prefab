@@ -259,6 +259,7 @@ MonoBehaviour:
   option: 3
   player: {fileID: 0}
   audioAtaque: {fileID: 8300000, guid: ae6fce8a29728d64b8ea4edbe38f0dca, type: 3}
+  audioCaminar: {fileID: 8300000, guid: 6cfa7bd11c5e7664fbb049205b6b80e2, type: 3}
 --- !u!114 &6006050247200528830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -367,7 +368,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

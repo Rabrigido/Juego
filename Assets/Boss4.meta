@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Boss4.meta
 guid: e65fb7f5d21340845a140f7c11c90480
+=======
+guid: c407c897ac222c342856eaf0932585bb
+>>>>>>> f6340e189629c357bb376add0eb235faa9c18042:Assets/Mapa4/Animaciones.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

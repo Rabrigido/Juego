@@ -18,6 +18,7 @@ public class balas : MonoBehaviour
     private Boolean muerto;
     public GameObject audioRecargando1;
     public GameObject audioRecargando2;
+    public Boolean recarga = false;
 
     // Start is called before the first frame update
     void Start()
@@ -113,15 +114,18 @@ public class balas : MonoBehaviour
             recargando.SetActive(true);
             PlayerPrefs.SetInt("disparo", contador);
             contadorAlt = contadorAlt + Time.deltaTime;
-            if(contadorAlt > 0.02f && contadorAlt < 0.03f)
+
+            if(!recarga)
             {
                 Destroy(Instantiate(audioRecargando1, gameObject.transform.position, Quaternion.identity),3);
+                recarga = true;
 
             }
             if (contadorAlt > 3)
             {
                 contador = 6;//contador alt son los segundos de recarga
                 Destroy(Instantiate(audioRecargando2, gameObject.transform.position, Quaternion.identity),3);
+                recarga = false;
             }
         }
     }
