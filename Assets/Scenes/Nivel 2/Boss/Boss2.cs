@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 
 public class Boss2 : MonoBehaviour
@@ -10,23 +11,51 @@ public class Boss2 : MonoBehaviour
     public float visionRadius2;
     public GameObject player;
     Vector3 target;
+    public int vida;
     private float contador;
     private float contador2;
     public float speed;
     private int number;
     private float speed2;
     private static readonly Random getrandom = new Random();
+    public GameObject recolectable;
+    private float contadorRecolectable = 0;
+    public GameObject textoContadorEnemigos;
 
     // Start is called before the first frame update
     void Start()
     {
         target = gameObject.transform.position;
+        PlayerPrefs.SetInt("vidajefe", vida);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (PlayerPrefs.GetInt("vidajefe") <= 0)
+        {
+            contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
+            contador--;
+            textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
+            contadorRecolectable = contadorRecolectable + Time.deltaTime;
+            gameObject.GetComponent<Animator>().SetBool("move", false);
+            gameObject.GetComponent<Animator>().SetBool("death", true);
+            if (recolectable != null)
+            {
+
+                if (contadorRecolectable > 1)
+                {
+                    if (!recolectable.activeSelf)
+                    {
+                        recolectable.transform.position = gameObject.transform.position;
+                        recolectable.SetActive(true);
+                    }
+
+                }
+
+            }
+        }
+
         float dist = Vector3.Distance(player.transform.position, transform.position);
         target = new Vector3(player.transform.position.x, gameObject.transform.position.y, 0f);
         if (!gameObject.GetComponent<Animator>().GetBool("death"))
@@ -112,6 +141,14 @@ public class Boss2 : MonoBehaviour
         lock (getrandom)
         {
             return getrandom.Next(min, max);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+
+    {
+        if (collision.gameObject.tag == "Bala")
+        {
+            PlayerPrefs.SetInt("vidajefe", (PlayerPrefs.GetInt("vidajefe") - 1));
         }
     }
 }
