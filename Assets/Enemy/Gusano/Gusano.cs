@@ -73,7 +73,7 @@ public class Gusano : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
 
             }
-            Debug.Log(dist);
+
             if(dist > visionRadius2)
             {
                 gameObject.GetComponent<Animator>().SetBool("Ver", false);

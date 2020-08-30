@@ -230,6 +230,9 @@ public class Boss1 : MonoBehaviour
         if ((PlayerPrefs.GetInt("Vida") <= 0) && (!gameObject.GetComponent<Animator>().GetBool("Muerto")))
         {
             gameObject.GetComponent<Animator>().SetBool("Acercarse", false);
+            speed2 = 0;
+            transform.position = Vector3.MoveTowards(transform.position, target, speed2);
+
         }
 
     }
