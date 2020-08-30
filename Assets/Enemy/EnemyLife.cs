@@ -15,6 +15,7 @@ public class EnemyLife : MonoBehaviour
     float contadorRecolectable = 0;
     public GameObject recolectable;
     public GameObject audioMuerteEnemigo;
+    private Boolean sonidoMuerteActivo = false;
 
     void Start()
     {
@@ -43,9 +44,10 @@ public class EnemyLife : MonoBehaviour
 
                 contadorRecolectable = contadorRecolectable + Time.deltaTime;
 
-                if (contadorRecolectable < 0.01 )
+                if (!sonidoMuerteActivo )
                 {
                     Destroy(Instantiate(audioMuerteEnemigo, gameObject.transform.position, Quaternion.identity),3);
+                    sonidoMuerteActivo = true;
                 }
             }
             Destroy(gameObject, 1.5f);

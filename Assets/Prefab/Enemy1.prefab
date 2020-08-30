@@ -230,7 +230,8 @@ MonoBehaviour:
   speed2: 7
   option: 1
   player: {fileID: 0}
-  audioAtaque: {fileID: 8300000, guid: ae6fce8a29728d64b8ea4edbe38f0dca, type: 3}
+  audioAtaque: {fileID: 8300000, guid: 44eaffc12e8d0cd43b00815658382cca, type: 3}
+  audioCaminar: {fileID: 8300000, guid: 6cfa7bd11c5e7664fbb049205b6b80e2, type: 3}
 --- !u!114 &1488834688173112689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +305,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -3399,6 +3399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaNivel3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8479553465409616620, guid: cbc0810d41021c64ca70de1ae2b80159,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plataforma
+      objectReference: {fileID: 0}
     - target: {fileID: 8479553465409616623, guid: cbc0810d41021c64ca70de1ae2b80159,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6732,12 +6737,12 @@ PrefabInstance:
     - target: {fileID: 5748332616999672646, guid: 0c527160347923045bf18a31a81a165f,
         type: 3}
       propertyPath: totalRecolectable
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5748332616999672646, guid: 0c527160347923045bf18a31a81a165f,
         type: 3}
       propertyPath: nombreEscena
-      value: Nivel4.1
+      value: Nivel3.5
       objectReference: {fileID: 0}
     - target: {fileID: 5748332616999672647, guid: 0c527160347923045bf18a31a81a165f,
         type: 3}

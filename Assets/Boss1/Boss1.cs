@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,23 +22,35 @@ public class Boss1 : MonoBehaviour
     private int contador;
     public GameObject recolectable;
     float contadorRecolectable = 0;
-    public GameObject audioMuerteEnemigo;
+
+    private AudioSource sonido;
+    public AudioClip sonidoCaminar;
+    public AudioClip sonidoAtaque;
+    public AudioClip audioMuerteEnemigo;
+    private Boolean atacando = false;
+    private Boolean moviendose = false;
+    private Boolean muerto = false;
+    private float contAux = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         gameObject.GetComponent<Animator>().SetBool("Acercarse", false);
-        PlayerPrefs.SetInt("vidajefe",vida);
+        PlayerPrefs.SetInt("vidajefe", vida);
         if (recolectable != null)
         {
             recolectable.SetActive(false);
 
         }
+        sonido = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
+
         if (PlayerPrefs.GetInt("vidajefe") <= 0) //Se muere
         {
             gameObject.GetComponent<Animator>().SetBool("Muerto", true);
@@ -66,11 +79,54 @@ public class Boss1 : MonoBehaviour
             }
         }
 
-        Debug.Log("VIDA BOSS: " + PlayerPrefs.GetInt("vidajefe"));
+
 
 
         float dist = Vector3.Distance(player.transform.position, transform.position);
-        
+
+
+        if (gameObject.GetComponent<Animator>().GetBool("Acercarse") && sonido.clip != sonidoCaminar) //Caminando
+        {
+            contAux = 0;
+            sonido.Stop();
+            sonido.clip = sonidoCaminar;
+            sonido.loop = true;
+            sonido.Play();
+
+        }
+
+
+
+
+        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && sonido.clip != sonidoAtaque && contAux >= 1f) //Atacando
+        {
+            sonido.Stop();
+            sonido.clip = sonidoAtaque;
+            sonido.loop = false;
+            sonido.Play();
+        }
+
+
+        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && sonido.clip == sonidoAtaque && !sonido.isPlaying) //Atacando
+        {
+            sonido.Stop();
+            sonido.clip = sonidoAtaque;
+            sonido.loop = false;
+            sonido.Play();
+        }
+
+
+
+        if (gameObject.GetComponent<Animator>().GetBool("Muerto") && sonido.clip != audioMuerteEnemigo) //F
+        {
+            contAux = 0;
+            sonido.Stop();
+            sonido.clip = audioMuerteEnemigo;
+            sonido.loop = false;
+            sonido.Play();
+
+        }
+
 
         if (!gameObject.GetComponent<Animator>().GetBool("Muerto") && PlayerPrefs.GetInt("Vida") > 0) //Si no está muerto
         {
@@ -87,7 +143,7 @@ public class Boss1 : MonoBehaviour
 
                 gameObject.GetComponent<Animator>().SetBool("Acercarse", true);
 
-                if (gameObject.transform.position.x == player.transform.position.x && 
+                if (gameObject.transform.position.x == player.transform.position.x &&
                     gameObject.transform.position.x == player.transform.position.x) //El player está arriba del boss
                 {
                     gameObject.GetComponent<Animator>().SetBool("Acercarse", false);
@@ -98,6 +154,7 @@ public class Boss1 : MonoBehaviour
                 {
                     speed2 = 0;
                     gameObject.GetComponent<Animator>().SetBool("Atacar", true);
+                    contAux = contAux + Time.deltaTime;
                     gameObject.GetComponent<Animator>().SetBool("Acercarse", false);
                     transform.position = Vector3.MoveTowards(transform.position, target, speed2);
                 }
@@ -109,10 +166,10 @@ public class Boss1 : MonoBehaviour
 
                     if (gameObject.transform.position.x > minX && gameObject.transform.position.x < maxX) //Si está dentro de su espacio
                     {
-       
+
                         speed2 = initialSpeed * Time.deltaTime;
                         transform.position = Vector3.MoveTowards(transform.position, target, speed2); //Te sigue
-                        
+
                     }
 
                     if (gameObject.transform.position.x == minX || gameObject.transform.position.x == maxX) //Llega al borde
@@ -121,7 +178,7 @@ public class Boss1 : MonoBehaviour
                         speed2 = 0;
                         transform.position = Vector3.MoveTowards(transform.position, target, speed2);
                     }
-                }  
+                }
             }
             else
             {
@@ -167,14 +224,14 @@ public class Boss1 : MonoBehaviour
                 }
             }
             */
-            
+
         }
 
         if ((PlayerPrefs.GetInt("Vida") <= 0) && (!gameObject.GetComponent<Animator>().GetBool("Muerto")))
         {
             gameObject.GetComponent<Animator>().SetBool("Acercarse", false);
         }
-        
+
     }
 
     void OnDrawGizmos()
@@ -193,4 +250,5 @@ public class Boss1 : MonoBehaviour
             PlayerPrefs.SetInt("vidajefe", (PlayerPrefs.GetInt("vidajefe") - 1));
         }
     }
+
 }
