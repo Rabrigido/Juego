@@ -66,6 +66,7 @@ public class boss3 : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("vidajefe") <= 0)
         {
+            fuenteAudio.Stop();
             contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
             contador--;
             textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();

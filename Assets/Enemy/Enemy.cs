@@ -31,6 +31,9 @@ public class Enemy : MonoBehaviour
     public AudioClip audioCaminar;
     private AudioSource fuenteAudio;
 
+    private Boolean caminando = false;
+    private Boolean atacando = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -49,13 +52,35 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<Animator>().GetBool("vePlayer") && !fuenteAudio.isPlaying){
+        if (gameObject.GetComponent<Animator>().GetBool("vePlayer") && !caminando){
 
 
             fuenteAudio.clip = audioCaminar;
+            fuenteAudio.loop = true;
+            caminando = true;
             fuenteAudio.Play();
 
         }
+        if (!gameObject.GetComponent<Animator>().GetBool("vePlayer"))
+        {
+            caminando = false;
+        }
+
+        if (gameObject.GetComponent<Animator>().GetBool("Atacando") && !atacando)
+        {
+
+            fuenteAudio.clip = audioAtaque;
+            fuenteAudio.loop = true;
+            atacando = true;
+            fuenteAudio.Play();
+
+        }
+        if (!gameObject.GetComponent<Animator>().GetBool("Atacando"))
+        {
+            atacando = false;
+        }
+
+
 
         if (option == 1)
         {
