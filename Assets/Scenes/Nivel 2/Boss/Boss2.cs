@@ -23,9 +23,15 @@ public class Boss2 : MonoBehaviour
     public GameObject textoContadorEnemigos;
     public GameObject audioMuerteEnemigo;
     public AudioClip audioMover;
+    public AudioClip audioGarra;
+    public AudioClip audioCola;
+    public AudioClip audioOler;
     private AudioSource fuenteAudio;
-    private Boolean caminando = false;
     private Boolean cmurio = true;
+    private float contAuxG;
+    private float contAuxC;
+    private float contAtaque;
+    private Boolean ataque;
 
     // Start is called before the first frame update
     void Start()
@@ -77,19 +83,67 @@ public class Boss2 : MonoBehaviour
         } 
         if (!gameObject.GetComponent<Animator>().GetBool("death"))
         {
-            if (gameObject.GetComponent<Animator>().GetBool("move") && !caminando)
+            if (gameObject.GetComponent<Animator>().GetBool("move") && fuenteAudio.clip != audioMover) //Caminando
             {
+                contAuxG = 0;
+                contAuxC = 0;
                 fuenteAudio.Stop();
                 fuenteAudio.clip = audioMover;
                 fuenteAudio.loop = true;
                 fuenteAudio.Play();
-                caminando = true;
+
             }
-            if (!gameObject.GetComponent<Animator>().GetBool("move"))
+            if (gameObject.GetComponent<Animator>().GetBool("ataqueGarra") && fuenteAudio.clip != audioGarra && contAuxG >= 1f) //Atacando
             {
+                contAuxC = 0;
                 fuenteAudio.Stop();
-                caminando = false;
+                fuenteAudio.clip = audioGarra;
+                fuenteAudio.loop = false;
+                fuenteAudio.Play();
             }
+            if (gameObject.GetComponent<Animator>().GetBool("ataqueGarra") && fuenteAudio.clip == audioGarra && !fuenteAudio.isPlaying) //Atacando
+            {
+                contAuxC = 0;
+                fuenteAudio.Stop();
+                fuenteAudio.clip = audioGarra;
+                fuenteAudio.loop = false;
+                fuenteAudio.Play();
+            }
+            if (gameObject.GetComponent<Animator>().GetBool("ataqueCola") && fuenteAudio.clip != audioCola && contAuxC >= 1f) //Atacando
+            {
+                contAuxG = 0;
+                fuenteAudio.Stop();
+                fuenteAudio.clip = audioCola;
+                fuenteAudio.loop = false;
+                fuenteAudio.Play();
+            }
+            if (gameObject.GetComponent<Animator>().GetBool("ataqueCola") && fuenteAudio.clip == audioCola && !fuenteAudio.isPlaying) //Atacando
+            {
+                contAuxG = 0;
+                fuenteAudio.Stop();
+                fuenteAudio.clip = audioCola;
+                fuenteAudio.loop = false;
+                fuenteAudio.Play();
+            }
+            if (gameObject.GetComponent<Animator>().GetBool("smell") && fuenteAudio.clip != audioOler) //Atacando
+            {
+                contAuxG = 0;
+                contAuxC = 0;
+                fuenteAudio.Stop();
+                fuenteAudio.clip = audioOler;
+                fuenteAudio.loop = false;
+                fuenteAudio.Play();
+            }
+            if (gameObject.GetComponent<Animator>().GetBool("smell") && fuenteAudio.clip == audioOler && !fuenteAudio.isPlaying) //Atacando
+            {
+                contAuxG = 0;
+                contAuxC = 0;
+                fuenteAudio.Stop();
+                fuenteAudio.clip = audioOler;
+                fuenteAudio.loop = false;
+                fuenteAudio.Play();
+            }
+
             float dist = Vector3.Distance(player.transform.position, transform.position);
             target = new Vector3(player.transform.position.x, gameObject.transform.position.y, 0f);
             if (player.transform.position.x < gameObject.transform.position.x)
@@ -102,45 +156,54 @@ public class Boss2 : MonoBehaviour
             }
             if(dist < visionRadius1)
             {
-                
-                gameObject.GetComponent<Animator>().SetBool("smell", true);
+                if (contador <= 2) gameObject.GetComponent<Animator>().SetBool("smell", true);          
                 contador += Time.deltaTime;
                 if(contador > 2)
                 {
-                    gameObject.GetComponent<Animator>().SetBool("smell", false);
-                    gameObject.GetComponent<Animator>().SetBool("move", true);
-                    
-                    if (gameObject.transform.position.x == player.transform.position.x)
+                    if (!ataque)
                     {
-                        contador2 += Time.deltaTime;
-                        gameObject.GetComponent<Animator>().SetBool("smell", true);
-                        gameObject.GetComponent<Animator>().SetBool("move", false);
-                        speed2 = 0;
+                        gameObject.GetComponent<Animator>().SetBool("smell", false);
+                        gameObject.GetComponent<Animator>().SetBool("move", true);
+                        if (gameObject.transform.position.x == player.transform.position.x)
+                        {
+                            contador2 += Time.deltaTime;
+                            gameObject.GetComponent<Animator>().SetBool("smell", true);
+                            gameObject.GetComponent<Animator>().SetBool("move", false);
+                            speed2 = 0;
+                        }
                     }
+
+                    contAtaque = contAtaque + Time.deltaTime;
+                    if (contAtaque >= 1f) { int number = GetRandomNumber(1, 3); }
                     if (dist <= visionRadius2)
                     {
-                        int number = GetRandomNumber(1, 3);
+                        ataque = true;
+                        contAuxG = contAuxG + Time.deltaTime;
+                        contAuxC = contAuxC + Time.deltaTime;                  
+                        int number = GetRandomNumber(1, 3);                          
                         if (number == 1)
                         {
                             speed2 = 0;
                             transform.position = Vector3.MoveTowards(transform.position, target, speed2);
+                            gameObject.GetComponent<Animator>().SetBool("move", false);
                             gameObject.GetComponent<Animator>().SetBool("ataqueCola", false);
                             gameObject.GetComponent<Animator>().SetBool("ataqueGarra", true);
                             gameObject.GetComponent<Animator>().SetBool("smell", false);
-                            gameObject.GetComponent<Animator>().SetBool("move", false);
                         }
-                        else if(number == 2)
+                        else if (number == 2)
                         {
                             speed2 = 0;
                             transform.position = Vector3.MoveTowards(transform.position, target, speed2);
+                            gameObject.GetComponent<Animator>().SetBool("move", false);
                             gameObject.GetComponent<Animator>().SetBool("ataqueGarra", false);
                             gameObject.GetComponent<Animator>().SetBool("ataqueCola", true);
                             gameObject.GetComponent<Animator>().SetBool("smell", false);
-                            gameObject.GetComponent<Animator>().SetBool("move", false);
                         }
+                        contAtaque = 0;                                           
                     }
                     if (dist > visionRadius2)
                     {
+                        ataque = false;
                         if (!gameObject.GetComponent<Animator>().GetBool("smell"))
                         {
                             gameObject.GetComponent<Animator>().SetBool("ataqueGarra", false);
