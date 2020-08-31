@@ -88,7 +88,7 @@ public class Corazones : MonoBehaviour
             corazon1.SetActive(false);
             corazon2.SetActive(false);
             corazon3.SetActive(false);
-           
+
             cero.SetActive(true);
             uno.SetActive(false);
             dos.SetActive(false);
@@ -96,16 +96,18 @@ public class Corazones : MonoBehaviour
             cuatro.SetActive(false);
 
 
-            if (PlayerPrefs.GetInt("NumeroJugadores") == 2) 
+            if (PlayerPrefs.GetInt("NumeroJugadores") == 2)
             {
-                if (PlayerPrefs.GetInt("PlayerActual") == 1) 
+                if (PlayerPrefs.GetInt("PlayerActual") == 1)
                 {
                     botonMuerteMenu.SetActive(true);
                     botonMuerteContinuar.SetActive(true);
+                    Time.timeScale = 0;
                 }
                 if (PlayerPrefs.GetInt("PlayerActual") == 2)
                 {
                     botonMuerteMenu.SetActive(true);
+                    Time.timeScale = 0;
                 }
 
             }
@@ -113,9 +115,17 @@ public class Corazones : MonoBehaviour
             if (PlayerPrefs.GetInt("NumeroJugadores") == 1)
             {
                 botonMuerteMenu.SetActive(true);
+                Time.timeScale = 0;
             }
             imagenMuerte.SetActive(true);
             textoMuerte.SetActive(true);
+
+            AudioSource[] audios = FindObjectsOfType<AudioSource>();
+
+            foreach (AudioSource a in audios)
+            {
+                a.Stop();
+            }
         }
     }
 }

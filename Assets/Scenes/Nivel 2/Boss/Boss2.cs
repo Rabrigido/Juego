@@ -83,7 +83,7 @@ public class Boss2 : MonoBehaviour
         } 
         if (!gameObject.GetComponent<Animator>().GetBool("death"))
         {
-            if (gameObject.GetComponent<Animator>().GetBool("move") && fuenteAudio.clip != audioMover) //Caminando
+           if (gameObject.GetComponent<Animator>().GetBool("move") && fuenteAudio.clip != audioMover) //Caminando
             {
                 contAuxG = 0;
                 contAuxC = 0;
@@ -93,39 +93,8 @@ public class Boss2 : MonoBehaviour
                 fuenteAudio.Play();
 
             }
-            if (gameObject.GetComponent<Animator>().GetBool("ataqueGarra") && fuenteAudio.clip != audioGarra && contAuxG >= 1f) //Atacando
-            {
-                contAuxC = 0;
-                fuenteAudio.Stop();
-                fuenteAudio.clip = audioGarra;
-                fuenteAudio.loop = false;
-                fuenteAudio.Play();
-            }
-            if (gameObject.GetComponent<Animator>().GetBool("ataqueGarra") && fuenteAudio.clip == audioGarra && !fuenteAudio.isPlaying) //Atacando
-            {
-                contAuxC = 0;
-                fuenteAudio.Stop();
-                fuenteAudio.clip = audioGarra;
-                fuenteAudio.loop = false;
-                fuenteAudio.Play();
-            }
-            if (gameObject.GetComponent<Animator>().GetBool("ataqueCola") && fuenteAudio.clip != audioCola && contAuxC >= 1f) //Atacando
-            {
-                contAuxG = 0;
-                fuenteAudio.Stop();
-                fuenteAudio.clip = audioCola;
-                fuenteAudio.loop = false;
-                fuenteAudio.Play();
-            }
-            if (gameObject.GetComponent<Animator>().GetBool("ataqueCola") && fuenteAudio.clip == audioCola && !fuenteAudio.isPlaying) //Atacando
-            {
-                contAuxG = 0;
-                fuenteAudio.Stop();
-                fuenteAudio.clip = audioCola;
-                fuenteAudio.loop = false;
-                fuenteAudio.Play();
-            }
-            if (gameObject.GetComponent<Animator>().GetBool("smell") && fuenteAudio.clip != audioOler) //Atacando
+
+            else if (gameObject.GetComponent<Animator>().GetBool("smell") && fuenteAudio.clip != audioOler) //Atacando
             {
                 contAuxG = 0;
                 contAuxC = 0;
@@ -134,7 +103,7 @@ public class Boss2 : MonoBehaviour
                 fuenteAudio.loop = false;
                 fuenteAudio.Play();
             }
-            if (gameObject.GetComponent<Animator>().GetBool("smell") && fuenteAudio.clip == audioOler && !fuenteAudio.isPlaying) //Atacando
+            else if (gameObject.GetComponent<Animator>().GetBool("smell") && fuenteAudio.clip == audioOler && !fuenteAudio.isPlaying) //Atacando
             {
                 contAuxG = 0;
                 contAuxC = 0;
@@ -143,6 +112,11 @@ public class Boss2 : MonoBehaviour
                 fuenteAudio.loop = false;
                 fuenteAudio.Play();
             }
+            else if (!gameObject.GetComponent<Animator>().GetBool("smell") && !gameObject.GetComponent<Animator>().GetBool("ataqueCola") && !gameObject.GetComponent<Animator>().GetBool("ataqueGarra") && !gameObject.GetComponent<Animator>().GetBool("move"))
+            {
+                fuenteAudio.Stop();
+            }
+
 
             float dist = Vector3.Distance(player.transform.position, transform.position);
             target = new Vector3(player.transform.position.x, gameObject.transform.position.y, 0f);
@@ -248,4 +222,19 @@ public class Boss2 : MonoBehaviour
             PlayerPrefs.SetInt("vidajefe", (PlayerPrefs.GetInt("vidajefe") - 1));
         }
     }
+
+    public void audioAtaque()
+    {
+        fuenteAudio.clip = audioGarra;
+        fuenteAudio.loop = false;
+        fuenteAudio.Play();
+    }
+
+    public void audioColaa()
+    {
+        fuenteAudio.clip = audioCola;
+        fuenteAudio.loop = false;
+        fuenteAudio.Play();
+    }
+
 }
