@@ -15,7 +15,7 @@ public class BulletMovement : MonoBehaviour
     private Rigidbody2D bulletRB;
     private float originalScaleX;
 
-    public GameObject choqueBala;
+    //public GameObject choqueBala;
     // Start is called before the first frame update
 
     void Awake()
@@ -51,13 +51,14 @@ public class BulletMovement : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
+        //Instantiate(choqueBala);
         Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            //Destroy(Instantiate(),.5);
+            //Instantiate(choqueBala);
             Destroy(gameObject);
 
         }
