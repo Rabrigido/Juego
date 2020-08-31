@@ -66,6 +66,7 @@ public class Enemy : MonoBehaviour
             caminando = false;
         }
 
+        /*
         if (gameObject.GetComponent<Animator>().GetBool("Atacando") && !atacando)
         {
 
@@ -79,8 +80,7 @@ public class Enemy : MonoBehaviour
         {
             atacando = false;
         }
-
-
+        */
 
         if (option == 1)
         {
@@ -298,5 +298,12 @@ public class Enemy : MonoBehaviour
         vidaPlayer--;
         PlayerPrefs.SetInt("Vida", vidaPlayer);
 
+    }
+
+    public void sonidoAtaque()
+    {
+        fuenteAudio.clip = audioAtaque;
+        fuenteAudio.loop = false;
+        fuenteAudio.Play();
     }
 }

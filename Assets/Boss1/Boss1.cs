@@ -87,42 +87,10 @@ public class Boss1 : MonoBehaviour
 
         if (gameObject.GetComponent<Animator>().GetBool("Acercarse") && sonido.clip != sonidoCaminar) //Caminando
         {
-            contAux = 0;
+
             sonido.Stop();
             sonido.clip = sonidoCaminar;
             sonido.loop = true;
-            sonido.Play();
-
-        }
-
-
-
-
-        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && sonido.clip != sonidoAtaque && contAux >= 1f) //Atacando
-        {
-            sonido.Stop();
-            sonido.clip = sonidoAtaque;
-            sonido.loop = false;
-            sonido.Play();
-        }
-
-
-        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && sonido.clip == sonidoAtaque && !sonido.isPlaying) //Atacando
-        {
-            sonido.Stop();
-            sonido.clip = sonidoAtaque;
-            sonido.loop = false;
-            sonido.Play();
-        }
-
-
-
-        if (gameObject.GetComponent<Animator>().GetBool("Muerto") && sonido.clip != audioMuerteEnemigo) //F
-        {
-            contAux = 0;
-            sonido.Stop();
-            sonido.clip = audioMuerteEnemigo;
-            sonido.loop = false;
             sonido.Play();
 
         }
@@ -252,6 +220,20 @@ public class Boss1 : MonoBehaviour
         {
             PlayerPrefs.SetInt("vidajefe", (PlayerPrefs.GetInt("vidajefe") - 1));
         }
+    }
+
+    public void sonidoColetazo()
+    {
+        sonido.clip = sonidoAtaque;
+        sonido.loop = false;
+        sonido.Play();
+    }
+
+    public void sonidoMuerto()
+    {
+        sonido.clip = audioMuerteEnemigo;
+        sonido.loop = false;
+        sonido.Play();
     }
 
 }
