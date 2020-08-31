@@ -13,6 +13,7 @@ TagManager:
   - garra
   - vida
   - Caida
+  - Boss
   layers:
   - Default
   - TransparentFX
