@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: 62f21a8888656e64f9cfed7af9fa7980
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4358486944315779152
+    second: sprite png sin fondo (1)_0
+  - first:
+      213: -4047624521026764692
+    second: sprite png sin fondo (1)_1
+  - first:
+      213: 5886601778878154749
+    second: sprite png sin fondo (1)_2
+  - first:
+      213: -2195259005229957649
+    second: sprite png sin fondo (1)_3
+  - first:
+      213: 2187971506316268320
+    second: sprite png sin fondo (1)_4
+  - first:
+      213: 1298979439908239066
+    second: sprite png sin fondo (1)_5
+  - first:
+      213: -1310476843956739175
+    second: sprite png sin fondo (1)_6
+  - first:
+      213: -8236929249400614902
+    second: sprite png sin fondo (1)_7
+  - first:
+      213: -5322683058233380964
+    second: sprite png sin fondo (1)_8
+  - first:
+      213: -1750208388816207207
+    second: sprite png sin fondo (1)_9
+  - first:
+      213: -6245619770556442496
+    second: sprite png sin fondo (1)_10
+  - first:
+      213: -6445713863729798150
+    second: sprite png sin fondo (1)_11
+  - first:
+      213: -3755910936697888075
+    second: sprite png sin fondo (1)_12
+  - first:
+      213: 8332719158770885030
+    second: sprite png sin fondo (1)_13
+  - first:
+      213: -6562418824809114286
+    second: sprite png sin fondo (1)_14
+  - first:
+      213: -8430129968262813991
+    second: sprite png sin fondo (1)_15
+  - first:
+      213: 6739340802501559166
+    second: sprite png sin fondo (1)_16
+  - first:
+      213: 381546758489058947
+    second: sprite png sin fondo (1)_17
+  - first:
+      213: 3319909343563113046
+    second: sprite png sin fondo (1)_18
+  - first:
+      213: -4503375730923173099
+    second: sprite png sin fondo (1)_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 387
+        width: 100
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058ae1a98c47c7c30800000000000000
+      internalID: 4358486944315779152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 384
+        width: 98
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c600a0081f2f3d7c0800000000000000
+      internalID: -4047624521026764692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 383
+        width: 100
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7073c112961b150800000000000000
+      internalID: 5886601778878154749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_3
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 383
+        width: 127
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed7a43d09fd881e0800000000000000
+      internalID: -2195259005229957649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 262
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02358ac1e7c3d5e10800000000000000
+      internalID: 2187971506316268320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 263
+        width: 127
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad634461be6e60210800000000000000
+      internalID: 1298979439908239066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_6
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 259
+        width: 87
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993659de04040dde0800000000000000
+      internalID: -1310476843956739175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 276
+        width: 72
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0093712d7c80bd80800000000000000
+      internalID: -8236929249400614902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_8
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 264
+        width: 129
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f620695f70226b0800000000000000
+      internalID: -5322683058233380964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_9
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 260
+        width: 94
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99283bd4eb206b7e0800000000000000
+      internalID: -1750208388816207207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_10
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 260
+        width: 94
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08893ddc8e91359a0800000000000000
+      internalID: -6245619770556442496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_11
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 141
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3239c44693c86a0800000000000000
+      internalID: -6445713863729798150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_12
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 142
+        width: 131
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b22e1a17e250ebc0800000000000000
+      internalID: -3755910936697888075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_13
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 141
+        width: 163
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a161af1de3c3a370800000000000000
+      internalID: 8332719158770885030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_14
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 141
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2559ae719da9de4a0800000000000000
+      internalID: -6562418824809114286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_15
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 140
+        width: 163
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6e1576579220b80800000000000000
+      internalID: -8430129968262813991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_16
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 143
+        width: 131
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73c669d0c2f68d50800000000000000
+      internalID: 6739340802501559166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_17
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 140
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e21fc51c68b4500800000000000000
+      internalID: 381546758489058947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_18
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 24
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652649555ffa21e20800000000000000
+      internalID: 3319909343563113046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite png sin fondo (1)_19
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 9
+        width: 164
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b8534f1abc081c0800000000000000
+      internalID: -4503375730923173099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
