@@ -20,16 +20,20 @@ public class MenuJugadores : MonoBehaviour
     {
         PlayerPrefs.SetInt("NumeroJugadores", 1);
         PlayerPrefs.SetInt("PlayerActual", 1);
-        SceneManager.LoadScene("CargaMenu-Tutorial1");
+        SceneManager.LoadScene("cargaMenuN1.1");
     }
     public void dosJugadores()
     {
         PlayerPrefs.SetInt("NumeroJugadores", 2);
         PlayerPrefs.SetInt("PlayerActual", 1);
-        SceneManager.LoadScene("CargaMenu-Tutorial1");
+        SceneManager.LoadScene("cargaMenuN1.1");
     }
     public void volver()
     {
         SceneManager.LoadScene("MenuPrincipal");
+    }
+    public void comoJugar()
+    {
+        SceneManager.LoadScene("comoJugar");
     }
 }

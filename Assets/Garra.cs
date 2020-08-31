@@ -39,13 +39,14 @@ public class Garra : MonoBehaviour
         if (boss.transform.localScale.x < 0)
         {
             transform.localScale = new Vector3(-originalScaleX, transform.localScale.y, transform.localScale.z);
-            bulletRB.velocity = new Vector2(bulletSpeed, 0);
+            
+            bulletRB.velocity = new Vector2(bulletSpeed, bulletRB.velocity.y);
             
         }
         else if (boss.transform.localScale.x > 0)
         {
             transform.localScale = new Vector3(originalScaleX, transform.localScale.y, transform.localScale.z);
-            bulletRB.velocity = new Vector2(-bulletSpeed,0);
+            bulletRB.velocity = new Vector2(-bulletSpeed, bulletRB.velocity.y);
         }
         
     }

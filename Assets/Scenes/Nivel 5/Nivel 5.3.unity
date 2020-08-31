@@ -6879,7 +6879,7 @@ PrefabInstance:
     - target: {fileID: 631062473895411477, guid: 2daa3dc30aa91a9409cc437f4e117cb2,
         type: 3}
       propertyPath: m_Text
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3808255805326776478, guid: 2daa3dc30aa91a9409cc437f4e117cb2,
         type: 3}

@@ -34,4 +34,5 @@ public class MenuPrincipal : MonoBehaviour
     {
         SceneManager.LoadScene("Creditos");
     }
+    
 }

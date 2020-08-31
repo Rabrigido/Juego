@@ -8,6 +8,7 @@ public class Boss4Controller : MonoBehaviour
     public GameObject player;
     public float visionRadius1;
     public float visionRadius2;
+
     public int vida;
     private AudioSource sonido;
     public AudioClip sonidoCaminar;
@@ -16,14 +17,18 @@ public class Boss4Controller : MonoBehaviour
     public float initialSpeed;
     private float speed2;
     private int contador;
-    //public GameObject textoContadorEnemigos;
+    public GameObject textoContadorEnemigos;
     private float contAux;
     private Vector3 target;
     
     public GameObject bulletPrefab;
     public GameObject guiaMano;
     private Vector3 posMano;
-   
+
+    public GameObject recolectable;
+    private float contadorRecolectable;
+    
+
 
 
 
@@ -33,7 +38,12 @@ public class Boss4Controller : MonoBehaviour
         gameObject.GetComponent<Animator>().SetBool("VePlayer", false);
         PlayerPrefs.SetInt("vidajefe", vida);
         sonido = GetComponent<AudioSource>();
-        
+        if (recolectable != null)
+        {
+            recolectable.SetActive(false);
+
+        }
+
 
     }
 
@@ -46,15 +56,28 @@ public class Boss4Controller : MonoBehaviour
 
         if (PlayerPrefs.GetInt("vidajefe") <= 0) //Se muere
         {
+            contadorRecolectable = contadorRecolectable + Time.deltaTime;
             gameObject.GetComponent<Animator>().SetBool("Muerto", true);
             gameObject.GetComponent<Animator>().SetBool("VePlayer", false);
             gameObject.GetComponent<Animator>().SetBool("Atacar", false);
             speed2 = 0;
-            /*
             contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
-            contador--;
+            contador = 0;
             textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
-            */
+            if (recolectable != null)
+            {
+                if (contadorRecolectable > 1)
+                {
+                    if (!recolectable.activeSelf)
+                    {
+                        recolectable.transform.position = gameObject.transform.position;
+                        recolectable.SetActive(true);
+                    }
+
+                }
+
+            }
+
         }
 
         //---------------------------------AUDIO-----------------------------------------------------
@@ -86,15 +109,13 @@ public class Boss4Controller : MonoBehaviour
             {
 
                 //------------------Flipeos-----------------------------
-                if (gameObject.transform.position.x - player.transform.position.x > 0)
+                if (gameObject.transform.position.x - target.x > 0)
                 {
-                    gameObject.transform.localScale = new Vector3(1,1,1); //flip false
-                    
+                    gameObject.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f); //flip false         
                 }
-                if (gameObject.transform.position.x - player.transform.position.x < 0)
+                if (gameObject.transform.position.x - target.x < 0)
                 {
-                    
-                    gameObject.transform.localScale = new Vector3(-1, 1, 1); //flip true
+                    gameObject.transform.localScale = new Vector3(-0.6f, 0.6f, 0.6f); //flip true
                 }
                 //------------------Fin Flipeos-----------------------------
 
@@ -114,26 +135,23 @@ public class Boss4Controller : MonoBehaviour
                     gameObject.GetComponent<Animator>().SetBool("VePlayer", true);
                     speed2 = initialSpeed * Time.deltaTime;
                     transform.position = Vector3.MoveTowards(transform.position, target, speed2); //Te sigue
-
-                   
+   
                 }
                 //---------------Ataque----------------------------------
                 if (dist <= visionRadius2) //Está en la distancia para atacar
                 {
+                    target = new Vector3(player.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
                     gameObject.GetComponent<Animator>().SetBool("Atacar", true);
                     
                     contAux = contAux + Time.deltaTime;
                     speed2 = 0;
                     transform.position = Vector3.MoveTowards(transform.position, target, speed2);
-
-                    if (contAux > 1.1f)
-                    {
-                        //lanzamiento();
-                        contAux = 0;
-                    }
-                    
+                
                 }
                 //---------------Fin Ataque-------------------------
+
+
+
             }
             else //Si no lo ve
             {
@@ -142,18 +160,16 @@ public class Boss4Controller : MonoBehaviour
                 gameObject.GetComponent<Animator>().SetBool("Atacar", false);
                 speed2 = 0;
                 transform.position = Vector3.MoveTowards(transform.position, target, speed2);
-                
+
 
                 //-----------------Flipeos---------------------
-                if (gameObject.transform.position.x - player.transform.position.x > 0)
+                if (gameObject.transform.position.x - target.x > 0)
                 {
-                    gameObject.transform.localScale = new Vector3(1, 1, 1); //flip false
-
+                    gameObject.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f); //flip false         
                 }
-                if (gameObject.transform.position.x - player.transform.position.x < 0)
+                if (gameObject.transform.position.x - target.x < 0)
                 {
-
-                    gameObject.transform.localScale = new Vector3(-1, 1, 1); //flip true
+                    gameObject.transform.localScale = new Vector3(-0.6f, 0.6f, 0.6f); //flip true
                 }
                 //-----------------Fin Flipeos---------------------
             }

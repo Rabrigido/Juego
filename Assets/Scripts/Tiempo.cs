@@ -42,8 +42,33 @@ public class Tiempo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerPrefs.SetFloat("Tiempo", PlayerPrefs.GetFloat("Tiempo") + Time.deltaTime);
-        ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
+        if (PlayerPrefs.GetInt("Vida") != 0)
+        {
+            if (SceneManager.GetActiveScene().name.Equals("Nivel6.1"))
+            {
+                float tiempoEnSegundos = PlayerPrefs.GetFloat("Tiempo");
+
+                int minutos = (int)tiempoEnSegundos / 60;
+                int segundos = (int)tiempoEnSegundos % 60;
+                int milisegundos = (int)(((tiempoEnSegundos % 60) - segundos) * 60);
+                textoTiempo.text = "Tiempo Final: " + minutos.ToString("00") + ":" + segundos.ToString("00") + ":" + milisegundos.ToString("00");
+            }
+
+            else
+            {
+                PlayerPrefs.SetFloat("Tiempo", PlayerPrefs.GetFloat("Tiempo") + Time.deltaTime);
+
+                if (PlayerPrefs.GetFloat("Tiempo") > 3600)
+                {
+                    textoTiempo.text = "Tiempo Excedido";
+                }
+                else
+                {
+                    ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
+                }
+            }
+        }
+
     }
 
     public void ActualizarReloj(float tiempoEnSegundos)
