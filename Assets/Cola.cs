@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Garra : MonoBehaviour
+public class Cola : MonoBehaviour
 {
-
     public float bulletSpeed;
     public float bulletLife;
     public string tagg;
@@ -12,12 +11,9 @@ public class Garra : MonoBehaviour
     private GameObject boss;
     public AudioClip audioDisparo;
     public AudioSource sonido;
-    
+
     private Rigidbody2D bulletRB;
     private float originalScaleX;
-
-
-
     void Awake()
     {
         bulletRB = GetComponent<Rigidbody2D>();
@@ -26,7 +22,6 @@ public class Garra : MonoBehaviour
         originalScaleX = transform.localScale.x;
 
     }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,16 +33,16 @@ public class Garra : MonoBehaviour
 
         if (boss.transform.localScale.x < 0)
         {
-            transform.localScale = new Vector3(-originalScaleX, transform.localScale.y, transform.localScale.z);
-            bulletRB.velocity = new Vector2(bulletSpeed, 0);
-            
+            transform.localScale = new Vector3(originalScaleX, transform.localScale.y, transform.localScale.z);
+            bulletRB.velocity = new Vector2(-bulletSpeed, 0);
+
         }
         else if (boss.transform.localScale.x > 0)
         {
-            transform.localScale = new Vector3(originalScaleX, transform.localScale.y, transform.localScale.z);
-            bulletRB.velocity = new Vector2(-bulletSpeed,0);
+            transform.localScale = new Vector3(-originalScaleX, transform.localScale.y, transform.localScale.z);
+            bulletRB.velocity = new Vector2(bulletSpeed, 0);
         }
-        
+
     }
 
     // Update is called once per frame
@@ -55,17 +50,13 @@ public class Garra : MonoBehaviour
     {
         Destroy(gameObject, bulletLife);
     }
-
-
-
     private void OnTriggerEnter2D(Collider2D collision)
-    {    
+    {
         if (collision.gameObject.tag != "Boss")
         {
             Destroy(gameObject);
         }
-        
+
 
     }
-
 }

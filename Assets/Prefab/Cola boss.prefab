@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7282269458273440358}
   - component: {fileID: 7282269458273440377}
   - component: {fileID: 7282269458273440376}
-  - component: {fileID: 7282269458273440359}
   - component: {fileID: 9197298553591539788}
   - component: {fileID: 7461794133619500810}
+  - component: {fileID: -7229648764646385223}
   m_Layer: 0
   m_Name: Cola boss
   m_TagString: garra
@@ -112,23 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.182068, y: 0.8417542}
   m_EdgeRadius: 0
---- !u!114 &7282269458273440359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7282269458273440379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0f1c09339957c47a3a14ed440073b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 30
-  bulletLife: 1
-  tagg: Boss
-  audioDisparo: {fileID: 8300000, guid: 71abac51e34899445a4439aede0d056c, type: 3}
-  sonido: {fileID: 0}
 --- !u!50 &9197298553591539788
 Rigidbody2D:
   serializedVersion: 4
@@ -246,3 +229,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7229648764646385223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7282269458273440379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8ca9afcd82ccd49a9d859c0b95c2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 30
+  bulletLife: 1
+  tagg: Boss
+  audioDisparo: {fileID: 8300000, guid: 71abac51e34899445a4439aede0d056c, type: 3}
+  sonido: {fileID: 0}
