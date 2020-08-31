@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-
 public class Boss4Controller : MonoBehaviour
 {
     public GameObject player;
@@ -13,7 +11,7 @@ public class Boss4Controller : MonoBehaviour
     public int vida;
     private AudioSource sonido;
     public AudioClip sonidoCaminar;
-    public AudioClip sonidoAtaque;
+
     public AudioClip audioMuerteEnemigo;
     public float initialSpeed;
     private float speed2;
@@ -21,6 +19,10 @@ public class Boss4Controller : MonoBehaviour
     //public GameObject textoContadorEnemigos;
     private float contAux;
     private Vector3 target;
+    public GameObject guiaMano;
+    public GameObject bulletPrefab;
+    private Vector3 posMano;
+   
 
 
 
@@ -30,12 +32,15 @@ public class Boss4Controller : MonoBehaviour
         gameObject.GetComponent<Animator>().SetBool("VePlayer", false);
         PlayerPrefs.SetInt("vidajefe", vida);
         sonido = GetComponent<AudioSource>();
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
+        posMano = guiaMano.transform.position;
 
         if (PlayerPrefs.GetInt("vidajefe") <= 0) //Se muere
         {
@@ -50,37 +55,22 @@ public class Boss4Controller : MonoBehaviour
             */
         }
 
-        //--------------------AUDIO-----------------------------------------------------
+        //---------------------------------AUDIO-----------------------------------------------------
         if (gameObject.GetComponent<Animator>().GetBool("VePlayer") && sonido.clip != sonidoCaminar) //Caminando
         {
-            contAux = 0;
+         
             sonido.Stop();
             sonido.clip = sonidoCaminar;
             sonido.loop = true;
             sonido.Play();
         }
         
-        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && sonido.clip != sonidoAtaque && contAux >= 1f) //Atacando
-        {
-            sonido.Stop();
-            sonido.clip = sonidoAtaque;
-            sonido.loop = false;
-            sonido.Play();
-        }
-        
-
-        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && sonido.clip == sonidoAtaque && !sonido.isPlaying) //Atacando
-        {
-            sonido.Stop();
-            sonido.clip = sonidoAtaque;
-            sonido.loop = false;
-            sonido.Play();
-        }
+    
         
 
         if (gameObject.GetComponent<Animator>().GetBool("Muerto") && sonido.clip != audioMuerteEnemigo) //Se muere el boss
         {
-            contAux = 0;
+          
             sonido.Stop();
             sonido.clip = audioMuerteEnemigo;
             sonido.loop = false;
@@ -125,14 +115,23 @@ public class Boss4Controller : MonoBehaviour
 
                    
                 }
-
+                //---------------Ataque----------------------------------
                 if (dist <= visionRadius2) //Está en la distancia para atacar
                 {
                     gameObject.GetComponent<Animator>().SetBool("Atacar", true);
+                    
+                    contAux = contAux + Time.deltaTime;
                     speed2 = 0;
                     transform.position = Vector3.MoveTowards(transform.position, target, speed2);
+
+                    if (contAux > 1.1f)
+                    {
+                        //lanzamiento();
+                        contAux = 0;
+                    }
                     
                 }
+                //---------------Fin Ataque-------------------------
             }
             else //Si no lo ve
             {
@@ -173,5 +172,10 @@ public class Boss4Controller : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, visionRadius1);
         Gizmos.color = UnityEngine.Color.red;
         Gizmos.DrawWireSphere(transform.position, visionRadius2);
+    }
+
+    public void lanzamiento()
+    {
+        Instantiate(bulletPrefab, posMano, Quaternion.identity);
     }
 }
