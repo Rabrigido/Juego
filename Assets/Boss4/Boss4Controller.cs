@@ -19,8 +19,9 @@ public class Boss4Controller : MonoBehaviour
     //public GameObject textoContadorEnemigos;
     private float contAux;
     private Vector3 target;
-    public GameObject guiaMano;
+    
     public GameObject bulletPrefab;
+    public GameObject guiaMano;
     private Vector3 posMano;
    
 
@@ -39,6 +40,7 @@ public class Boss4Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float dist = Vector3.Distance(player.transform.position, transform.position);
         posMano = guiaMano.transform.position;
 
@@ -172,6 +174,14 @@ public class Boss4Controller : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, visionRadius1);
         Gizmos.color = UnityEngine.Color.red;
         Gizmos.DrawWireSphere(transform.position, visionRadius2);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bala")
+        {
+            PlayerPrefs.SetInt("vidajefe", PlayerPrefs.GetInt("vidajefe")-1);
+        }
     }
 
     public void lanzamiento()

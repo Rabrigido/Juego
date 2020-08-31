@@ -9,9 +9,10 @@ public class Garra : MonoBehaviour
     public float bulletLife;
     public string tagg;
     private GameObject gun;
-    public GameObject boss;
+    private GameObject boss;
     public AudioClip audioDisparo;
-    private AudioSource fuenteAudio;
+    public AudioSource sonido;
+    
     private Rigidbody2D bulletRB;
     private float originalScaleX;
 
@@ -29,6 +30,12 @@ public class Garra : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sonido = GetComponent<AudioSource>();
+        sonido.clip = audioDisparo;
+        sonido.loop = false;
+        sonido.Play();
+
+
         if (boss.transform.localScale.x < 0)
         {
             transform.localScale = new Vector3(-originalScaleX, transform.localScale.y, transform.localScale.z);
@@ -40,6 +47,7 @@ public class Garra : MonoBehaviour
             transform.localScale = new Vector3(originalScaleX, transform.localScale.y, transform.localScale.z);
             bulletRB.velocity = new Vector2(-bulletSpeed,0);
         }
+        
     }
 
     // Update is called once per frame
