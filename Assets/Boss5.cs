@@ -121,7 +121,7 @@ public class Boss5 : MonoBehaviour
             speed2 = 0;
             
             contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
-            contador--;
+            contador = 0;
             textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
             
             if (recolectable != null)

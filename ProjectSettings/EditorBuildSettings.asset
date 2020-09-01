@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Nivel 5/Nivel 5.5.unity
+    guid: 7d5d1d020691ff04aaeafd7c706c5765
+  - enabled: 1
     path: Assets/Scenes/Cargas/Menu/Inicio.unity
     guid: d7b1e3a80ccfc2d40a555f9121d49930
   - enabled: 1
@@ -54,68 +57,131 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 1/Nivel1.5.unity
     guid: d2ef3cd76849ded479f1ea0462e5d2e0
   - enabled: 1
+    path: Assets/Scenes/Cargas/N1/carga15.21.unity
+    guid: 79bcf29a37faa4f4dadf9eac4b542481
+  - enabled: 1
     path: Assets/Scenes/Nivel 2/Nivel2.1.unity
     guid: aceb7c38e195f9348a9fdfaa2106047d
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N2/carga21.22.unity
+    guid: 5b87f8b5d547f8244850e3e0de8c8c33
   - enabled: 1
     path: Assets/Scenes/Nivel 2/Nivel2.2.unity
     guid: 8fce6aabe4334734790684a26d5298a8
   - enabled: 1
+    path: Assets/Scenes/Cargas/N2/carga22.23.unity
+    guid: b9543767a0ea2e94cbe597772021eccd
+  - enabled: 1
     path: Assets/Scenes/Nivel 2/Nivel2.3.unity
     guid: 12d6205c5a32b5c479c76be0a8d51ec4
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N2/carga23.24.unity
+    guid: 738752f254c038244a8f7a5178be2168
   - enabled: 1
     path: Assets/Scenes/Nivel 2/Nivel2.4.unity
     guid: e223c3a20581c464bba781402f86e82b
   - enabled: 1
+    path: Assets/Scenes/Cargas/N2/carga24.25.unity
+    guid: 32d3a23e61697b747846161ee21c79cc
+  - enabled: 1
     path: Assets/Scenes/Nivel 2/Nivel2.5.unity
     guid: f0bb772d65a477945ac650d3c903206d
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N2/carga25.31.unity
+    guid: 8a6b2a61ad7e4d54c840b23ccc470fe9
   - enabled: 1
     path: Assets/Scenes/Nivel 3/Nivel3.1.unity
     guid: 673bedede1d0d704f9a531e83a64abc6
   - enabled: 1
+    path: Assets/Scenes/Cargas/N3/carga31.32.unity
+    guid: d3f9ed3839fa117428c33b4f380482e4
+  - enabled: 1
     path: Assets/Scenes/Nivel 3/Nivel3.2.unity
     guid: 8be4ae931aafbcb49a87f7abbd2b6a02
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N3/carga32.33.unity
+    guid: 2dbe738afbb74fd419a810247092c927
   - enabled: 1
     path: Assets/Scenes/Nivel 3/Nivel3.3.unity
     guid: e18c82e095d4beb4cad527e96a4736a9
   - enabled: 1
+    path: Assets/Scenes/Cargas/N3/carga33.34.unity
+    guid: 5801cada80ab7f74fb814cf54058601e
+  - enabled: 1
     path: Assets/Scenes/Nivel 3/Nivel3.4.unity
     guid: d91a3be6f8fd6ae45b45cfa498f4f8d4
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N3/carga34.35.unity
+    guid: 85b3d43ea50f0dc4185f9b8f3b8cfa8e
   - enabled: 1
     path: Assets/Scenes/Nivel 3/Nivel3.5.unity
     guid: 775c80879a58be147bdb54e0dee7e8ae
   - enabled: 1
+    path: Assets/Scenes/Cargas/N3/carga35.41.unity
+    guid: 42cbb410982a2b14fae5f1e77f455ee9
+  - enabled: 1
     path: Assets/Scenes/Nivel 4/Nivel4.1.unity
     guid: 11736fc3a42c5d642b1542c848973583
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N4/carga41.42.unity
+    guid: 06d7caf0e8f2e3b4f89a8b896260793d
   - enabled: 1
     path: Assets/Scenes/Nivel 4/Nivel4.2.unity
     guid: 805b3068ae05d944fb2b9f99bfe2cea9
   - enabled: 1
+    path: Assets/Scenes/Cargas/N4/carga42.43.unity
+    guid: 6e7d17c292af80e47b93dd290cb9a7cf
+  - enabled: 1
     path: Assets/Scenes/Nivel 4/Nivel4.3.unity
     guid: e251c36480b68924583397f28cea5eb9
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N4/carga43.44.unity
+    guid: f608be91fec469a4288443a219897a64
   - enabled: 1
     path: Assets/Scenes/Nivel 4/Nivel4.4.unity
     guid: ea4c3636e292d15468a4d70218fcd76a
   - enabled: 1
+    path: Assets/Scenes/Cargas/N4/carga44.45.unity
+    guid: 08f04cad27379684bb1c931cf6106265
+  - enabled: 1
     path: Assets/Scenes/Nivel 4/Nivel4.5.unity
     guid: 53badd1f7f2e8ed45b95d1ca176d7b37
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N4/carga45.46.unity
+    guid: fb5d814a15adaad479a6023fb615c02b
   - enabled: 1
     path: Assets/Scenes/Nivel 4/Nivel4.6.unity
     guid: b28609906bae38d489a33ee6a98b34dc
   - enabled: 1
+    path: Assets/Scenes/Cargas/N4/carga46.51.unity
+    guid: d07d8b916e304fe499c13aa1fd3f9dd3
+  - enabled: 1
     path: Assets/Scenes/Nivel 5/Nivel 5.1.unity
     guid: 35f0fe7ff25194e4e914af45e6c4c022
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N5/carga51.52.unity
+    guid: 2f003871c14f4754182a8a32f2287ca5
   - enabled: 1
     path: Assets/Scenes/Nivel 5/Nivel 5.2.unity
     guid: aaebfa079dc55bf449b66734ae6ecd3f
   - enabled: 1
+    path: Assets/Scenes/Cargas/N5/carga52.53.unity
+    guid: 5bfe5e578bcdaf947a11df32eef5e486
+  - enabled: 1
     path: Assets/Scenes/Nivel 5/Nivel 5.3.unity
     guid: f697981381da27442981eb33154bf20f
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N5/carga53.54.unity
+    guid: d1944d9bd547a9043b22a8e8f557b963
   - enabled: 1
     path: Assets/Scenes/Nivel 5/Nivel 5.4.unity
     guid: 54b598fc206a8c3449667f96b2acb637
   - enabled: 1
-    path: Assets/Scenes/Nivel 5/Nivel 5.5.unity
-    guid: 7d5d1d020691ff04aaeafd7c706c5765
+    path: Assets/Scenes/Cargas/N5/carga54.55.unity
+    guid: dcd27113723e4ba42bec87bf4f8cb173
+  - enabled: 1
+    path: Assets/Scenes/Cargas/N5/carga55.61.unity
+    guid: b18a4bfb0538d044eb9b540734f251a5
   - enabled: 1
     path: Assets/Scenes/Nivel6.1.unity
     guid: 0c236ba2a6c95a340b84c32d3f26e12b
