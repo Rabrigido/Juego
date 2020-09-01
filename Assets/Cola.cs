@@ -10,7 +10,7 @@ public class Cola : MonoBehaviour
     private GameObject gun;
     private GameObject boss;
     public AudioClip audioDisparo;
-    public AudioSource sonido;
+    private AudioSource sonido;
 
     private Rigidbody2D bulletRB;
     private float originalScaleX;
@@ -52,7 +52,7 @@ public class Cola : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Boss")
+        if (collision.gameObject.tag != "Boss" && collision.gameObject.tag != "bug")
         {
             Destroy(gameObject);
         }

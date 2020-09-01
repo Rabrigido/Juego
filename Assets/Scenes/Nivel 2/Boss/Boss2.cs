@@ -58,7 +58,7 @@ public class Boss2 : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("move", false);
             gameObject.GetComponent<Animator>().SetBool("death", true);
             contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
-            contador--;
+            contador = 0;
             textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
             contadorRecolectable = contadorRecolectable + Time.deltaTime;
             if (cmurio)

@@ -36,11 +36,11 @@ public class CambioEscena : MonoBehaviour
                 }
                 else 
                 {
-                    Debug.Log("te faltan enemigos");
+                    //Debug.Log("te faltan enemigos");
                 }       
             }
             else {
-                Debug.Log("te faltan items");
+                //Debug.Log("te faltan items");
             }     
         } 
     }
