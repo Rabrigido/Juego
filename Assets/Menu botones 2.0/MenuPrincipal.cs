@@ -22,9 +22,9 @@ public class MenuPrincipal : MonoBehaviour
     {
         SceneManager.LoadScene("MenuJugadores");
     }
-    public void Opciones()
+    public void Ranking()
     {
-
+        SceneManager.LoadScene("Ranking");
     }
     public void Salir()
     {

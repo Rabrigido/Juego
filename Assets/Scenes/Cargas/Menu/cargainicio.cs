@@ -17,6 +17,6 @@ public class cargainicio : MonoBehaviour
     {
         contador = contador + Time.deltaTime;
         if (Input.anyKeyDown) SceneManager.LoadScene("CargaPostInicio");
-        if (contador > 15) SceneManager.LoadScene("CargaPostInicio");
+        if (contador > 19) SceneManager.LoadScene("CargaPostInicio");
     }
 }

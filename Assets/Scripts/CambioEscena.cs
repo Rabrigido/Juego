@@ -32,7 +32,11 @@ public class CambioEscena : MonoBehaviour
             {
                 if (textoContadorAlien.GetComponent<Text>().text.Equals("0"))
                 {
+                    int puntajeAux = (int)PlayerPrefs.GetFloat("PuntajeAux", 0);
+                    PlayerPrefs.SetInt("PuntajeTotal", PlayerPrefs.GetInt("PuntajeTotal",0) + puntajeAux);
+
                     SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+
                 }
                 else 
                 {

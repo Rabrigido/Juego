@@ -18,6 +18,11 @@ public class Creditos : MonoBehaviour
     }
     public void volver()
     {
+        SceneManager.LoadScene("Ranking");
+    }
+
+    public void menuPrincipal()
+    {
         SceneManager.LoadScene("MenuPrincipal");
     }
 }

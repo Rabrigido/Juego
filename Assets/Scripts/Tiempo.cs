@@ -21,40 +21,32 @@ public class Tiempo : MonoBehaviour
     private float escalaDeTiempoAlIniciar;
 
     public Boolean estaPausado;
+    private Boolean muerte;
+    private float ptos;
 
 
     void Start()
     {
-
-        if (estaPausado)
+        muerte = false;
+        PlayerPrefs.SetFloat("PuntajeAux", 0);
+        if (SceneManager.GetActiveScene().name.Equals("Nivel1.1"))
         {
-            if (PlayerPrefs.GetFloat("Tiempo") < 300)
-            {
-                PlayerPrefs.SetInt("PuntajeTotal", PlayerPrefs.GetInt("PuntajeTotal") +(int) (300 - PlayerPrefs.GetFloat("Tiempo")));
-                Debug
-            }
-            
-
+            PlayerPrefs.SetInt("PuntajeTotal", 0);
+            PlayerPrefs.SetFloat("Tiempo", 0);
         }
-        else
-        {
-            PlayerPrefs.SetFloat("Tiempo", 0f);
-            if (SceneManager.GetActiveScene().name.Equals("Nivel1.1"))
-            {
-                PlayerPrefs.SetInt("PuntajeTotal", 0);
-            }
 
-            textoTiempo = GetComponent<Text>();
+        textoTiempo = GetComponent<Text>();
 
-            ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
+        
 
-        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!estaPausado)
+        /*
+        if (!estaPausado) //Est
         {
             if (PlayerPrefs.GetInt("Vida") != 0)
             {
@@ -71,7 +63,7 @@ public class Tiempo : MonoBehaviour
                 
 
                 else
-                {*/
+                {
                     PlayerPrefs.SetFloat("Tiempo", PlayerPrefs.GetFloat("Tiempo") + Time.deltaTime);
 
                     if (PlayerPrefs.GetFloat("Tiempo") > 3600)
@@ -82,10 +74,40 @@ public class Tiempo : MonoBehaviour
                     else
                     {
                         ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
-                  //  }
+                    }
                 }
             }
         }
+        */
+        PlayerPrefs.SetFloat("Tiempo", PlayerPrefs.GetFloat("Tiempo") + Time.deltaTime);
+
+        if (PlayerPrefs.GetFloat("Tiempo") > 3600)
+        {
+            textoTiempo.text = "Tiempo Excedido";
+
+        }
+        else
+        {
+            ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
+        }
+
+        if (!estaPausado) 
+        {
+            ptos = ptos + Time.deltaTime;
+            PlayerPrefs.SetFloat("PuntajeAux", 300 - ptos); //Puntaje por nivel
+
+        }
+
+        if (PlayerPrefs.GetInt("Vida") <= 0 && !muerte) //Cuando muere
+        {
+            muerte = true;
+            int puntajeAux = (int) PlayerPrefs.GetFloat("PuntajeAux", 0);
+            PlayerPrefs.SetInt("PuntajeTotal", PlayerPrefs.GetInt("PuntajeTotal",0) + puntajeAux);
+        }
+
+
+
+
         
 
     }

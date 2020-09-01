@@ -16,6 +16,6 @@ public class carga5561 : MonoBehaviour
     void Update()
     {
         contador = contador + Time.deltaTime;
-        if (contador > 3) SceneManager.LoadScene("Nivel6.1");
+        if (contador > 3) SceneManager.LoadScene("Final");
     }
 }

@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 1184420039}
   - component: {fileID: 1184420038}
   m_Layer: 5
-  m_Name: opciones
+  m_Name: rankin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,12 +720,12 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 3812818383905580946, guid: 2ab54165d06928e4bacdff5d7c22d704,
+    m_HighlightedSprite: {fileID: 4586521579136955869, guid: 49a522fafa7c7164293d7610846c7f35,
       type: 3}
-    m_PressedSprite: {fileID: 3134184013418149659, guid: 2ab54165d06928e4bacdff5d7c22d704,
+    m_PressedSprite: {fileID: -2334388549537685274, guid: 49a522fafa7c7164293d7610846c7f35,
       type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: -3986769515132844164, guid: 2ab54165d06928e4bacdff5d7c22d704,
+    m_DisabledSprite: {fileID: 1147910366256798550, guid: 49a522fafa7c7164293d7610846c7f35,
       type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -737,7 +737,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1184420039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1831701830}
+        m_MethodName: Ranking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1184420039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3986769515132844164, guid: 2ab54165d06928e4bacdff5d7c22d704,
+  m_Sprite: {fileID: 1147910366256798550, guid: 49a522fafa7c7164293d7610846c7f35,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1057,6 +1068,155 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1806297434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1806297437}
+  - component: {fileID: 1806297436}
+  - component: {fileID: 1806297435}
+  m_Layer: 0
+  m_Name: Musica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1806297435
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806297434}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1806297436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806297434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24170295d0d9a344695f56f10c6c7f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tema1: {fileID: 8300000, guid: bbb14a6235feaf6499c0b61e3c1adfab, type: 3}
+  tema2: {fileID: 8300000, guid: 6ad28e6c5697be948a531779904c258f, type: 3}
+  tema3: {fileID: 8300000, guid: d049c9b8198916146a6cabd1d1522e29, type: 3}
+  tema4: {fileID: 8300000, guid: cc5863d4db2494e4bb3f171a0edb7399, type: 3}
+  tema5: {fileID: 8300000, guid: 6967dfacc1955e54784a7e4f1e792607, type: 3}
+  temaBoss: {fileID: 8300000, guid: 4d2b175497b7bc0429c45bdf7ade4319, type: 3}
+  temaMuerte: {fileID: 8300000, guid: c089e10de4c7ec54f9ff8c9a0d486d73, type: 3}
+  temaMenu: {fileID: 8300000, guid: ebc3d4f571bc0594fbad163693788bcd, type: 3}
+  temaPutin: {fileID: 8300000, guid: 6a80c9861cb76f641ae611ee97957e5c, type: 3}
+--- !u!4 &1806297437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806297434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.547983, y: 151.3534, z: -10.740154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831701829
 GameObject:
