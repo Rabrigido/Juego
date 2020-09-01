@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BotonesMuerte : MonoBehaviour
@@ -19,13 +17,13 @@ public class BotonesMuerte : MonoBehaviour
 
     public void continuar()
     {
-        PlayerPrefs.SetInt("PlayerActual",2);
-        PlayerPrefs.SetInt("Vida", 4);
-        SceneManager.LoadScene("Nivel2.1");
+        /**/
+        SceneManager.LoadScene("Nivel6.1");
     }
 
     public void volverMenu()
     {
         SceneManager.LoadScene("MenuPrincipal"); //Escena de carga <-
     }
+
 }

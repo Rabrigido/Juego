@@ -43,6 +43,7 @@ public class PlayerLife : MonoBehaviour
             if (PlayerPrefs.GetInt("NumeroJugadores") == 1)  //Hay 1 player
             {
                 PlayerPrefs.SetInt("ModoMuerte", 1); //pal lobby, F
+
             }
         }
     }

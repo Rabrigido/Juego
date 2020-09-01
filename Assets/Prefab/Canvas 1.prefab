@@ -4471,6 +4471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoInicial: 0
   escalaDeTiempo: 1
+  estaPausado: 0
 --- !u!1 &8236564234285592228
 GameObject:
   m_ObjectHideFlags: 0
