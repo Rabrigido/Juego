@@ -19,55 +19,79 @@ public class Tiempo : MonoBehaviour
     private float escalaDeTiempoAlPausar;
 
     private float escalaDeTiempoAlIniciar;
-    private Boolean estaPausado;
+
+    public Boolean estaPausado;
 
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().name.Equals("Nivel1.1"))
+
+        if (estaPausado)
+        {
+            if (PlayerPrefs.GetFloat("Tiempo") < 300)
+            {
+                PlayerPrefs.SetInt("PuntajeTotal", (int) (300 - PlayerPrefs.GetFloat("Tiempo")));
+            }
+
+        }
+        else
         {
             PlayerPrefs.SetFloat("Tiempo", 0f);
-        }
-        /*else
-        {
-            PlayerPrefs.SetFloat("Tiempo", 0f);
-        }
-        */
+            if (SceneManager.GetActiveScene().name.Equals("Nivel1.1"))
+            {
+                PlayerPrefs.SetInt("PuntajeTotal", 0);
+            }
 
-        textoTiempo = GetComponent<Text>();
+            textoTiempo = GetComponent<Text>();
 
-        ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
+            ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerPrefs.GetInt("Vida") != 0)
+        if (!estaPausado)
         {
-            if (SceneManager.GetActiveScene().name.Equals("Nivel6.1"))
+            if (PlayerPrefs.GetInt("Vida") != 0)
             {
-                float tiempoEnSegundos = PlayerPrefs.GetFloat("Tiempo");
 
-                int minutos = (int)tiempoEnSegundos / 60;
-                int segundos = (int)tiempoEnSegundos % 60;
-                int milisegundos = (int)(((tiempoEnSegundos % 60) - segundos) * 60);
-                textoTiempo.text = "Tiempo Final: " + minutos.ToString("00") + ":" + segundos.ToString("00") + ":" + milisegundos.ToString("00");
-            }
-
-            else
-            {
-                PlayerPrefs.SetFloat("Tiempo", PlayerPrefs.GetFloat("Tiempo") + Time.deltaTime);
-
-                if (PlayerPrefs.GetFloat("Tiempo") > 3600)
+                if (SceneManager.GetActiveScene().name.Equals("Nivel6.1"))
                 {
-                    textoTiempo.text = "Tiempo Excedido";
+                    float tiempoEnSegundos = PlayerPrefs.GetFloat("Tiempo");
+
+                    int minutos = (int)tiempoEnSegundos / 60;
+                    int segundos = (int)tiempoEnSegundos % 60;
+                    int milisegundos = (int)(((tiempoEnSegundos % 60) - segundos) * 60);
+                    textoTiempo.text = "Tiempo Final: " + minutos.ToString("00") + ":" + segundos.ToString("00") + ":" + milisegundos.ToString("00");
                 }
+
                 else
                 {
-                    ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
+                    PlayerPrefs.SetFloat("Tiempo", PlayerPrefs.GetFloat("Tiempo") + Time.deltaTime);
+
+                    if (PlayerPrefs.GetFloat("Tiempo") > 3600)
+                    {
+                        textoTiempo.text = "Tiempo Excedido";
+
+                    }
+                    else
+                    {
+                        ActualizarReloj(PlayerPrefs.GetFloat("Tiempo"));
+                    }
                 }
             }
         }
+        else if (SceneManager.GetActiveScene().name.Equals("Nivel6.1") && PlayerPrefs.GetInt("NumeroJugadores") == 1)
+        {
+            textoTiempo.text = "Puntaje Total = " + PlayerPrefs.GetInt("PuntajeTotal");
+        }
+        else if(SceneManager.GetActiveScene().name.Equals("Nivel6.1") && PlayerPrefs.GetInt("NumeroJugadores") == 2)
+        {
+
+        }
+        
 
     }
 
