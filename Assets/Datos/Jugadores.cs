@@ -16,22 +16,7 @@ public class Jugadores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        ids = new ArrayList();
-        puntajes = new ArrayList();
-
-        string[] lines = System.IO.File.ReadAllLines("DatosJugadores.txt");
-
-        foreach (string line in lines)
-        {
-            string[] linea = line.Split(',');
-
-            ids.Add(linea[0]);
-            puntajes.Add(linea[1]);
-
-        }
-
-       
+    
 
 
     }

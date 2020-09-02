@@ -36,4 +36,9 @@ public class MenuJugadores : MonoBehaviour
     {
         SceneManager.LoadScene("comoJugar");
     }
+    public void reiniciar()
+    {
+        PlayerPrefs.SetString("DatosNombres", "");
+        PlayerPrefs.SetString("DatosPuntajes", "");
+    }
 }

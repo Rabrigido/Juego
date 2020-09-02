@@ -14,8 +14,8 @@ public class TopTen : MonoBehaviour
         PlayerPrefs.SetString("DatosPuntajes", "");
         */
 
-        Debug.Log(PlayerPrefs.GetString("DatosNombres"));
-        Debug.Log(PlayerPrefs.GetString("DatosPuntajes"));
+        /*Debug.Log(PlayerPrefs.GetString("DatosNombres"));
+        Debug.Log(PlayerPrefs.GetString("DatosPuntajes"));*/
         string nombreAux = PlayerPrefs.GetString("DatosNombres");
         string puntajesAux = PlayerPrefs.GetString("DatosPuntajes");
         string[] nombres = nombreAux.Split(',');
