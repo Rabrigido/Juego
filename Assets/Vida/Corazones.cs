@@ -93,6 +93,7 @@ public class Corazones : MonoBehaviour
         if (PlayerPrefs.GetInt("Vida") == 0)
         {
             cont = cont + Time.deltaTime;
+            PlayerPrefs.SetInt("EstadoMuerto", 1);
             corazon.SetActive(false);
             corazon1.SetActive(false);
             corazon2.SetActive(false);
@@ -129,7 +130,7 @@ public class Corazones : MonoBehaviour
             imagenMuerte.SetActive(true);
             textoMuerte.SetActive(true);
 
-            if (!mute)
+            /*if (!mute)
             {
                 AudioSource[] sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
                 for (int index = 0; index < sources.Length; ++index)
@@ -140,10 +141,11 @@ public class Corazones : MonoBehaviour
                             sources[index].mute = true;
                         }
                     }
-                    //Debug.Log(sources[index].clip);
+
                 }
                 mute = true;
             }
+            /*
             else
             {
                 if (!sonandoMuerte)
@@ -154,6 +156,7 @@ public class Corazones : MonoBehaviour
                     sonandoMuerte = true;
                 }
             }
+            */
         }
     }
 }

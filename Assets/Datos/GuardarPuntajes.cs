@@ -18,8 +18,11 @@ public class GuardarPuntajes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Time.timeScale = 1;
+        PlayerPrefs.SetInt("EstadoMuerto", 0);
         Aviso = false;
+        
     }
 
     // Update is called once per frame

@@ -11,6 +11,8 @@ public class MenuPrincipal : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+        PlayerPrefs.SetInt("Vida", 4);
+        PlayerPrefs.SetInt("EstadoMuerto", 0);
     }
 
     // Update is called once per frame

@@ -20,6 +20,7 @@ public class AudioController : MonoBehaviour
 
 
 
+
     void Awake()
     {
         if (!created)
@@ -38,30 +39,40 @@ public class AudioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale != 0)
+        if (Time.timeScale == 1 ) //Player vivo, tiempo correcto
         {
-            desmutear();
+            mutear(false);
         }
-        if (PlayerPrefs.GetInt("Vida") <= 0 && !reproduciendo)
+        if (Time.timeScale == 0) //Player muerto, tiempo 0
+        {
+            mutear(true);
+        }
+
+
+        if (PlayerPrefs.GetInt("EstadoMuerto") == 1)
         {
             GetComponent<AudioSource>().clip = temaMuerte;
-            reproduciendo = true;
+            GetComponent<AudioSource>().mute = false;
         }
-        if (SceneManager.GetActiveScene().name.Equals("Nivel1.1")) GetComponent<AudioSource>().clip = tema1;
 
-        if (SceneManager.GetActiveScene().name.Equals("Nivel1.5") || (SceneManager.GetActiveScene().name.Equals("Nivel2.5"))
-            || (SceneManager.GetActiveScene().name.Equals("Nivel3.5")) || (SceneManager.GetActiveScene().name.Equals("Nivel4.6"))
-           || (SceneManager.GetActiveScene().name.Equals("Nivel5.5"))) GetComponent<AudioSource>().clip = temaBoss;
+        else
+        {
+            if (SceneManager.GetActiveScene().name.Equals("Nivel1.1")) GetComponent<AudioSource>().clip = tema1;
 
-        if (SceneManager.GetActiveScene().name.Equals("Nivel2.1")) GetComponent<AudioSource>().clip = tema2;
-        if (SceneManager.GetActiveScene().name.Equals("Nivel3.1")) GetComponent<AudioSource>().clip = tema3;
-        if (SceneManager.GetActiveScene().name.Equals("Nivel4.1")) GetComponent<AudioSource>().clip = tema4;
-        if (SceneManager.GetActiveScene().name.Equals("Nivel5.1")) GetComponent<AudioSource>().clip = tema5;
-        if (SceneManager.GetActiveScene().name.Equals("MenuPrincipal")) GetComponent<AudioSource>().clip = temaMenu;
-        if (SceneManager.GetActiveScene().name.Equals("Ranking")) GetComponent<AudioSource>().clip = temaPutin;
-        if (SceneManager.GetActiveScene().name.Equals("Creditos")) GetComponent<AudioSource>().Stop();
-        if (SceneManager.GetActiveScene().name.Equals("Final")) GetComponent<AudioSource>().Stop();
-        if (SceneManager.GetActiveScene().name.Equals("Nivel6.1")) GetComponent<AudioSource>().clip = temaMenu;
+            if (SceneManager.GetActiveScene().name.Equals("Nivel1.5") || (SceneManager.GetActiveScene().name.Equals("Nivel2.5"))
+                || (SceneManager.GetActiveScene().name.Equals("Nivel3.5")) || (SceneManager.GetActiveScene().name.Equals("Nivel4.6"))
+               || (SceneManager.GetActiveScene().name.Equals("Nivel5.5"))) GetComponent<AudioSource>().clip = temaBoss;
+
+            if (SceneManager.GetActiveScene().name.Equals("Nivel2.1")) GetComponent<AudioSource>().clip = tema2;
+            if (SceneManager.GetActiveScene().name.Equals("Nivel3.1")) GetComponent<AudioSource>().clip = tema3;
+            if (SceneManager.GetActiveScene().name.Equals("Nivel4.1")) GetComponent<AudioSource>().clip = tema4;
+            if (SceneManager.GetActiveScene().name.Equals("Nivel5.1")) GetComponent<AudioSource>().clip = tema5;
+            if (SceneManager.GetActiveScene().name.Equals("MenuPrincipal")) GetComponent<AudioSource>().clip = temaMenu;
+            if (SceneManager.GetActiveScene().name.Equals("Ranking")) GetComponent<AudioSource>().clip = temaPutin;
+            if (SceneManager.GetActiveScene().name.Equals("Creditos")) GetComponent<AudioSource>().Stop();
+            if (SceneManager.GetActiveScene().name.Equals("Final")) GetComponent<AudioSource>().Stop();
+            if (SceneManager.GetActiveScene().name.Equals("Nivel6.1")) GetComponent<AudioSource>().clip = temaMenu;
+        }
         if (!GetComponent<AudioSource>().isPlaying)
         {
             GetComponent<AudioSource>().Play();
@@ -70,17 +81,14 @@ public class AudioController : MonoBehaviour
 
     }
 
-    public void desmutear()
+    private void mutear(bool mute)
     {
         AudioSource[] sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
         for (int index = 0; index < sources.Length; ++index)
         {
-            if (sources[index].clip != null)
-            {
-                {
-                    sources[index].mute = false;
-                }
-            }
+            sources[index].mute = mute;
         }
     }
+
+
 }

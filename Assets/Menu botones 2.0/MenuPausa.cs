@@ -27,7 +27,7 @@ public class MenuPausa : MonoBehaviour
         si.SetActive(false);
         no.SetActive(false);
         seguro.SetActive(false);
-        mutear(false);
+
 
     }
 
@@ -43,7 +43,7 @@ public class MenuPausa : MonoBehaviour
             if (boolean == 1)
             {
                 player.GetComponent<Player1controller>().enabled = false;
-                mutear(true);
+
                 Time.timeScale = 0;
                 fondo.SetActive(true);
                 titulo.SetActive(true);
@@ -53,7 +53,7 @@ public class MenuPausa : MonoBehaviour
             if (boolean == -1)
             {
                 player.GetComponent<Player1controller>().enabled = true;
-                mutear(false);
+
                 fondo.SetActive(false);
                 titulo.SetActive(false);
                 menu.SetActive(false);
@@ -75,9 +75,8 @@ public class MenuPausa : MonoBehaviour
     }
     public void Si()
     {
-        mutear(false);
+
         SceneManager.LoadScene("MenuPrincipal");
-        
     }
     public void No()
     {
@@ -92,13 +91,5 @@ public class MenuPausa : MonoBehaviour
         boolean = -1;
     }
 
-    private void mutear(bool mute)
-    {
-        AudioSource[] sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
-        for (int index = 0; index < sources.Length; ++index)
-        {
-            sources[index].mute = mute;
-        }
-        muted = mute;
-    }
+    
 }
