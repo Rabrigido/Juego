@@ -12,12 +12,14 @@ public class cargaMenuN11 : MonoBehaviour
     void Start()
     {
         continuar.SetActive(false);
+        contador = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         contador = contador + Time.deltaTime;
+
         if (contador > 3)
         {
             cargando.SetActive(false);

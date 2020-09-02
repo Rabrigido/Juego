@@ -14,7 +14,7 @@ public class Tiempo : MonoBehaviour
     public float escalaDeTiempo = 1;
 
     private Text textoTiempo;
-    private float tiempoAMostrarEnSegundos = 0f;
+
 
     private float escalaDeTiempoAlPausar;
 

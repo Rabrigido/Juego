@@ -1896,7 +1896,7 @@ MonoBehaviour:
   maxX: 210
   maxY: -0.59
   puntoInicial: {fileID: 1383609635}
-  vida: 20
+  vida: 45
   textoContadorEnemigos: {fileID: 205730005}
   recolectable: {fileID: 1008311516}
   sonidoCaminar: {fileID: 8300000, guid: 6cfa7bd11c5e7664fbb049205b6b80e2, type: 3}
@@ -6493,7 +6493,7 @@ MonoBehaviour:
   detector: {fileID: 1880430982}
   bloqueo: {fileID: 2015502253}
   barraVida: {fileID: 735442871}
-  vidaJefe: 20
+  vidaJefe: 45
   barragris: {fileID: 846202856}
   barranegra: {fileID: 1485088269}
   nombrejefe: {fileID: 1038574251}

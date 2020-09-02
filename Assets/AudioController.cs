@@ -26,7 +26,7 @@ public class AudioController : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
             created = true;
-            //Debug.Log("Awake: " + this.gameObject);
+            
         }
     }
     // Start is called before the first frame update

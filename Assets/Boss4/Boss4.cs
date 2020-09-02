@@ -12,13 +12,13 @@ public class Boss4 : MonoBehaviour
     public int vida;
     private AudioSource sonido;
     public AudioClip sonidoCaminar;
-    //public AudioClip sonidoAtaque;
+
     public AudioClip audioMuerteEnemigo;
     public float initialSpeed;
     private float speed2;
     private int contador;
-    //public GameObject textoContadorEnemigos;
-    private float contAux;
+    public GameObject textoContadorEnemigos;
+
     private Vector3 target;
 
 
@@ -28,6 +28,7 @@ public class Boss4 : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetBool("VePlayer", false);
         PlayerPrefs.SetInt("vidajefe", vida);
+        sonido = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,44 +44,26 @@ public class Boss4 : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("VePlayer", false);
             gameObject.GetComponent<Animator>().SetBool("Atacar", false);
             speed2 = 0;
-            /*
+            
             contador = Int32.Parse(textoContadorEnemigos.GetComponent<Text>().text);
-            contador--;
+            contador = 0;
             textoContadorEnemigos.GetComponent<Text>().text = contador.ToString();
-            */
+            
         }
 
         //--------------------AUDIO-----------------------------------------------------
         if (gameObject.GetComponent<Animator>().GetBool("VePlayer") && sonido.clip != sonidoCaminar) //Caminando
         {
-            contAux = 0;
+
             sonido.Stop();
             sonido.clip = sonidoCaminar;
             sonido.loop = true;
             sonido.Play();
         }
-        /*
-        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && sonido.clip != sonidoAtaque && contAux >= 1f) //Atacando
-        {
-            sonido.Stop();
-            sonido.clip = sonidoAtaque;
-            sonido.loop = false;
-            sonido.Play();
-        }
-        
 
-        if (gameObject.GetComponent<Animator>().GetBool("Atacar") && sonido.clip == sonidoAtaque && !sonido.isPlaying) //Atacando
-        {
-            sonido.Stop();
-            sonido.clip = sonidoAtaque;
-            sonido.loop = false;
-            sonido.Play();
-        }
-        */
 
         if (gameObject.GetComponent<Animator>().GetBool("Muerto") && sonido.clip != audioMuerteEnemigo) //F
         {
-            contAux = 0;
             sonido.Stop();
             sonido.clip = audioMuerteEnemigo;
             sonido.loop = false;

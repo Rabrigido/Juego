@@ -17,12 +17,10 @@ public class Enemy : MonoBehaviour
     public float speed2;
     public int option;
     public GameObject player;
-    private Boolean atacar = false;
 
-    private Boolean devolviendose;
+    
 
-    //Variable para guardar la posicion
-    //GameObject player;
+    
     //Variable para guardar la posicion inicial
     Vector3 initialPosition;
     Vector3 target;
@@ -32,7 +30,7 @@ public class Enemy : MonoBehaviour
     private AudioSource fuenteAudio;
 
     private Boolean caminando = false;
-    private Boolean atacando = false;
+
 
 
     // Start is called before the first frame update
@@ -136,7 +134,7 @@ public class Enemy : MonoBehaviour
                         {
                             gameObject.GetComponent<Animator>().SetBool("vePlayer", true);
                         }
-                        devolviendose = false;
+
                         if (gameObject.transform.position.x - player.transform.position.x > 0)
                         {
                             gameObject.GetComponent<SpriteRenderer>().flipX = true;

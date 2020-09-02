@@ -56,7 +56,6 @@ public class PlayerLife : MonoBehaviour
                 vida--;
                 PlayerPrefs.SetInt("Vida", vida);
             }
-
         }
         if (vida < 4 && collision.gameObject.tag == "vida")
         {

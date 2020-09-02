@@ -1082,6 +1082,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tope (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7337189827164609881, guid: f775cb8b28efb5044b16ff9963bcc7dd,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 36.097862
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337189827164609881, guid: f775cb8b28efb5044b16ff9963bcc7dd,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 74.899
+      objectReference: {fileID: 0}
     - target: {fileID: 7446329527483981491, guid: f775cb8b28efb5044b16ff9963bcc7dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1458,6 +1468,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tope
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337189827164609881, guid: f775cb8b28efb5044b16ff9963bcc7dd,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 37.47133
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337189827164609881, guid: f775cb8b28efb5044b16ff9963bcc7dd,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 77.645935
       objectReference: {fileID: 0}
     - target: {fileID: 7446329527483981491, guid: f775cb8b28efb5044b16ff9963bcc7dd,
         type: 3}

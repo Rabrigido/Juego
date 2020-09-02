@@ -22,7 +22,7 @@ public class Player1controller : MonoBehaviour
     private Boolean caminandoA;
     public GameObject audioBala;
 
-    private bool fire;
+    
     private Animator shot;
 
 
@@ -49,13 +49,10 @@ public class Player1controller : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 PlayerShooting();
-                fire = true;
+                
 
             }
-            else
-            {
-                fire = false;
-            }
+            
             //Fin Disparo
 
             if (gameObject.GetComponent<Animator>().GetBool("Move") && onGround)

@@ -27,9 +27,6 @@ public class Boss1 : MonoBehaviour
     public AudioClip sonidoCaminar;
     public AudioClip sonidoAtaque;
     public AudioClip audioMuerteEnemigo;
-    private Boolean atacando = false;
-    private Boolean moviendose = false;
-    private Boolean muerto = false;
     private float contAux = 0;
 
     // Start is called before the first frame update
