@@ -17,14 +17,12 @@ public class BotonesMuerte : MonoBehaviour
 
     public void continuar()
     {
-        
         SceneManager.LoadScene("Nivel6.1");
     }
 
     public void volverMenu()
     {
-
+        PlayerPrefs.SetInt("NumeroJugadores", 1);
         SceneManager.LoadScene("Nivel6.1"); //Escena de carga <-
     }
-
 }

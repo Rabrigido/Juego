@@ -18,7 +18,9 @@ public class GuardarPuntajes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         Aviso = false;
+        
     }
 
     // Update is called once per frame
@@ -55,7 +57,7 @@ public class GuardarPuntajes : MonoBehaviour
                 PlayerPrefs.SetString("DatosNombres", PlayerPrefs.GetString("DatosNombres") + "," + nombre1);
                 PlayerPrefs.SetString("DatosPuntajes", PlayerPrefs.GetString("DatosPuntajes") + "," + PlayerPrefs.GetInt("PuntajeTotal"));
             }
-            //Aqui iria el Save() en caso de...
+            
 
             if (PlayerPrefs.GetInt("NumeroJugadores") == 1 && PlayerPrefs.GetInt("Vida") > 0)
             { //Modo 1 player y ganó
