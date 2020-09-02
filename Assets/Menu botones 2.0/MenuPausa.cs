@@ -15,6 +15,7 @@ public class MenuPausa : MonoBehaviour
     public GameObject player;
     public GameObject si;
     public GameObject no;
+    private bool mute;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class MenuPausa : MonoBehaviour
         si.SetActive(false);
         no.SetActive(false);
         seguro.SetActive(false);
+        mute = false;
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class MenuPausa : MonoBehaviour
             if (boolean == 1)
             {
                 player.GetComponent<Player1controller>().enabled = false;
-                camara.GetComponent<AudioListener>().enabled = false;
+                mutear();
                 Time.timeScale = 0;
                 fondo.SetActive(true);
                 titulo.SetActive(true);
@@ -50,7 +52,7 @@ public class MenuPausa : MonoBehaviour
             if (boolean == -1)
             {
                 player.GetComponent<Player1controller>().enabled = true;
-                camara.GetComponent<AudioListener>().enabled = true;
+                mutear();
                 fondo.SetActive(false);
                 titulo.SetActive(false);
                 menu.SetActive(false);
@@ -72,7 +74,9 @@ public class MenuPausa : MonoBehaviour
     }
     public void Si()
     {
+        mutear();
         SceneManager.LoadScene("MenuPrincipal");
+        
     }
     public void No()
     {
@@ -85,5 +89,16 @@ public class MenuPausa : MonoBehaviour
     public void Continuar()
     {
         boolean = -1;
+    }
+
+    public void mutear()
+    {
+        mute = !mute;
+
+        if (mute)
+            AudioListener.volume = 0f;
+
+        else
+            AudioListener.volume = 1f;
     }
 }
