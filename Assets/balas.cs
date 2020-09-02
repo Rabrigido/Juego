@@ -30,17 +30,7 @@ public class balas : MonoBehaviour
     void Update()
     {
         muerto = player.GetComponent<Animator>().GetBool("Muerte");
-        if (contador >= 0 && !muerto)
-        {
-            if (Input.GetKeyDown("r") && contador != 6)
-            {
-                contador = 0;
-            }
-            if (Input.GetKeyDown("space") && !Input.GetKey("s"))
-            {
-                contador--;
-            }
-        }
+        
         if (contador == 6)
         {
             recargando.SetActive(false);
@@ -126,6 +116,17 @@ public class balas : MonoBehaviour
                 contador = 6;//contador alt son los segundos de recarga
                 Destroy(Instantiate(audioRecargando2, gameObject.transform.position, Quaternion.identity),3);
                 recarga = false;
+            }
+        }
+        if (contador >= 0 && !muerto)
+        {
+            if (Input.GetKeyDown("r") && contador != 6)
+            {
+                contador = 0;
+            }
+            if (Input.GetKeyDown("space") && !Input.GetKey("s"))
+            {
+                contador--;
             }
         }
     }

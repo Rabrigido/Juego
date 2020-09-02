@@ -11,7 +11,7 @@ public class CargaPostInicio : MonoBehaviour
     void Start()
     {
         cargando.SetActive(false);
-
+        PlayerPrefs.SetInt("Vida", 4);
     }
 
     // Update is called once per frame
