@@ -2068,6 +2068,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748332616999672645, guid: 0c527160347923045bf18a31a81a165f,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 12.7784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748332616999672645, guid: 0c527160347923045bf18a31a81a165f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 28.017235
+      objectReference: {fileID: 0}
     - target: {fileID: 5748332616999672646, guid: 0c527160347923045bf18a31a81a165f,
         type: 3}
       propertyPath: TextoContadorCarpetas

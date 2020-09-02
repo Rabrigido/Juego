@@ -20,7 +20,6 @@ public class GuardarPuntajes : MonoBehaviour
     {
         Time.timeScale = 1;
         Aviso = false;
-        
     }
 
     // Update is called once per frame

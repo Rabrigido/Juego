@@ -20,6 +20,11 @@ public class Corazones : MonoBehaviour
     public GameObject dos;
     public GameObject tres;
     public GameObject cuatro;
+    private bool mute;
+    private bool sonandoMuerte;
+    private float cont;
+    
+    
 
 
     // Start is called before the first frame update
@@ -29,6 +34,9 @@ public class Corazones : MonoBehaviour
         textoMuerte.SetActive(false);
         botonMuerteMenu.SetActive(false);
         botonMuerteContinuar.SetActive(false);
+        mute = false;
+        sonandoMuerte = false;
+        cont = 0;
     }
 
     // Update is called once per frame
@@ -84,6 +92,7 @@ public class Corazones : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("Vida") == 0)
         {
+            cont = cont + Time.deltaTime;
             corazon.SetActive(false);
             corazon1.SetActive(false);
             corazon2.SetActive(false);
@@ -95,36 +104,55 @@ public class Corazones : MonoBehaviour
             tres.SetActive(false);
             cuatro.SetActive(false);
 
-
-            if (PlayerPrefs.GetInt("NumeroJugadores") == 2)
+            if (cont > 1)
             {
-                if (PlayerPrefs.GetInt("PlayerActual") == 1)
+                if (PlayerPrefs.GetInt("NumeroJugadores") == 2)
+                {
+                    if (PlayerPrefs.GetInt("PlayerActual") == 1)
+                    {
+                        botonMuerteMenu.SetActive(true);
+                        botonMuerteContinuar.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    if (PlayerPrefs.GetInt("PlayerActual") == 2)
+                    {
+                        botonMuerteMenu.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                }
+                if (PlayerPrefs.GetInt("NumeroJugadores") == 1)
                 {
                     botonMuerteMenu.SetActive(true);
-                    botonMuerteContinuar.SetActive(true);
                     Time.timeScale = 0;
                 }
-                if (PlayerPrefs.GetInt("PlayerActual") == 2)
-                {
-                    botonMuerteMenu.SetActive(true);
-                    Time.timeScale = 0;
-                }
-
-            }
-
-            if (PlayerPrefs.GetInt("NumeroJugadores") == 1)
-            {
-                botonMuerteMenu.SetActive(true);
-                Time.timeScale = 0;
             }
             imagenMuerte.SetActive(true);
             textoMuerte.SetActive(true);
 
-            AudioSource[] audios = FindObjectsOfType<AudioSource>();
-
-            foreach (AudioSource a in audios)
+            if (!mute)
             {
-                a.Stop();
+                AudioSource[] sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+                for (int index = 0; index < sources.Length; ++index)
+                {
+                    if (sources[index].clip != null)
+                    {
+                        {
+                            sources[index].mute = true;
+                        }
+                    }
+                    //Debug.Log(sources[index].clip);
+                }
+                mute = true;
+            }
+            else
+            {
+                if (!sonandoMuerte)
+                {
+                    player.GetComponent<AudioSource>().mute = false;
+                    player.GetComponent<AudioSource>().clip = player.GetComponent<Player1controller>().sonidoMuerte;
+                    player.GetComponent<AudioSource>().Play();
+                    sonandoMuerte = true;
+                }
             }
         }
     }

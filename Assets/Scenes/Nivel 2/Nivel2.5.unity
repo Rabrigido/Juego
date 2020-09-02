@@ -252,6 +252,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748332616999672645, guid: 0c527160347923045bf18a31a81a165f,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 5.7481155
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748332616999672645, guid: 0c527160347923045bf18a31a81a165f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 9.793198
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748332616999672645, guid: 0c527160347923045bf18a31a81a165f,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 26.399027
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748332616999672645, guid: 0c527160347923045bf18a31a81a165f,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 55.70785
+      objectReference: {fileID: 0}
     - target: {fileID: 5748332616999672646, guid: 0c527160347923045bf18a31a81a165f,
         type: 3}
       propertyPath: totalRecolectable
@@ -424,12 +444,12 @@ PrefabInstance:
     - target: {fileID: 4435616916760467303, guid: 2daa3dc30aa91a9409cc437f4e117cb2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 62
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 5297577928512456611, guid: 2daa3dc30aa91a9409cc437f4e117cb2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 61
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 6858424059020472581, guid: 2daa3dc30aa91a9409cc437f4e117cb2,
         type: 3}

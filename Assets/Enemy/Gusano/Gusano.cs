@@ -25,8 +25,6 @@ public class Gusano : MonoBehaviour
     {
         sonido = gameObject.GetComponent<AudioSource>();
         target = gameObject.transform.position;
-
-
     }
 
     // Update is called once per frame
@@ -87,8 +85,6 @@ public class Gusano : MonoBehaviour
             Destroy(gameObject, .5f);
             exploto = true;
         }
-
-
     }
 
     void OnDrawGizmos()
@@ -98,15 +94,5 @@ public class Gusano : MonoBehaviour
         Gizmos.color = UnityEngine.Color.red;
         Gizmos.DrawWireSphere(transform.position, visionRadius2);
     }
-    private void OnTriggerEnter2D(Collider2D colission)
-    {
-        if (colission.gameObject.tag == "Player" && PlayerPrefs.GetInt("Vida") > 0)
-        {
-            int vida = PlayerPrefs.GetInt("Vida");
-            vida--;
-            PlayerPrefs.SetInt("Vida", vida);
-
-        }
-
-    }
+    
 }

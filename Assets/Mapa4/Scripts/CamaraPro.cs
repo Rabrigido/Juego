@@ -23,7 +23,7 @@ public class CamaraPro : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey("s") && player.GetComponent<Player1controller>().onGround)
+        if (Input.GetKey("s"))
         {
             contAux = contAux + Time.deltaTime;
             if (contAux >= 0.4f)

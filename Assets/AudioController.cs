@@ -32,13 +32,16 @@ public class AudioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time.timeScale != 0)
+        {
+            desmutear();
+        }
         if (PlayerPrefs.GetInt("Vida") <= 0 && !reproduciendo)
         {
             GetComponent<AudioSource>().clip = temaMuerte;
@@ -65,5 +68,19 @@ public class AudioController : MonoBehaviour
         }
         
 
+    }
+
+    public void desmutear()
+    {
+        AudioSource[] sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        for (int index = 0; index < sources.Length; ++index)
+        {
+            if (sources[index].clip != null)
+            {
+                {
+                    sources[index].mute = false;
+                }
+            }
+        }
     }
 }

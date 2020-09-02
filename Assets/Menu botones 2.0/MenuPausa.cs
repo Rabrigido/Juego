@@ -15,7 +15,7 @@ public class MenuPausa : MonoBehaviour
     public GameObject player;
     public GameObject si;
     public GameObject no;
-    private bool mute;
+    private bool muted;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,8 @@ public class MenuPausa : MonoBehaviour
         si.SetActive(false);
         no.SetActive(false);
         seguro.SetActive(false);
-        mute = false;
+        mutear(false);
+
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class MenuPausa : MonoBehaviour
             if (boolean == 1)
             {
                 player.GetComponent<Player1controller>().enabled = false;
-                mutear();
+                mutear(true);
                 Time.timeScale = 0;
                 fondo.SetActive(true);
                 titulo.SetActive(true);
@@ -52,7 +53,7 @@ public class MenuPausa : MonoBehaviour
             if (boolean == -1)
             {
                 player.GetComponent<Player1controller>().enabled = true;
-                mutear();
+                mutear(false);
                 fondo.SetActive(false);
                 titulo.SetActive(false);
                 menu.SetActive(false);
@@ -74,7 +75,7 @@ public class MenuPausa : MonoBehaviour
     }
     public void Si()
     {
-        mutear();
+        mutear(false);
         SceneManager.LoadScene("MenuPrincipal");
         
     }
@@ -91,14 +92,13 @@ public class MenuPausa : MonoBehaviour
         boolean = -1;
     }
 
-    public void mutear()
+    private void mutear(bool mute)
     {
-        mute = !mute;
-
-        if (mute)
-            AudioListener.volume = 0f;
-
-        else
-            AudioListener.volume = 1f;
+        AudioSource[] sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        for (int index = 0; index < sources.Length; ++index)
+        {
+            sources[index].mute = mute;
+        }
+        muted = mute;
     }
 }

@@ -21,6 +21,7 @@ public class Player1controller : MonoBehaviour
     private AudioSource fuenteAudio;
     private Boolean caminandoA;
     public GameObject audioBala;
+    public AudioClip sonidoMuerte;
 
     
     private Animator shot;
@@ -46,7 +47,7 @@ public class Player1controller : MonoBehaviour
             onGround = Physics2D.OverlapCircle(footRef.position, 0.5f, 1 << 8);
 
             // Disparo
-            if (Input.GetKeyDown("space"))
+            if (Input.GetKeyDown("space") && Time.timeScale != 0)
             {
                 PlayerShooting();
                 

@@ -228,7 +228,7 @@ MonoBehaviour:
   detector: {fileID: 26793415}
   bloqueo: {fileID: 1335874884}
   barraVida: {fileID: 1614902121}
-  vidaJefe: 35
+  vidaJefe: 50
   barragris: {fileID: 14219977}
   barranegra: {fileID: 1235223545}
   nombrejefe: {fileID: 1588726425}
@@ -776,7 +776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &243875296
 PrefabInstance:
@@ -983,7 +983,7 @@ PrefabInstance:
     - target: {fileID: 2187425388717106905, guid: 9d1d4afc8e992944f89ef0cc3f63f091,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2187425388717106905, guid: 9d1d4afc8e992944f89ef0cc3f63f091,
         type: 3}
@@ -3313,7 +3313,7 @@ MonoBehaviour:
   player: {fileID: 1186255251}
   visionRadius1: 55
   visionRadius2: 35
-  vida: 35
+  vida: 50
   sonidoCaminar: {fileID: 8300000, guid: 6cfa7bd11c5e7664fbb049205b6b80e2, type: 3}
   audioMuerteEnemigo: {fileID: 8300000, guid: 5f322a84ff3b2ba4aa435cd12d6e3a6a, type: 3}
   initialSpeed: 35

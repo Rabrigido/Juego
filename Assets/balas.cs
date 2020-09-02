@@ -29,104 +29,107 @@ public class balas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        muerto = player.GetComponent<Animator>().GetBool("Muerte");
-        
-        if (contador == 6)
+        if (Time.timeScale != 0)
         {
-            recargando.SetActive(false);
-            PlayerPrefs.SetInt("disparo", 1);
-            contadorAlt = 0;
-            bala1.SetActive(true);
-            bala2.SetActive(true);
-            bala3.SetActive(true);
-            bala4.SetActive(true);
-            bala5.SetActive(true);
-            bala6.SetActive(true);
-        }
-        if (contador == 5)
-        {
-            bala1.SetActive(true);
-            bala2.SetActive(true);
-            bala3.SetActive(true);
-            bala4.SetActive(true);
-            bala5.SetActive(true);
-            bala6.SetActive(false);
-        }
-        if (contador == 4)
-        {
-            bala1.SetActive(true);
-            bala2.SetActive(true);
-            bala3.SetActive(true);
-            bala4.SetActive(true);
-            bala5.SetActive(false);
-            bala6.SetActive(false);
-        }
-        if (contador == 3)
-        {
-            bala1.SetActive(true);
-            bala2.SetActive(true);
-            bala3.SetActive(true);
-            bala4.SetActive(false);
-            bala5.SetActive(false);
-            bala6.SetActive(false);
-        }
-        if (contador == 2)
-        {
-            bala1.SetActive(true);
-            bala2.SetActive(true);
-            bala3.SetActive(false);
-            bala4.SetActive(false);
-            bala5.SetActive(false);
-            bala6.SetActive(false);
-        }
-        if (contador == 1)
-        {
-            bala1.SetActive(true);
-            bala2.SetActive(false);
-            bala3.SetActive(false);
-            bala4.SetActive(false);
-            bala5.SetActive(false);
-            bala6.SetActive(false);
-        }
-        if (contador == 0)
-        {
-            
-            bala1.SetActive(false);
-            bala2.SetActive(false);
-            bala3.SetActive(false);
-            bala4.SetActive(false);
-            bala5.SetActive(false);
-            bala6.SetActive(false);
-        }
-        if (contador <= 0)
-        {
-           
-            recargando.SetActive(true);
-            PlayerPrefs.SetInt("disparo", contador);
-            contadorAlt = contadorAlt + Time.deltaTime;
+            muerto = player.GetComponent<Animator>().GetBool("Muerte");
 
-            if(!recarga)
+            if (contador == 6)
             {
-                Destroy(Instantiate(audioRecargando1, gameObject.transform.position, Quaternion.identity),3);
-                recarga = true;
+                recargando.SetActive(false);
+                PlayerPrefs.SetInt("disparo", 1);
+                contadorAlt = 0;
+                bala1.SetActive(true);
+                bala2.SetActive(true);
+                bala3.SetActive(true);
+                bala4.SetActive(true);
+                bala5.SetActive(true);
+                bala6.SetActive(true);
+            }
+            if (contador == 5)
+            {
+                bala1.SetActive(true);
+                bala2.SetActive(true);
+                bala3.SetActive(true);
+                bala4.SetActive(true);
+                bala5.SetActive(true);
+                bala6.SetActive(false);
+            }
+            if (contador == 4)
+            {
+                bala1.SetActive(true);
+                bala2.SetActive(true);
+                bala3.SetActive(true);
+                bala4.SetActive(true);
+                bala5.SetActive(false);
+                bala6.SetActive(false);
+            }
+            if (contador == 3)
+            {
+                bala1.SetActive(true);
+                bala2.SetActive(true);
+                bala3.SetActive(true);
+                bala4.SetActive(false);
+                bala5.SetActive(false);
+                bala6.SetActive(false);
+            }
+            if (contador == 2)
+            {
+                bala1.SetActive(true);
+                bala2.SetActive(true);
+                bala3.SetActive(false);
+                bala4.SetActive(false);
+                bala5.SetActive(false);
+                bala6.SetActive(false);
+            }
+            if (contador == 1)
+            {
+                bala1.SetActive(true);
+                bala2.SetActive(false);
+                bala3.SetActive(false);
+                bala4.SetActive(false);
+                bala5.SetActive(false);
+                bala6.SetActive(false);
+            }
+            if (contador == 0)
+            {
 
+                bala1.SetActive(false);
+                bala2.SetActive(false);
+                bala3.SetActive(false);
+                bala4.SetActive(false);
+                bala5.SetActive(false);
+                bala6.SetActive(false);
             }
-            if (contadorAlt > 3)
+            if (contador <= 0)
             {
-                contador = 6;//contador alt son los segundos de recarga
-                Destroy(Instantiate(audioRecargando2, gameObject.transform.position, Quaternion.identity),3);
-                recarga = false;
+
+                recargando.SetActive(true);
+                PlayerPrefs.SetInt("disparo", contador);
+                contadorAlt = contadorAlt + Time.deltaTime;
+
+                if (!recarga)
+                {
+                    Destroy(Instantiate(audioRecargando1, gameObject.transform.position, Quaternion.identity), 3);
+                    recarga = true;
+
+                }
+                if (contadorAlt > 3)
+                {
+                    contador = 6;//contador alt son los segundos de recarga
+                    Destroy(Instantiate(audioRecargando2, gameObject.transform.position, Quaternion.identity), 3);
+                    recarga = false;
+                }
             }
-        }
-        if (contador >= 0 && !muerto)
-        {
-            if (Input.GetKeyDown("r") && contador != 6)
+            if (contador >= 0 && !muerto)
             {
-                contador = 0;
-            }
-            if (Input.GetKeyDown("space") && !Input.GetKey("s"))
-            {
-                contador--;
+                if (Input.GetKeyDown("r") && contador != 6)
+                {
+                    contador = 0;
+                }
+                if (Input.GetKeyDown("space") && !Input.GetKey("s"))
+                {
+                    contador--;
+                }
             }
         }
     }

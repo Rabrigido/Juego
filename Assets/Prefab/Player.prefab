@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8794299897761733429
@@ -151,6 +151,7 @@ MonoBehaviour:
   audioCaminar: {fileID: 8300000, guid: 0f163b08423ad37479c32196aebb787c, type: 3}
   audioBala: {fileID: 1258480483346773204, guid: c0e1ff460119e0d41b9480a3d27e7aed,
     type: 3}
+  sonidoMuerte: {fileID: 8300000, guid: eb1bf0bf5018b4944bfd03fe8e8a81b6, type: 3}
 --- !u!95 &8794299897761733436
 Animator:
   serializedVersion: 3
@@ -469,7 +470,7 @@ SpriteRenderer:
   m_Size: {x: 0.14, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8794299897822070834
@@ -551,7 +552,7 @@ SpriteRenderer:
   m_Size: {x: 0.14, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8794299898660759871
@@ -633,6 +634,6 @@ SpriteRenderer:
   m_Size: {x: 0.14, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
