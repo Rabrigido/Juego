@@ -11,14 +11,14 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
 
-        if (SceneManager.GetActiveScene().name.Equals("Nivel2.5"))
+        if (SceneManager.GetActiveScene().name.Equals("Nivel1.1"))
         {
             PlayerPrefs.SetInt("Vida", 4);
         }
         else
         {
-            PlayerPrefs.SetInt("Vida", 4); //POR MIENTRAS CAMBIAR LUEGO AAAAAAAAAAAAAAAAAAAAAAAA
-            // vida = PlayerPrefs.GetInt("Vida");
+           
+            vida = PlayerPrefs.GetInt("Vida");
         }
     }
 

@@ -40,5 +40,7 @@ public class MenuJugadores : MonoBehaviour
     {
         PlayerPrefs.SetString("DatosNombres", "");
         PlayerPrefs.SetString("DatosPuntajes", "");
+        SceneManager.LoadScene("Ranking");
+
     }
 }

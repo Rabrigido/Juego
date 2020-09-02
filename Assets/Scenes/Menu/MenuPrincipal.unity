@@ -1196,14 +1196,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tema1: {fileID: 8300000, guid: 8a98d3e59936b69468cf9a1e35d64c51, type: 3}
-  tema2: {fileID: 8300000, guid: 6ad28e6c5697be948a531779904c258f, type: 3}
+  tema2: {fileID: 8300000, guid: fe589e5a7afba8e41828b17173cfb061, type: 3}
   tema3: {fileID: 8300000, guid: d5e715935855858498ebffda2d5c8c3d, type: 3}
-  tema4: {fileID: 8300000, guid: cc5863d4db2494e4bb3f171a0edb7399, type: 3}
+  tema4: {fileID: 8300000, guid: 4efca1bf679f01a40ad2075038144d7d, type: 3}
   tema5: {fileID: 8300000, guid: fc005b9871f176e49ba5271376031758, type: 3}
   temaBoss: {fileID: 8300000, guid: cfd08ec3bd3dc7b49a4087af0b393028, type: 3}
-  temaMuerte: {fileID: 8300000, guid: 1aa25b8d854eb6443a6a05c918e0f8eb, type: 3}
-  temaMenu: {fileID: 8300000, guid: ebc3d4f571bc0594fbad163693788bcd, type: 3}
-  temaPutin: {fileID: 8300000, guid: 6a80c9861cb76f641ae611ee97957e5c, type: 3}
+  temaMuerte: {fileID: 8300000, guid: eb1bf0bf5018b4944bfd03fe8e8a81b6, type: 3}
+  temaMenu: {fileID: 8300000, guid: 8651142ff0a66914fadf261864f0952a, type: 3}
+  temaPutin: {fileID: 8300000, guid: a606ef4aa30ba3847b9e4c57b774054f, type: 3}
 --- !u!4 &1806297437
 Transform:
   m_ObjectHideFlags: 0
