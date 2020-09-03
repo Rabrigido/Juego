@@ -252,8 +252,8 @@ MonoBehaviour:
   tema3: {fileID: 8300000, guid: d5e715935855858498ebffda2d5c8c3d, type: 3}
   tema4: {fileID: 8300000, guid: 4efca1bf679f01a40ad2075038144d7d, type: 3}
   tema5: {fileID: 8300000, guid: fc005b9871f176e49ba5271376031758, type: 3}
-  temaMuerte: {fileID: 8300000, guid: eb1bf0bf5018b4944bfd03fe8e8a81b6, type: 3}
   temaBoss: {fileID: 8300000, guid: cfd08ec3bd3dc7b49a4087af0b393028, type: 3}
+  temaMuerte: {fileID: 8300000, guid: eb1bf0bf5018b4944bfd03fe8e8a81b6, type: 3}
   temaMenu: {fileID: 8300000, guid: 8651142ff0a66914fadf261864f0952a, type: 3}
   temaPutin: {fileID: 8300000, guid: a606ef4aa30ba3847b9e4c57b774054f, type: 3}
 --- !u!4 &112180940
