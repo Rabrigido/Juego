@@ -13098,7 +13098,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971588269
 GameObject:
@@ -13516,6 +13516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Botiquin1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762630099040828336, guid: a117d7a0977c0b64299860ec47375558,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4762630099040828343, guid: a117d7a0977c0b64299860ec47375558,
         type: 3}

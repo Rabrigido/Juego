@@ -2008,7 +2008,7 @@ Transform:
   - {fileID: 1029256796}
   - {fileID: 489366703}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &175301999
 GameObject:
@@ -6638,7 +6638,7 @@ PrefabInstance:
     - target: {fileID: 2187425388717106905, guid: 9d1d4afc8e992944f89ef0cc3f63f091,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2187425388717106905, guid: 9d1d4afc8e992944f89ef0cc3f63f091,
         type: 3}
@@ -6949,7 +6949,7 @@ PrefabInstance:
     - target: {fileID: 631062473479326155, guid: 2daa3dc30aa91a9409cc437f4e117cb2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 631062473479326155, guid: 2daa3dc30aa91a9409cc437f4e117cb2,
         type: 3}
@@ -11759,6 +11759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Botiquin1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762630099040828336, guid: a117d7a0977c0b64299860ec47375558,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4762630099040828343, guid: a117d7a0977c0b64299860ec47375558,
         type: 3}

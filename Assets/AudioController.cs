@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class AudioController : MonoBehaviour
 {
     private static bool created = false;
-    private static bool reproduciendo = false;
+
 
     public AudioClip tema1;
     public AudioClip tema2;

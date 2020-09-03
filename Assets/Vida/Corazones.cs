@@ -20,8 +20,8 @@ public class Corazones : MonoBehaviour
     public GameObject dos;
     public GameObject tres;
     public GameObject cuatro;
-    private bool mute;
-    private bool sonandoMuerte;
+
+
     private float cont;
     
     
@@ -34,8 +34,8 @@ public class Corazones : MonoBehaviour
         textoMuerte.SetActive(false);
         botonMuerteMenu.SetActive(false);
         botonMuerteContinuar.SetActive(false);
-        mute = false;
-        sonandoMuerte = false;
+
+
         cont = 0;
     }
 
@@ -129,34 +129,6 @@ public class Corazones : MonoBehaviour
             }
             imagenMuerte.SetActive(true);
             textoMuerte.SetActive(true);
-
-            /*if (!mute)
-            {
-                AudioSource[] sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
-                for (int index = 0; index < sources.Length; ++index)
-                {
-                    if (sources[index].clip != null)
-                    {
-                        {
-                            sources[index].mute = true;
-                        }
-                    }
-
-                }
-                mute = true;
-            }
-            /*
-            else
-            {
-                if (!sonandoMuerte)
-                {
-                    player.GetComponent<AudioSource>().mute = false;
-                    player.GetComponent<AudioSource>().clip = player.GetComponent<Player1controller>().sonidoMuerte;
-                    player.GetComponent<AudioSource>().Play();
-                    sonandoMuerte = true;
-                }
-            }
-            */
         }
     }
 }
