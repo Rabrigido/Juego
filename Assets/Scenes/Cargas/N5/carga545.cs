@@ -16,6 +16,6 @@ public class carga545 : MonoBehaviour
     void Update()
     {
         contador = contador + Time.deltaTime;
-        if (contador > 3) SceneManager.LoadScene("Nivel5.5");
+        if (contador > 3) SceneManager.LoadScene("Nivel 5.5");
     }
 }

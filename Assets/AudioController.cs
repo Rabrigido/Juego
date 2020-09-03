@@ -61,12 +61,12 @@ public class AudioController : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name.Equals("Nivel1.5") || (SceneManager.GetActiveScene().name.Equals("Nivel2.5"))
                 || (SceneManager.GetActiveScene().name.Equals("Nivel3.5")) || (SceneManager.GetActiveScene().name.Equals("Nivel4.6"))
-               || (SceneManager.GetActiveScene().name.Equals("Nivel5.5"))) GetComponent<AudioSource>().clip = temaBoss;
+               || (SceneManager.GetActiveScene().name.Equals("Nivel 5.5"))) GetComponent<AudioSource>().clip = temaBoss;
 
             if (SceneManager.GetActiveScene().name.Equals("Nivel2.1")) GetComponent<AudioSource>().clip = tema2;
             if (SceneManager.GetActiveScene().name.Equals("Nivel3.1")) GetComponent<AudioSource>().clip = tema3;
             if (SceneManager.GetActiveScene().name.Equals("Nivel4.1")) GetComponent<AudioSource>().clip = tema4;
-            if (SceneManager.GetActiveScene().name.Equals("Nivel5.1")) GetComponent<AudioSource>().clip = tema5;
+            if (SceneManager.GetActiveScene().name.Equals("Nivel 5.1")) GetComponent<AudioSource>().clip = tema5;
             if (SceneManager.GetActiveScene().name.Equals("MenuPrincipal")) GetComponent<AudioSource>().clip = temaMenu;
             if (SceneManager.GetActiveScene().name.Equals("Ranking")) GetComponent<AudioSource>().clip = temaPutin;
             if (SceneManager.GetActiveScene().name.Equals("Creditos")) GetComponent<AudioSource>().Stop();
